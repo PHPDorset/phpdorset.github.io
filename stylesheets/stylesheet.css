@@ -251,6 +251,16 @@ h2 {
   margin-bottom: 8px;
 } 
 
+h2#next-event {
+  visibility: hidden;
+  height:65px;
+}
+
+h2#next-event:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 h3 {
   color: #d5000d;
   font-size: 18px;

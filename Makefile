@@ -1,2 +1,2 @@
 serve:
-	@php -S localhost:3000
+	@cd web && php -S localhost:3000

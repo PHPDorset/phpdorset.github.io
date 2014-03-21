@@ -14,4 +14,16 @@ $app->get('/', function() use($app) {
     ));
 });
 
+$app->get('/sponsors', function() use($app) { 
+    return $app['twig']->render('master.twig', array(
+        'main_content' => 'sponsors.twig'
+    ));
+});
+
+$app->get('/contact', function() use($app) { 
+    return $app['twig']->render('master.twig', array(
+        'main_content' => 'contact.twig'
+    ));
+});
+
 $app->run();

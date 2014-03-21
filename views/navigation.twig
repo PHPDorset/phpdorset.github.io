@@ -2,9 +2,9 @@
                 <div class="inner">
                     <h3 class="masthead-brand">PHP Dorset</h3>
                     <ul class="nav masthead-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/sponsors">Sponsors</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li {% if app.current_url == '/' %} class="active" {% endif %}><a href="/">Home</a></li>
+                        <li {% if app.current_url == '/sponsors' %} class="active" {% endif %}><a href="/sponsors">Sponsors</a></li>
+                        <li {% if app.current_url == '/contact' %} class="active" {% endif %}><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
             </div>

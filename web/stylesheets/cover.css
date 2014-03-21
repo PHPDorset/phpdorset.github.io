@@ -64,12 +64,32 @@ p.event-location {
 }
 
 /*
+ * Sponsors
+ */
+ h3.digital {
+    font-family: "minecraftiaregular", "Open Sans", sans-serif;
+ }
+
+ div.sponsor {
+    padding-bottom: 25px;
+ }
+
+/*
+ * Contact
+ */
+ div.contact-list {
+    font-size:20px;
+    text-align: left;
+ }
+
+/*
  * Header
  */
 .masthead-brand {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: "minecraftiaregular", "Open Sans", sans-serif;
+    text-transform:uppercase;
 }
 
 .masthead-nav > li {

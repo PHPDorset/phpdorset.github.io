@@ -11,17 +11,21 @@ include_once __DIR__ . '/PhpDorsetSilexTest.php';
 /**
  * Class HomePageTest
  */
-class ContactPageTest extends PhpDorsetSilexTest {
+class ContactPageTest extends PhpDorsetSilexTest
+{
 
     public function testContactPageResponseIs200()
     {
+        $this->app['current_url'] = '/contact';
         $client = $this->createClient();
         $crawler = $client->request('GET', '/contact');
 
         $this->assertTrue($client->getResponse()->isOk());
     }
 
-    public function testContactPageHasIrcChannel() {
+    public function testContactPageHasIrcChannel()
+    {
+        $this->app['current_url'] = '/contact';
         $client = $this->createClient();
         $crawler = $client->request('GET', '/contact');
 

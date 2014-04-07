@@ -11,7 +11,8 @@ use Silex\WebTestCase;
 /**
  * Class PhpDorsetSilexTest
  */
-abstract class PhpDorsetSilexTest extends WebTestCase {
+abstract class PhpDorsetSilexTest extends WebTestCase
+{
 
     public function createApplication()
     {

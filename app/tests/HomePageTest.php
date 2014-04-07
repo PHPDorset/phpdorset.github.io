@@ -11,10 +11,12 @@ include_once __DIR__ . '/PhpDorsetSilexTest.php';
 /**
  * Class HomePageTest
  */
-class HomePageTest extends PhpDorsetSilexTest {
+class HomePageTest extends PhpDorsetSilexTest
+{
 
     public function testHomePageResponseIs200()
     {
+		$this->app['current_url'] = '/';
         $client = $this->createClient();
         $crawler = $client->request('GET', '/');
 

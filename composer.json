@@ -1,5 +1,6 @@
   {
-    "name": "phpdorset",
+    "name": "phpdorset/phpdorset",
+    "description": "The PHP Dorset Website",
     "require": {
         "php": ">=5.3.0",
         "silex/silex": "~1.1",

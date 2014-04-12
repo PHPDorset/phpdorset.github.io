@@ -24,10 +24,8 @@ $app->get(
     '/',
     function () use ($app) {
         return $app['twig']->render(
-            'master.twig',
-            array(
-                'main_content' => 'homepage.twig'
-            )
+            'homepage.twig',
+            array()
         );
     }
 );
@@ -36,10 +34,8 @@ $app->get(
     '/sponsors',
     function () use ($app) {
         return $app['twig']->render(
-            'master.twig',
-            array(
-                'main_content' => 'sponsors.twig'
-            )
+            'sponsors.twig',
+            array()
         );
     }
 );
@@ -48,10 +44,8 @@ $app->get(
     '/contact',
     function () use ($app) {
         return $app['twig']->render(
-            'master.twig',
-            array(
-                'main_content' => 'contact.twig'
-            )
+            'contact.twig',
+            array()
         );
     }
 );

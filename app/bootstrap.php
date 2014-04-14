@@ -40,6 +40,17 @@ $app->get(
     }
 );
 
+
+$app->get(
+    '/join',
+    function () use ($app) {
+        return $app['twig']->render(
+            'join.twig',
+            array()
+        );
+    }
+);
+
 $app->get(
     '/contact',
     function () use ($app) {

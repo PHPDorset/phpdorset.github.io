@@ -50,4 +50,8 @@ $app->get(
     }
 );
 
+$app->get('/about', function () use ($app) {
+    return $app['twig']->render('about.twig');
+});
+
 return $app;

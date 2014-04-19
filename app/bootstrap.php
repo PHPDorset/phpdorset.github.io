@@ -54,4 +54,33 @@ $app->get('/about', function () use ($app) {
     return $app['twig']->render('about.twig');
 });
 
+$app->get(
+    '/talks/{year}/{month}',
+    function ($year,$month) use ($app) {
+
+        // $json = file_get_contents("/presentations/{$year}/{$month}/cues.json");
+        // $cues = json_decode($json,true);
+
+        $cues = array(
+            2 => 3,
+            3 => 7,
+            4 => 10,
+            5 => 27,
+            6 => 39,
+            7 => 47,
+            8 => 81   
+        );
+
+        $pdf_url = "/presentations/{$year}/{$month}/talk.pdf";
+
+        return $app['twig']->render(
+            'talk.twig',
+            array(
+                'pdf_url' => $pdf_url,
+                'cues' => $cues
+            )
+        );
+    }
+);
+
 return $app;

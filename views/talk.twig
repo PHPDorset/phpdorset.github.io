@@ -1,0 +1,67 @@
+{% include 'header.twig' %}
+
+<script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+ 
+<script>
+    // ensure the web page (DOM) has loaded
+    document.addEventListener("DOMContentLoaded", function () {
+
+    // Create a popcorn instance by calling the Vimeo player plugin
+    var video = Popcorn.vimeo(
+    '#video',
+    'http://player.vimeo.com/video/91962484');
+
+    {% for cue in cues %}
+
+     video.cue( {{cue}}, function() {
+        renderPage({{loop.index}});
+    });
+
+    {% endfor %}
+
+    // play the video right away
+    video.play();
+
+    }, false);
+
+    var url = '{{ pdf_url }}';
+
+</script>
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            {% include 'navigation.twig' %}
+
+        </div>
+
+        <div id="media_holder" class="clearfix">
+
+            <div id="video_wrapper">
+
+                <div id="image_holder"><img src="/images/logo-transparent.png"/></div>
+
+                <div id="video"></div>
+
+            </div>
+
+            <canvas id="presentation"></canvas>
+
+        </div>
+
+        <div class="cover-container">
+            {% include 'mast_foot.twig' %}
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="http://raw.github.com/mozilla/pdf.js/gh-pages/build/pdf.js"></script>
+<script src="/scripts/pdf_config.js"></script>
+
+{% include 'footer.twig' %}
+   

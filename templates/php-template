@@ -1,0 +1,22 @@
+# Rewrite for content.
+
+if (!-d $request_filename) {
+    rewrite ^/(.+)/$ /$1 permanent;
+}
+
+location ~* \.php$ {
+    # Server PHP config.
+    
+    fastcgi_pass                    {{ fcgi_pass }};
+    fastcgi_index                   index.php;
+    fastcgi_split_path_info         ^(.+\.php)(.*)$;
+
+    # Typical vars in here, nothing interesting.
+    include                         /etc/nginx/fastcgi_params;
+    fastcgi_param                   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
+
+location ~ /\.ht {
+    # Hells no, we usin nginx up in this mutha. (deny .htaccess)
+    deny all;
+}

@@ -1,0 +1,91 @@
+---
+- hosts: vagrant
+  user: vagrant
+  sudo: yes
+  vars:
+    - fcgi_pass: unix:/var/run/php5-fpm.sock
+  tasks:
+
+    - name: Set Manchester Deb Repos
+      shell: sed -i -e 's/us.archive.ubuntu.com/mirrors.manchester.m247.com/g' /etc/apt/sources.list
+
+    - name: update apt cache
+      apt: update_cache=yes
+
+    - name: install Python Software Properties
+      apt: pkg=python-software-properties state=latest
+
+    - name: Import Ondrej PHP PPA
+      command: add-apt-repository -y ppa:ondrej/php5
+
+    - name: Import Nginx Stable PPA
+      command: add-apt-repository -y ppa:nginx/stable
+
+    - name: install packages
+      apt: pkg={{ item }} state=latest
+      with_items:
+          - unzip
+          - vim
+          - nginx
+          - memcached
+          - postgresql
+          - libpq-dev
+          - python-psycopg2
+          - htop
+          - curl
+
+    - name: start Postgres service
+      service: name=postgresql state=started
+
+    - name: setup empty database
+      postgresql_db: name=phpdorset state=present
+      sudo_user: postgres
+      
+    - name: install PHP
+      apt: pkg={{ item }} state=latest force=true
+      with_items:
+        - php5
+        - php5-cli
+        - php5-mysql
+        - php5-curl
+        - php5-gd
+        - php5-sqlite
+        - php5-xmlrpc
+        - php5-imagick
+        - php5-xcache
+        - php5-mysql
+        - php5-fpm
+        - php5-memcached
+
+    - name: Install Composer PHP Package Manager
+      shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin creates=/usr/bin/composer
+
+    - name: Setup Composer PHP Package Manager Permissions
+      shell: mv /usr/bin/composer.phar /usr/bin/composer && chmod a+x /usr/bin/composer creates=/usr/bin/composer
+
+    - name: put vagrant user in www-data group
+      user: name=vagrant groups=www-data append=yes
+
+    - name: Create Nginx Template directory
+      file: dest=/etc/nginx/templates state=directory
+
+    - name: Create Nginx Log Directory
+      file: dest=/var/log/nginx state=directory
+
+    - name: Copy PHP Nginx Config
+      template: src={{ phpTemplatePath }} dest="/etc/nginx/templates/php-template"
+
+    - name: copy virtual host setup over
+      template: src={{ vhostTemplatePath }} dest=/etc/nginx/sites-available/
+
+    - name: activate virtual host symliknk
+      file: src=/etc/nginx/sites-available/vhost dest=/etc/nginx/sites-enabled/vhost state=link
+
+    - name: deactivate default vhost symlink
+      file: path=/etc/nginx/sites-enabled/default state=absent
+
+    - name: ensure PHP FPM is running
+      service: name=php5-fpm state=restarted
+
+    - name: ensure Nginx is running
+      service: name=nginx state=restarted

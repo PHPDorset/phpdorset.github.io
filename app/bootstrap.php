@@ -12,12 +12,30 @@ $app = new Silex\Application();
 
 // add the current url to the app object.
 $app['current_url'] = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : null;
+$app['debug'] = true;
 
 $app->register(
     new Silex\Provider\TwigServiceProvider(),
     array(
         'twig.path' => __DIR__ . '/../views',
     )
+);
+
+$app->register(new Silex\Provider\ServiceControllerServiceProvider);
+
+$app['presentation.controller'] = $app->share(
+    function () use ($app) {
+        return new PhpDorset\Presentation\PresentationController(
+            new PhpDorset\Presentation\PresentationRepository(
+                __DIR__ . '/database/cues.json'
+            )
+        );
+    }
+);
+
+$app->get(
+    '/api/v1/presentations/{year}/{month}/cues.json',
+    "presentation.controller:fetchCuesByYearAndMonth"
 );
 
 $app->get(
@@ -50,26 +68,19 @@ $app->get(
     }
 );
 
-$app->get('/about', function () use ($app) {
-    return $app['twig']->render('about.twig');
-});
+$app->get(
+    '/about',
+    function () use ($app) {
+        return $app['twig']->render('about.twig');
+    }
+);
 
 $app->get(
     '/talks/{year}/{month}',
-    function ($year,$month) use ($app) {
+    function ($year, $month) use ($app) {
 
         // $json = file_get_contents("/presentations/{$year}/{$month}/cues.json");
         // $cues = json_decode($json,true);
-
-        $cues = array(
-            2 => 3,
-            3 => 7,
-            4 => 10,
-            5 => 27,
-            6 => 39,
-            7 => 47,
-            8 => 81   
-        );
 
         $pdf_url = "/presentations/{$year}/{$month}/talk.pdf";
 
@@ -77,7 +88,7 @@ $app->get(
             'talk.twig',
             array(
                 'pdf_url' => $pdf_url,
-                'cues' => $cues
+                'cues'    => $cues
             )
         );
     }

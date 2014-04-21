@@ -9,7 +9,7 @@
 namespace PhpDorset\Presentation;
 
 /**
- * Class TalkRepository
+ * Class PresentationRepository
  * @package PhpDorset\Presentation
  */
 class PresentationRepository

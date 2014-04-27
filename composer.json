@@ -6,6 +6,9 @@
         "silex/silex": "~1.1",
         "twig/twig": ">=1.8,<2.0-dev"
     },
+    "autoload": {
+        "psr-4": {"PhpDorset\\": "app/src/PhpDorset"}
+    },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
         "symfony/browser-kit": ">=2.3,<2.4-dev",

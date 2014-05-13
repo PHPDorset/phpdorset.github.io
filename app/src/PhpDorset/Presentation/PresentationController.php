@@ -21,13 +21,15 @@ class PresentationController
      * @var PresentationRepository
      */
     protected $repository;
+    private $app;
 
     /**
      * @param PresentationRepository $eventRepository
      */
-    public function __construct(PresentationRepository $eventRepository)
+    public function __construct(PresentationRepository $eventRepository, $app)
     {
         $this->repository = $eventRepository;
+        $this->_app = $app;
     }
 
     /**
@@ -38,7 +40,17 @@ class PresentationController
     public function fetchCuesByYearAndMonth($year, $month)
     {
         $cues = $this->repository->fetchCues($year, $month);
-        return new JsonResponse($cues);
+        $pdf_url = "/presentations/{$year}_{$month}.pdf";
+
+        return $this->_app['twig']->render(
+            'talk.twig',
+            array(
+                'pdf_url' => $pdf_url,
+                'cues'    => $cues
+            )
+        );
+
+
     }
 
     /**

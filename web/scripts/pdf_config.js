@@ -1,7 +1,7 @@
 
 // Disable workers to avoid yet another cross-origin issue (workers need the URL of
 // the script to be loaded, and currently do not allow cross-origin scripts)
-PDFJS.disableWorker = true;
+PDFJS.disableWorker = false;
 
 var pdfDoc = null,
     pageNum = 1,

@@ -28,7 +28,7 @@ $app['presentation.controller'] = $app->share(
         return new PhpDorset\Presentation\PresentationController(
             new PhpDorset\Presentation\PresentationRepository(
                 __DIR__ . '/database/cues.json'
-            )
+            ), $app
         );
     }
 );
@@ -77,21 +77,7 @@ $app->get(
 
 $app->get(
     '/talks/{year}/{month}',
-    function ($year, $month) use ($app) {
-
-        // $json = file_get_contents("/presentations/{$year}/{$month}/cues.json");
-        // $cues = json_decode($json,true);
-
-        $pdf_url = "/presentations/{$year}/{$month}/talk.pdf";
-
-        return $app['twig']->render(
-            'talk.twig',
-            array(
-                'pdf_url' => $pdf_url,
-                'cues'    => $cues
-            )
-        );
-    }
+    [$app['presentation.controller'], 'fetchCuesByYearAndMonth']
 );
 
 return $app;

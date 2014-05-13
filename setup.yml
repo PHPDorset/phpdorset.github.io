@@ -3,7 +3,7 @@
   user: vagrant
   sudo: yes
   vars:
-    - fcgi_pass: unix:/var/run/php5-fpm.sock
+    - fcgi_pass: 127.0.0.1:9000
   tasks:
 
     - name: Set Manchester Deb Repos
@@ -80,6 +80,9 @@
 
     - name: activate virtual host symliknk
       file: src=/etc/nginx/sites-available/vhost dest=/etc/nginx/sites-enabled/vhost state=link
+
+    - name: Set nginx to use fcgi_pass var
+      lineinfile: dest=/etc/php5/fpm/pool.d/www.conf regexp='^listen = /var/run/php5-fpm.sock'  line="listen = {{ fcgi_pass }}"
 
     - name: deactivate default vhost symlink
       file: path=/etc/nginx/sites-enabled/default state=absent

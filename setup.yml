@@ -16,7 +16,7 @@
       apt: pkg=python-software-properties state=latest
 
     - name: Import Ondrej PHP PPA
-      command: add-apt-repository -y ppa:ondrej/php5
+      command: add-apt-repository -y ppa:ondrej/php5 creates=/etc/apt/sources.list.d/ondrej-php5-raring.list
 
     - name: Import Nginx Stable PPA
       command: add-apt-repository -y ppa:nginx/stable

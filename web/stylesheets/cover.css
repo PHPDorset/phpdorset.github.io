@@ -131,10 +131,14 @@ p.event-location {
  */
 
 canvas{
-    position:absolute;
-  bottom:0;
-  right:0;
+    position:relative;
+    with:100%;
+
+}
+
+#canvas_holder{
     width:61.80%;
+    float:left;
 }
 
 #media_holder{

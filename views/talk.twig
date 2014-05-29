@@ -3,6 +3,7 @@
 <script src="/scripts/popcorn-complete.min.js"></script>
  
 <script>
+
     // ensure the web page (DOM) has loaded
     document.addEventListener("DOMContentLoaded", function () {
 
@@ -11,10 +12,10 @@
     '#video',
     'http://player.vimeo.com/video/91962484');
 
-    {% for cue in cues %}
+    {% for key, cue in cues %}
 
-     video.cue( {{cue*60}}, function() {
-        renderPage({{loop.index}});
+     video.cue( {{cue}}, function(key) {
+        renderPage({{key}});
     });
 
     {% endfor %}
@@ -48,7 +49,9 @@
 
             </div>
 
-            <canvas id="presentation"></canvas>
+            <div id="canvas_holder">
+                <canvas id="presentation"></canvas>
+            </div>
 
         </div>
 
@@ -62,6 +65,7 @@
 
 <script type="text/javascript" src="/scripts/pdf.js"></script>
 <script src="/scripts/pdf_config.js"></script>
+
 
 {% include 'footer.twig' %}
    

@@ -39,7 +39,11 @@ class PresentationController
      */
     public function fetchCuesByYearAndMonth($year, $month)
     {
-        $cues = $this->repository->fetchCues($year, $month);
+        $cues = array_map(function($cue){
+            list($mins,$secs) = explode(':',$cue);
+            return ($mins*60)+($secs);
+        }, $this->repository->fetchCues($year, $month));
+
         $pdf_url = "/presentations/{$year}_{$month}.pdf";
 
         return $this->_app['twig']->render(

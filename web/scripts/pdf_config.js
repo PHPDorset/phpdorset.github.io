@@ -27,6 +27,26 @@ function renderPage(num) {
   });
 }
 
+//
+// Go to previous page
+//
+function goPrevious() {
+    if (pageNum <= 1)
+        return;
+    pageNum--;
+    renderPage(pageNum);
+}
+
+//
+// Go to next page
+//
+function goNext() {
+    if (pageNum >= pdfDoc.numPages)
+        return;
+    pageNum++;
+    renderPage(pageNum);
+}
+
 // Asynchronously download PDF as an ArrayBuffer
 PDFJS.getDocument(url).then(function getPdfHelloWorld(_pdfDoc) {
   pdfDoc = _pdfDoc;

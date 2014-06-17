@@ -23,6 +23,7 @@ $app->register(
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider);
 
+
 $app['presentation.controller'] = $app->share(
     function () use ($app) {
         return new PhpDorset\Presentation\PresentationController(

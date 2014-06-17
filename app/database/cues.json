@@ -58,7 +58,11 @@
                 "52" : "20:17",
                 "53" : "21:07",
                 "54" : "21:53"
-            }
+            },
+            "video" : "http://player.vimeo.com/video/91962484"
+        },
+        "june" : {
+            "video" : "http://player.vimeo.com/video/97645043"
         }
     }
 }

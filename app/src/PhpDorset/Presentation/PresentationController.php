@@ -39,22 +39,39 @@ class PresentationController
      */
     public function fetchCuesByYearAndMonth($year, $month)
     {
+        $errors = [];
+
         $cues = array_map(function($cue){
             list($mins,$secs) = explode(':',$cue);
             return ($mins*60)+($secs);
         }, $this->repository->fetchCues($year, $month));
+//        if(!$cues)
+//        {
+//            $errors[] = 'Could not find any video cues for this talk';
+//        }
+
+
+        $video_url = $this->repository->fetchVideo($year, $month);
+        if(!empty($video_url))
+        {
+            $errors[] = 'Could not find a video for this talk';
+        }
 
         $pdf_url = "/presentations/{$year}_{$month}.pdf";
+//        if(!file_exists($this->_app->url($pdf_url)))
+//        {
+//            $errors[] = 'Could not find a presentation for this talk';
+//        }
 
         return $this->_app['twig']->render(
             'talk.twig',
             array(
+                'video_url' => $video_url,
                 'pdf_url' => $pdf_url,
-                'cues'    => $cues
+                'cues'    => $cues,
+                'errors'  => $errors
             )
         );
-
-
     }
 
     /**

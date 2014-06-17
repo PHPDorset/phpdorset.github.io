@@ -37,6 +37,17 @@ class PresentationRepository
         return $this->cues[$year][$month]['cues'];
     }
 
+
+    /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchVideo($year, $month)
+    {
+        return $this->cues[$year][$month]['video'];
+    }
+
     /**
      * @return array
      */

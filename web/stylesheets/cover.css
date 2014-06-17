@@ -132,8 +132,7 @@ p.event-location {
 
 canvas{
     position:relative;
-    with:100%;
-
+    width:100%;
 }
 
 #canvas_holder{
@@ -173,6 +172,17 @@ canvas{
   width:100%;
 }
 
+.button{
+    cursor: pointer;
+    padding:5px;
+    border-radius:4px;
+    -web-border-radius:4px;
+}
+
+.button:hover{
+    background:#45859f;
+    text-decoration:none;
+}
 
 /*
  * Header

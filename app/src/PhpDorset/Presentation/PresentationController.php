@@ -52,7 +52,7 @@ class PresentationController
 
 
         $video_url = $this->repository->fetchVideo($year, $month);
-        if(!empty($video_url))
+        if(empty($video_url))
         {
             $errors[] = 'Could not find a video for this talk';
         }

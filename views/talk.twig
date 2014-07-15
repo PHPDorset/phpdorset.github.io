@@ -54,6 +54,9 @@
                 </div>
 
                 <div id="video"></div>
+                <br/>
+                <a id="prev" class="button" onclick="goPrevious()">Previous Slide</a> |
+                <a id="next" class="button" onclick="goNext()">Next Slide</a>
 
             </div>
 
@@ -62,8 +65,7 @@
             </div>
         </div>
 
-            <a id="prev" class="button" onclick="goPrevious()">Previous Slide</a> |
-            <a id="next" class="button" onclick="goNext()">Next Slide</a>
+
 
         {% else %}
 
@@ -79,8 +81,9 @@
 
         {% endif %}
 
+
         <div class="cover-container">
-            {% include 'mast_foot.twig' %}
+
         </div>
 
     </div>

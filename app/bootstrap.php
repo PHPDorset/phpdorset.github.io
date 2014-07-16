@@ -81,4 +81,12 @@ $app->get(
     [$app['presentation.controller'], 'fetchCuesByYearAndMonth']
 );
 
+$app->get(
+    '/talks',
+    function () use ($app) {
+        return $app['twig']->render('talk_list.twig');
+    }
+);
+
+
 return $app;

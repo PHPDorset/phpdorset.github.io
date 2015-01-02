@@ -12,7 +12,6 @@ $app = new Silex\Application();
 
 // add the current url to the app object.
 $app['current_url'] = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : null;
-$app['debug'] = true;
 
 $app->register(
     new Silex\Provider\TwigServiceProvider(),

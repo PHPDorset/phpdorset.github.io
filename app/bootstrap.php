@@ -49,29 +49,12 @@ $app->get(
 );
 
 $app->get(
-    '/sponsors',
+    '/get-involved',
     function () use ($app) {
         return $app['twig']->render(
-            'sponsors.twig',
+            'get-involved.twig',
             array()
         );
-    }
-);
-
-$app->get(
-    '/contact',
-    function () use ($app) {
-        return $app['twig']->render(
-            'contact.twig',
-            array()
-        );
-    }
-);
-
-$app->get(
-    '/about',
-    function () use ($app) {
-        return $app['twig']->render('about.twig');
     }
 );
 
@@ -86,6 +69,7 @@ $app->get(
         return $app['twig']->render('talk_list.twig');
     }
 );
+
 
 
 return $app;

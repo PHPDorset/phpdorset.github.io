@@ -58,12 +58,15 @@
             "video" : "http://player.vimeo.com/video/91962484"
         },
         "may" : {
+            "cues": {},
             "video" : "http://player.vimeo.com/video/96925133"
         },
         "june" : {
+            "cues": {},
             "video" : "http://player.vimeo.com/video/97645043"
         },
         "july" : {
+            "cues": {},
             "video" : "http://player.vimeo.com/video/100841860"
         }
     }

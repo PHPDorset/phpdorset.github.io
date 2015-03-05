@@ -1,100 +1,103 @@
-{% include 'header.twig' %}
+{% extends "master.twig" %}
 
-<script src="/scripts/popcorn-complete.min.js"></script>
+{% block extra_headers %}
 
-{% if(errors is empty) %}
+    <script src="/scripts/popcorn-complete.min.js"></script>
 
-<script>
+    {% if(errors is empty) %}
 
-    // ensure the web page (DOM) has loaded
-    document.addEventListener("DOMContentLoaded", function () {
+        <script>
 
-    // Create a popcorn instance by calling the Vimeo player plugin
-    var video = Popcorn.vimeo(
-    '#video',
-    '{{ video_url }}');
+            // ensure the web page (DOM) has loaded
+            document.addEventListener("DOMContentLoaded", function () {
 
-    {% for key, cue in cues %}
+                // Create a popcorn instance by calling the Vimeo player plugin
+                var video = Popcorn.vimeo(
+                        '#video',
+                        '{{ video_url }}');
 
-     video.cue( {{cue}}, function(key) {
-        renderPage({{key}});
-    });
+                {% for key, cue in cues %}
 
-    {% endfor %}
+                video.cue( {{cue}}, function(key) {
+                    renderPage({{key}});
+                });
 
-    // play the video right away
-    video.play();
+                {% endfor %}
 
-    }, false);
+                // play the video right away
+                video.play();
 
-    var url = '{{ pdf_url }}';
+            }, false);
 
-</script>
+            var url = '{{ pdf_url }}';
 
-{% endif %}
+        </script>
 
-<div class="site-wrapper">
+    {% endif %}
 
-    <div class="site-wrapper-inner">
+{% endblock %}
 
-        <div class="cover-container">
+{% block main_content %}
 
-            {% include 'navigation.twig' %}
+
+
+    <div id="strapline">
+        <div class="wrapper">
+
+            <p>
+
+            </p>
 
         </div>
+    </div>
 
         {% if(errors is empty) %}
 
-        <div id="media_holder" class="clearfix">
+            <div id="media_holder" class="clearfix">
 
-            <div id="video_wrapper">
+                <div id="video_wrapper">
 
-                <div id="image_holder"><img src="/images/logo-transparent.png"/>
+
+                    <div id="video"></div>
+
+                    <a id="prev" class="btn" onclick="goPrevious()">Previous Slide</a>
+                    <a id="next" class="btn" onclick="goNext()">Next Slide</a>
 
                 </div>
 
-                <div id="video"></div>
-                <br/>
-                <a id="prev" class="button" onclick="goPrevious()">Previous Slide</a> |
-                <a id="next" class="button" onclick="goNext()">Next Slide</a>
-
+                <div id="canvas_holder">
+                    <canvas id="presentation"></canvas>
+                </div>
             </div>
-
-            <div id="canvas_holder">
-                <canvas id="presentation"></canvas>
-            </div>
-        </div>
 
 
 
         {% else %}
 
-            <h3>Whoops!</h3>
+            <h2>Whoops!</h2>
             <h4>This talk could not be displayed for the following reasons</h4>
             <ul>
-            {% for error in errors %}
-                <li>
-                    {{ error }}
-                </li>
-            {% endfor %}
+                {% for error in errors %}
+                    <li>
+                        {{ error }}
+                    </li>
+                {% endfor %}
             </ul>
 
         {% endif %}
 
 
-        <div class="cover-container">
-
-        </div>
-
-    </div>
-
-</div>
-
-{% if(errors is empty) %}
-<script type="text/javascript" src="/scripts/pdf.js"></script>
-<script src="/scripts/pdf_config.js"></script>
-{% endif %}
 
 
-{% include 'footer.twig' %}
-   
+{% endblock %}
+
+{% block extra_scripts %}
+
+
+    {% if(errors is empty) %}
+        <script type="text/javascript" src="/scripts/pdf.js"></script>
+        <script src="/scripts/pdf_config.js"></script>
+    {% endif %}
+
+
+{% endblock %}

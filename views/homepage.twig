@@ -1,29 +1,102 @@
 {% extends "master.twig" %}
 
 {% block main_content %}
-            <div class="inner cover">
-                <p class="lead">
-                    <img id="phpdorset-logo" src="/images/logo-transparent.png">
+
+    <div id="strapline">
+        <div class="wrapper">
+
+                <p>
+                    PHP Dorset is a local user group, open to all. Monthly talk and meet on the first monday of the month in Westbourne, Dorset.
                 </p>
 
-                <h2>Next event</h2>
+        </div>
+    </div>
 
-                <p class="event-location">
-                    <a href="http://bit.ly/1yH7neu">
-                        Mon March 2<sup>nd</sup> 2015 6:05pm<br>
-                        <strong>Chris Sherry: Wordpress for the Modern PHP Developer</strong>
-                        Tickets here<br>
-                        Westbourne Library,<br>
-                        Alum Chine Road,<br>
-                        BH4 8DX
-                    </a>
-                </p>
-                <p class="event-location">
-                    And then 7:00pm<br>
-                    <strong style="font-size:18px;line-height:35px">Camden Bar - Westbourne for PHPDorset special food and drink deals</strong><br>
-                    46 Seamoor Road <br>
-                    Bournemouth<br>
-                    BH4 9AS
-                </p>
+    <div class="banner clearfix">
+
+        <div class="wrapper">
+
+            <div class="info rightalign">
+                <h3>Last Event</h3>
+                <p>Wordpress for the Modern PHP Developer<br/>
+                    Chris Sherry<br/>
+                    2nd March 2015</p>
+                <a class="btn" href="talks/2015/march">Watch the talk</a>
             </div>
+
+            <div class="image" style="background-image: url('images/banners/march15talk.jpg');"></div>
+
+        </div>
+
+    </div>
+
+    <div class="banner clearfix">
+
+        <div class="wrapper">
+
+            <div class="image" style="background-image: url('images/banners/talks.jpg');"></div>
+
+            <div class="info">
+                <h2>Next Event</h2>
+                <p>Something about coding<br/>
+                    Someones name<br/>
+                    6th April 2015</p>
+                <a class="btn" href="eventbrite">Get a ticket</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="banner clearfix" id="southcoast">
+
+        <div class="wrapper">
+
+            <div class="info">
+                <h4>Upcoming Conference</h4>
+                <p>PHP South Coast<br/>
+                    Saturday 18th July 2015
+                <br/><br/></p>
+
+                <a class="btn" href="http://phpsouthcoast.co.uk">Find out more</a>
+            </div>
+
+            <div class="image" style="background-image: url('images/banners/southcoast.jpg');">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="sponsors">
+
+        <div class="wrapper">
+
+            <h5>Sponsors</h5>
+
+            <div>
+                <h6>O'Reilly User Group Program</h6>
+                <p>PHP Dorset is proud to be part of the O'Reilly User Group Program, which means our members can benefit from discounts (40% off printed books, 50% off e-books) and other goodies!</p>
+
+            </div>
+
+            <div>
+                <h6>JetBrains PhpStorm</h6>
+                <p>The editor that actually gets your code and deeply understands its structure, supporting PHP 5.3, 5.4 & 5.5 for modern and legacy projects. Provides the best code autocompletion, refactorings, on-the-fly error prevention, supports language mixtures and more.</p>
+
+            </div>
+
+            <div>
+                <h6>Camden Bar Westbourne</h6>
+                <p>Our current post-talk spot. Camden Bar give PHPDorset members special deals on food and drink, drop us a line to find out more.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 {% endblock %}

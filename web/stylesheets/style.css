@@ -1,0 +1,295 @@
+body {
+    background-color: #3d7b94;
+    color:#e3ebef;
+    text-align:center;
+}
+
+h1{
+    display:none;
+}
+
+#masthead{
+    width:100%;
+    height:100px;
+    background: #3d7b94;
+}
+
+#masthead .phpdorset-logo{
+    display:block;
+    width:160px;
+    float:left;
+}
+
+#masthead .phpdorset-logo img{
+    width:100%;
+}
+
+#masthead ul{
+    float:right;
+    margin-top:50px;
+}
+
+#masthead ul.navigation li{
+    display:inline-block;
+}
+
+#masthead ul.navigation li a{
+    font-family: "minecraftiaregular", "Open Sans", sans-serif;
+    text-transform: uppercase;
+    display:block;
+    color: #e3ebef;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px 20px;
+    margin:5px;
+}
+
+#masthead ul.navigation li a:hover, #masthead ul.navigation li.active a{
+    background: #14536B;
+}
+
+.wrapper{
+    max-width:1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#strapline {
+    background: #14536B;
+    color:#e3ebef;
+    padding:25px;
+    border-bottom:2px solid #103c50;
+}
+
+#strapline p{
+    padding:0;
+    margin:0;
+}
+
+#main_content{
+    background: #226794;
+}
+
+.inner{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+.inner h2{
+    margin-bottom:20px;
+}
+
+.banner{
+    width:100%;
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+}
+
+.clearfix:after{content: ".";display:block;height:1%;clear:both;visibility:hidden;margin:0;line-height:0.1em;}
+
+.banner .wrapper > div {
+    float:left;
+    padding:0;
+    margin:0;
+    height:200px;
+}
+
+.banner .wrapper .image{
+    background-position:center;
+    background-repeat:no-repeat;
+    width:50%;
+    background-size: 100%;
+    height:200px;
+    margin:0;
+    padding:0;
+}
+
+.banner:nth-child(2){
+    background-color:#137B3A;
+    text-align:right;
+}
+
+.banner:nth-child(3){
+    background-color:#AA801A;
+    text-align:left;
+}
+
+.banner:nth-child(4){
+    background-color:#AA331A;
+    text-align:right;
+}
+
+
+.banner .wrapper .info{
+    padding:20px;
+    width:39%;
+}
+
+
+a.btn{
+    display:inline-block;
+    margin-top:20px;
+    background: #14536B;
+    border-radius:4px;
+    padding:10px;
+    color:#e3ebef;
+    border-bottom:2px solid #0f3040;
+}
+
+a.btn:hover{
+    border-bottom:0;
+    margin-top:22px;
+    margin-bottom:-2px;
+    color:white;
+    background: #104155;
+}
+
+h2,h3,h4{
+    margin: 0 0 5px;
+    font-size:24px;
+}
+
+
+#sponsors{
+    background-color: #192b37;
+    color: #878c8f;
+}
+
+#sponsors h5{
+    font-size:22px;
+    padding-top:50px;
+    margin:0 0 30px;
+}
+
+#sponsors h6{
+    font-size:18px;
+}
+
+#sponsors .wrapper > div {
+    width:33%;
+    padding-left:3%;
+    padding-right:3%;
+    padding-bottom:40px;
+    padding-top:10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer{
+    background-color: #0d121a;
+    color: #365776;
+    height:150px;
+
+}
+
+#footer ul{
+    padding-top:50px;
+}
+
+#footer ul li{
+    list-style:none;
+    display:inline-block;
+}
+
+#footer ul li a{
+    border-radius:10px;
+    padding: 10px 10px 10px;
+    margin:5px;
+
+}
+
+#footer ul li a:hover{
+    background-color: #192b37;
+    color:#e3ebef;
+}
+
+.pod{
+    width:48%;
+    float:left;
+    padding:3%;
+    margin:1%;
+    min-height:250px;
+    background-color:#192B37;
+    border-top:6px solid #103c50;
+}
+
+.pod h3{
+    margin-bottom:10px;
+}
+
+.pod .btn{
+    margin-left:10px;
+    margin-right:10px;
+
+}
+
+ul.talk_list{
+
+}
+
+ul.talk_list li {
+    list-style:none;
+}
+
+ul.talk_list li a{
+    margin-bottom:10px;
+    padding:20px;
+    display:block;
+    text-decoration: none;
+    color: #e3ebef;
+    background-color:#192b37;
+    border-top:6px solid #103c50;
+}
+
+ul.talk_list li a:hover{
+    color:#e3ebef;
+}
+
+ul.talk_list li img{
+    border-radius:50%;
+    height:85px;
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+
+
+canvas{
+    position:relative;
+    width:100%;
+}
+
+#canvas_holder{
+    width:61.80%;
+    float:left;
+
+}
+
+#media_holder{
+    position:relative;
+}
+
+
+#media_holder #video_wrapper{
+    width:38.20%;
+    float:left;
+}
+
+#media_holder #video {
+    position: relative;
+    padding-bottom: 52%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+#media_holder #video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#media_holder #image_holder{
+    padding-left:25%;
+    padding-right:25%;
+}
+#media_holder #image_holder img{
+    width:100%;
+}

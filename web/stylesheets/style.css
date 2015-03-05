@@ -1,5 +1,5 @@
 body {
-    background-color: #3d7b94;
+    background-color: #0d121a;
     color:#e3ebef;
     text-align:center;
 }
@@ -16,12 +16,12 @@ h1{
 
 #masthead .phpdorset-logo{
     display:block;
-    width:160px;
+
     float:left;
 }
 
 #masthead .phpdorset-logo img{
-    width:100%;
+    width:160px;
 }
 
 #masthead ul{
@@ -222,7 +222,8 @@ h2,h3,h4{
 }
 
 ul.talk_list{
-
+    margin:0;
+    padding:0;
 }
 
 ul.talk_list li {
@@ -241,6 +242,7 @@ ul.talk_list li a{
 
 ul.talk_list li a:hover{
     color:#e3ebef;
+    background-color: #141d28;
 }
 
 ul.talk_list li img{
@@ -292,4 +294,48 @@ canvas{
 }
 #media_holder #image_holder img{
     width:100%;
+}
+
+
+
+@media only screen and (max-width : 800px) {
+
+    #sponsors .wrapper > div {
+        width: 100%;
+        float: none;
+    }
+
+    .banner .wrapper > div {
+        height: 220px;
+    }
+}
+@media only screen and (max-width : 600px) {
+    #masthead .phpdorset-logo{
+        width:100%;
+    }
+
+    .banner .wrapper .image {
+        background: none;
+        display: none;
+    }
+
+    .banner .wrapper .info {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #masthead ul{
+        float:none;
+        margin-top:0px;
+        display:block;
+    }
+
+    #masthead {
+        height: 155px;
+    }
+
+    .banner .wrapper > div {
+        height: 200px;
+    }
 }

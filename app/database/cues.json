@@ -152,7 +152,8 @@
             "speaker" : "Ollie Lawson",
             "title" : "Tales from inside an ISP",
             "avatar" : "/images/ollie.jpg",
-            "abstract" : "<p>In 2006 a book seller popularised a concept from the 50s that has revolutionised the arena we work in. Although not the inventors of this technology Amazon has made large-scale computing bigger, faster and cheaper. In this era of multi-billion dollar data centres and everything-as-a-service is there a future for having your own “iron”?</p><p>The commoditisation of enterprise class hardware and software has meant that small scale organisations can have large scale infrastructure. Listen to how you can use all the tools at your disposal (yes, even DevOps) to get that hosting bill down and performance and security up.</p>"
+            "abstract" : "<p>In 2006 a book seller popularised a concept from the 50s that has revolutionised the arena we work in. Although not the inventors of this technology Amazon has made large-scale computing bigger, faster and cheaper. In this era of multi-billion dollar data centres and everything-as-a-service is there a future for having your own “iron”?</p><p>The commoditisation of enterprise class hardware and software has meant that small scale organisations can have large scale infrastructure. Listen to how you can use all the tools at your disposal (yes, even DevOps) to get that hosting bill down and performance and security up.</p>",
+            "cues" : {}
         },
         "july" : {
             "speaker" : "Dave Baker",

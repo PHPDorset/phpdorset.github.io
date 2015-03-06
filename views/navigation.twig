@@ -1,12 +1,5 @@
-			<div class="masthead clearfix">
-                <div class="inner">
-                    <h3 class="masthead-brand">PHP Dorset</h3>
-                    <ul class="nav masthead-nav">
-                        <li {% if app.current_url == '/' %} class="active" {% endif %}><a href="/">Home</a></li>
-                        <li {% if app.current_url == '/about' %} class="active" {% endif %}><a href="/about">About</a></li>
-                        <li {% if app.current_url == '/sponsors' %} class="active" {% endif %}><a href="/sponsors">Sponsors</a></li>
-                        <li {% if app.current_url == '/talks' %} class="active" {% endif %}><a href="/talks">Talks</a></li>
-                        <li {% if app.current_url == '/contact' %} class="active" {% endif %}><a href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+<ul class="navigation">
+    <li {% if app.current_url == '/' %} class="active" {% endif %}><a href="/">Events</a></li>
+    <li {% if app.current_url == '/talks' %} class="active" {% endif %}><a href="/talks">Talks</a></li>
+    <li {% if app.current_url == '/get-involved' %} class="active" {% endif %}><a href="/get-involved">Get Involved</a></li>
+</ul>

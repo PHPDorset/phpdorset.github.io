@@ -204,6 +204,10 @@ h2,h3,h4{
     vertical-align: top;
 }
 
+#sponsors .wrapper > div p {
+    text-align: left;
+}
+
 #footer{
     background-color: #0d121a;
     color: #365776;
@@ -261,22 +265,25 @@ h2,h3,h4{
 
 .abstract{
     display:none;
+    background:#192B37;
+    border-bottom:2px solid #103c50;
 }
 
-.abstract > div{
+.abstract .wrapper > div{
     display:inline-block;
     padding:40px 10px 40px 10px;
     text-align:left;
+
 }
 
-.abstract .bio{
+.abstract .wrapper .bio{
     width:39%;
     vertical-align: top;
     text-align:center;
     font-size:18px;
 }
 
-.abstract .bio img{
+.abstract .wrapper .bio img{
     border-radius:50%;
     height:140px;
     margin-top:10px;
@@ -286,7 +293,7 @@ h2,h3,h4{
     margin-right:auto;
 }
 
-.abstract .text{
+.abstract .wrapper .text{
     vertical-align: top;
     font-size:15px;
     margin-left:auto;

@@ -60,6 +60,7 @@ class PresentationController
         $feedbackUrl = $this->repository->fetchFeedbackUrl($year, $month);
         $avatar = $this->repository->fetchAvatar($year, $month);
         $speaker = $this->repository->fetchSpeaker($year, $month);
+        $resources = $this->repository->fetchResources($year, $month);
 
         return $this->_app['twig']->render(
             'talk.twig',
@@ -75,6 +76,7 @@ class PresentationController
                 'video_url' => $video_url,
                 'pdf_url' => $pdf_url,
                 'cues'    => $cues,
+                'resources' => $resources,
                 'errors'  => $errors
             )
         );

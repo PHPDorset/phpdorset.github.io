@@ -100,6 +100,16 @@ class PresentationRepository
     }
 
     /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchResources($year, $month)
+    {
+        return $this->cues[$year][$month]['resources'];
+    }
+
+    /**
      * @return array
      */
     public function fetchAll()

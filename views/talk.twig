@@ -65,14 +65,16 @@
         </div>
     </div>
 
-    <div class="abstract wrapper">
-        <div class="bio">
-            <img src="{{ avatar }}"/>
+    <div class="abstract ">
+        <div class="wrapper">
+            <div class="bio">
+                <img src="{{ avatar }}"/>
 
-            {{ speaker }}
-        </div>
-        <div class="text">
-            {{ abstract|raw }}
+                {{ speaker }}
+            </div>
+            <div class="text">
+                {{ abstract|raw }}
+            </div>
         </div>
     </div>
 
@@ -98,18 +100,31 @@
                     <a class="btn" href="{{ feedbackUrl }}">Give feedback</a>
                 {% endif %}
 
-            </div>
 
-            <div id="canvas_holder">
-                <canvas id="presentation"></canvas>
-                {% if presentation %}
-                    <a id="prev" class="btn notmobile" onclick="goPrevious()">&leftarrow; Previous slide</a>
-                    <a id="next" class="btn notmobile" onclick="goNext()">Next slide &rightarrow;</a><br/><br/>
-                    {%  if cues|length > 0 %}
-                        <p class="notmobile">Slides for this talk are synced to the video</p>
-                    {% endif %}
+                {% if resources|length > 0 %}
+                    <br/> <br/>
+                    <h3>Resources</h3>
+                <p>
+                    {% for title, url in resources %}
+                        <a href="{{ url }}">{{ title }}</a><br/>
+                    {% endfor %}
+                </p>
                 {% endif %}
+
+
             </div>
+            {% if presentation %}
+                <div id="canvas_holder">
+                    <canvas id="presentation"></canvas>
+                    {% if presentation %}
+                        <a id="prev" class="btn notmobile" onclick="goPrevious()">&leftarrow; Previous slide</a>
+                        <a id="next" class="btn notmobile" onclick="goNext()">Next slide &rightarrow;</a><br/><br/>
+                        {%  if cues|length > 0 %}
+                            <p class="notmobile">Slides for this talk are synced to the video</p>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endif %}
         </div>
 
     {% else %}

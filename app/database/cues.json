@@ -3,9 +3,12 @@
         "march" : {
             "speaker" : "Chris Sherry",
             "title" : "WordPress for the modern PHP developer",
-            "avatar" : "https://pbs.twimg.com/profile_images/485030477086998529/OA2tXQgR_400x400.jpeg",
+            "avatar" : "/images/chris.jpeg",
             "abstract" : "<p>It powers 23% of the internet, so its more than likely you are maintaining a codebase built on Wordpress. Many of these projects have outgrown their humble beginnings as blogs or websites and are now highly customised web applications. However the modern tools we use as PHP developers to aid our development, particularly in teams, can be tricky to utilise with the popular blogging platform. </p><p>This technical talk will guide you through how to make the use of Composer, Git and other tools familiar to PHP developers within your Wordpress install - and help you take back control of your themes, plugins, database and environments in a growing application.</p>",
             "feedbackUrl" : "https://joind.in/13715",
+            "resources" : {
+                "Base Orchestration and Synchronization Helper" : "https://wearebase.com/about/blog/2015/deployment-database-and-asset-management/"
+            },
             "cues" : {
                 "1": "00:02",
                 "2": "00:04",
@@ -123,7 +126,7 @@
         "February" : {
             "speaker" : "Michael Cullum",
             "title" : "Getting off the island",
-            "avatar" : "https://media.licdn.com/mpr/mpr/shrink_120_120/p/1/005/08c/1e2/19c174b.jpg",
+            "avatar" : "/images/michaelc.jpg",
             "abstract" : "<p>There are many FOSS projects out there - such as phpBB, Drupal, Wordpress, MyBB and Joomla - that are web applications designed for end-users and have, due to a range of factors, become very isolated from the rest of the open source community, which can only be a bad thing. Many of these projects are beginning to change their philosophies, but there is a long way to go. We’ll look at how frameworks, libraries, and the PHP FIG can help these projects to 'get off the island' and how we can shift the focus from creating communities to integrating them.</p>",
             "cues" : {}
         }
@@ -132,7 +135,7 @@
         "december" : {
             "speaker" : "Jenny Wong",
             "title" : "Integrating Communities",
-            "avatar" : "https://pbs.twimg.com/profile_images/530065046655606784/RLnczv6S_400x400.jpeg",
+            "avatar" : "/images/jenny.jpeg",
             "abstract" : "<p>Is PHP one community or many?  Frameworks and CMSes created in PHP are popular enough to have self-sufficient communities, but this can often result in a lack of crossover between the communities. The result of the fragmentation is wasted effort and time as a developer but also a lack of knowledge transfer that extends outsides our own subgroup bubble.</p><p>This talk will bring some practical suggestions and solutions on how to look outside our comfort zones, widen our technical circles, and ensure that we learn from other peoples mistakes and bridge the gap between communities. As a result, we will make all our communities more diverse and stronger..</p>",
             "feedbackUrl" : "joind.in/event/view/3351",
             "cues" : {}
@@ -140,7 +143,7 @@
         "november" : {
             "speaker" : "Stuart Herbert",
             "title" : "When To Mock",
-            "avatar" : "http://www.stuartherbert.com/assets/mugshot_by_akrabat_crop_small.jpg",
+            "avatar" : "/images/stu.jpg",
             "abstract" : "<p>What are mocks, what are the consequences of using them, and when should you use them?</p>",
             "cues" : {},
             "video" : "http://player.vimeo.com/video/111983092"
@@ -170,7 +173,7 @@
         "may" : {
             "speaker" : "Simon Holywell",
             "title" : "Functional Programming",
-            "avatar" : "https://pbs.twimg.com/profile_images/552579893968379904/Ihn1-_Nh_400x400.jpeg",
+            "avatar" : "/images/simon.jpg",
             "abstract" : "<p>In the PHP world functions are generally sneered at due to their simplicity and perceived as an evil side effect of spaghetti code. This is not necessarily the case however as when functions are combined in a logical manner they can be very powerful.</p><p>In fact they can be deployed to great effect in all manner of applications to create advanced and potentially less error prone software. This talk will take the form of a gentle introduction to functional programming concepts in a PHP context.</p><p>It will cater to a variety of levels of knowledge. Right from those who have never heard of functional programming to coders who have been practicing aspects for years in other languages (JavaScript!) - perhaps without even knowing.</p><p>During my talk you’ll hear some history, functional theory (introduced gently I promise) and of course some practical examples. You definitely do not need to be a mathematician or expert/functional coder to enjoy this session.</p>",
             "cues" : {},
             "video" : "http://player.vimeo.com/video/96925133"
@@ -241,7 +244,10 @@
             "speaker" : "Michael Heap",
             "title" : "Vagrant and Ansible",
             "avatar" : "/images/michael.jpg",
-            "abstract" : "<p>'It works on my box'. 'I don't have a day to help Dave set up his new PC'. 'I swear I had the same version installed!'</p><p>Sound familiar? It was for me too before I started using Vagrant and Ansible.</p><p>Vagrant is a tool for automating the creation of virtual machines. Of course, that's only half of the battle - once you have a machine you need to configure it. That's where Ansible comes in.</p><p>Ansible is a powerful server automation tool (think Puppet or Chef, but with a much lower learning curve), allowing you to install software and configure things as you need in a reproducible way.</p><p>By the end of this talk, everyone will be able to go home and create a Vagrant box that installs PHP, Apache2 and configures an example website with a custom VirtualHost in under 30 minutes.</p>"
+            "abstract" : "<p>'It works on my box'. 'I don't have a day to help Dave set up his new PC'. 'I swear I had the same version installed!'</p><p>Sound familiar? It was for me too before I started using Vagrant and Ansible.</p><p>Vagrant is a tool for automating the creation of virtual machines. Of course, that's only half of the battle - once you have a machine you need to configure it. That's where Ansible comes in.</p><p>Ansible is a powerful server automation tool (think Puppet or Chef, but with a much lower learning curve), allowing you to install software and configure things as you need in a reproducible way.</p><p>By the end of this talk, everyone will be able to go home and create a Vagrant box that installs PHP, Apache2 and configures an example website with a custom VirtualHost in under 30 minutes.</p>",
+            "resources" : {
+                "Accompanying files" : "https://github.com/mheap/phpnw-ansible-playbooks"
+            }
         }
     }
 }

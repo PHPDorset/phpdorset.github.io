@@ -60,8 +60,17 @@
 
                     <div id="video"></div>
 
-                    <a id="prev" class="btn" onclick="goPrevious()">Previous Slide</a>
-                    <a id="next" class="btn" onclick="goNext()">Next Slide</a>
+                    <a id="prev" class="btn" onclick="goPrevious()">Previous slide</a>
+                    <a id="next" class="btn" onclick="goNext()">Next slide</a><br/><br/>
+
+
+
+                    {%  if cues|length > 0 %}
+
+                        <p>The slides for this video will change automatically to match the video</p>
+
+                    {% endif %}
+                    <p><a class="btn" href="{{ pdf_url }}">Download slides</a></p>
 
                 </div>
 

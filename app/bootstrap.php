@@ -82,6 +82,13 @@ $app->get(
     }
 );
 
+$app->get(
+    '/about',
+    function () use ($app) {
+        return $app->redirect('/', 301);
+    }
+);
+
 
 
 

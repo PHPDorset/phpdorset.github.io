@@ -160,6 +160,10 @@ a.btn:hover. a.btn:active{
     margin-top:0px;
 }
 
+.banner .wrapper .info a.btn:hover{
+    margin-top:2px;
+}
+
 
 a.btn:hover{
     border-bottom:0;

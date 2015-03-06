@@ -1,5 +1,9 @@
 {% extends "master.twig" %}
 
+{% block extra_headers %}
+    <script type="application/javascript" src="/scripts/box-heights.js"></script>
+{% endblock %}
+
 {% block main_content %}
     <div id="strapline">
         <div class="wrapper">
@@ -11,73 +15,42 @@
         </div>
     </div>
 
-    <div class="wrapper clearfix inner">
+    <div class="wrapper clearfix inner talk_list">
 
         <h2>Past Talks</h2>
 
-        <ul class="talk_list">
+        {% for year, years in talks %}
+            {% for month, talk in years %}
 
-            <li>
-                <a href="/talks/2015/march">
-                    <h3>March 2015</h3>
-                    <img src="https://pbs.twimg.com/profile_images/485030477086998529/OA2tXQgR_400x400.jpeg"/><br/>
+                <div class="pod">
+                    {% if talk.avatar %}
+                        <img src="{{ talk.avatar }}"/>
+                    {% endif %}
 
-                    WordPress for the modern PHP developer
-                    <em>- Chris Sherry</em>
-                </a>
-            </li>
+                    <h3>{{ talk.title }}</h3>
 
-            <li>
-                <a href="/talks/2014/november">
-                    <h3>November 2014</h3>
-                    <img src="http://www.stuartherbert.com/assets/mugshot_by_akrabat_crop_small.jpg"/><br/>
+                    <p>{{ talk.speaker }} - {{ month|capitalize }}, {{ year|capitalize }}</p>
 
-                    When to mock
-                    <em>- Stuart Herbert</em>
-                </a>
-            </li>
+                    <a class="btn" href="/talks/{{ year }}/{{ month }}">View this talk</a>
 
-            <li>
-                <a href="/talks/2014/july">
-                <h3>July 2014</h3>
-                <img src="https://pbs.twimg.com/profile_images/3479534354/6410737b00d9c96cd3e46256950521dd_400x400.jpeg"/><br/>
+                        {#{% if talk.cues|length > 0 and talk.video %}#}
 
-                    Chat-Ops for Fun & Profit
-                    <em>- Dave Baker</em>
-                </a>
-            </li>
-            <li>
-                <a href="/talks/2014/june">
-                    <h3>June 2014</h3>
-                    <img src="https://pbs.twimg.com/profile_images/550926756543094785/hTcbJAYb_400x400.png"/><br/>
+                            {#<a class="btn" href="/talks/{{ year }}/{{ month }}">Video and Slides</a>#}
 
-                    Dip Your Toes in the Sea of Security
-                    <em>- James Titcumb </em>
-                </a>
-            </li>
+                        {#{% elseif talk.cues|length > 0 %}#}
 
-            <li>
-                <a href="/talks/2014/may">
-                    <h3>May 2014</h3>
-                <img src="https://pbs.twimg.com/profile_images/552579893968379904/Ihn1-_Nh_400x400.jpeg"/><br/>
+                            {#<a class="btn" href="/talks/{{ year }}/{{ month }}">Slides</a>#}
 
+                        {#{% elseif talk.video %}#}
 
-                    Functional Programming
-                 <em>- Simon Holywell</em></a>
-            </li>
+                            {#<a class="btn" href="/talks/{{ year }}/{{ month }}">Video</a>#}
 
-            <li>
-                <a href="/talks/2014/april">
-                    <h3>April 2014</h3>
-                <img src="https://pbs.twimg.com/profile_images/555123789449551872/laA2ajHC_400x400.jpeg"/>
-                <img src="https://pbs.twimg.com/profile_images/473390267207151616/fjtJUkQt_400x400.jpeg"/><br/>
+                        {#{% endif %}#}
 
-                 Silex and Twig
-                <em>- <strike>Jon Ginn</strike> Dave Hulbert &amp; Alex Ross
-                </a>
-            </li>
+                </div>
 
-        </ul>
+            {% endfor %}
+        {% endfor %}
 </div>
 
 

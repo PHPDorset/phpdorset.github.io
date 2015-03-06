@@ -6,7 +6,7 @@
 
     {% if(errors is empty) %}
 
-        <script>
+        <script type="application/javascript">
 
             // ensure the web page (DOM) has loaded
             document.addEventListener("DOMContentLoaded", function () {
@@ -31,6 +31,22 @@
 
             var url = '{{ pdf_url }}';
 
+            $(document).ready(function() {
+                {% if not presentation %}
+                    $('.abstract').show();
+                {% endif %}
+
+                $('.abstractOpen').click(function(e){
+                    if($(this).hasClass('visible')){
+                        $('.abstract').slideUp();
+                        $(this).text('View abstract').removeClass('visible');
+                    } else {
+                        $('.abstract').slideDown();
+                        $(this).text('Hide abstract').addClass('visible');
+                    }
+                });
+            });
+
         </script>
 
     {% endif %}
@@ -39,64 +55,76 @@
 
 {% block main_content %}
 
-
-
     <div id="strapline">
         <div class="wrapper">
 
-            <p>
-
-            </p>
+            <h2>
+                {{ title }} - {{ month|capitalize }} {{ year }}
+            </h2>
 
         </div>
     </div>
 
-        {% if(errors is empty) %}
+    <div class="abstract wrapper">
+        <div class="bio">
+            <img src="{{ avatar }}"/>
 
-            <div id="media_holder" class="clearfix">
+            {{ speaker }}
+        </div>
+        <div class="text">
+            {{ abstract|raw }}
+        </div>
+    </div>
 
-                <div id="video_wrapper">
+    {% if(errors is empty) %}
 
+        <div id="media_holder" class="clearfix">
 
+            <div id="video_wrapper">
+
+                {% if video_url %}
                     <div id="video"></div>
+                {% endif %}
 
-                    <a id="prev" class="btn" onclick="goPrevious()">Previous slide</a>
-                    <a id="next" class="btn" onclick="goNext()">Next slide</a><br/><br/>
+                {% if abstract and (presentation or video) %}
+                <a href="#" class="abstractOpen btn notmobile">View abstract</a>
+                {% endif %}
 
+                {% if presentation %}
+                <a class="btn" href="{{ pdf_url }}">Download slides</a>
+                {% endif %}
 
+                {% if feedbackUrl %}
+                    <a class="btn" href="{{ feedbackUrl }}">Give feedback</a>
+                {% endif %}
 
-                    {%  if cues|length > 0 %}
-
-                        <p>The slides for this video will change automatically to match the video</p>
-
-                    {% endif %}
-                    <p><a class="btn" href="{{ pdf_url }}">Download slides</a></p>
-
-                </div>
-
-                <div id="canvas_holder">
-                    <canvas id="presentation"></canvas>
-                </div>
             </div>
 
+            <div id="canvas_holder">
+                <canvas id="presentation"></canvas>
+                {% if presentation %}
+                    <a id="prev" class="btn notmobile" onclick="goPrevious()">&leftarrow; Previous slide</a>
+                    <a id="next" class="btn notmobile" onclick="goNext()">Next slide &rightarrow;</a><br/><br/>
+                    {%  if cues|length > 0 %}
+                        <p class="notmobile">Slides for this talk are synced to the video</p>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
 
+    {% else %}
 
-        {% else %}
+        <h2>Whoops!</h2>
+        <h4>This talk could not be displayed for the following reasons</h4>
+        <ul>
+            {% for error in errors %}
+                <li>
+                    {{ error }}
+                </li>
+            {% endfor %}
+        </ul>
 
-            <h2>Whoops!</h2>
-            <h4>This talk could not be displayed for the following reasons</h4>
-            <ul>
-                {% for error in errors %}
-                    <li>
-                        {{ error }}
-                    </li>
-                {% endfor %}
-            </ul>
-
-        {% endif %}
-
-
-
+    {% endif %}
 
 {% endblock %}
 

@@ -39,33 +39,39 @@ class PresentationController
      */
     public function fetchCuesByYearAndMonth($year, $month)
     {
+        $presentation = true;
         $errors = [];
 
         $cues = array_map(function($cue){
             list($mins,$secs) = explode(':',$cue);
             return ($mins*60)+($secs);
         }, $this->repository->fetchCues($year, $month));
-//        if(!$cues)
-//        {
-//            $errors[] = 'Could not find any video cues for this talk';
-//        }
-
 
         $video_url = $this->repository->fetchVideo($year, $month);
-        if(empty($video_url))
-        {
-            $errors[] = 'Could not find a video for this talk';
-        }
 
         $pdf_url = "/presentations/{$year}_{$month}.pdf";
-//        if(!file_exists($this->_app->url($pdf_url)))
-//        {
-//            $errors[] = 'Could not find a presentation for this talk';
-//        }
+        if(!file_exists(realpath($_SERVER["DOCUMENT_ROOT"]).$pdf_url))
+        {
+           $presentation = false;
+        }
+
+        $title = $this->repository->fetchTitle($year, $month);
+        $abstract = $this->repository->fetchAbstract($year, $month);
+        $feedbackUrl = $this->repository->fetchFeedbackUrl($year, $month);
+        $avatar = $this->repository->fetchAvatar($year, $month);
+        $speaker = $this->repository->fetchSpeaker($year, $month);
 
         return $this->_app['twig']->render(
             'talk.twig',
             array(
+                'presentation' => $presentation,
+                'avatar' => $avatar,
+                'speaker' => $speaker,
+                'year' => $year,
+                'month' => $month,
+                'title' => $title,
+                'feedbackUrl' => $feedbackUrl,
+                'abstract' => $abstract,
                 'video_url' => $video_url,
                 'pdf_url' => $pdf_url,
                 'cues'    => $cues,
@@ -82,4 +88,16 @@ class PresentationController
         $events = $this->repository->fetchAll();
         return new JsonResponse($events);
     }
+
+    public function fetchTalkList()
+    {
+        return $this->_app['twig']->render(
+            'talk_list.twig',
+            array(
+                'talks' => $this->repository->fetchAll()
+            )
+        );
+    }
+
+
 }

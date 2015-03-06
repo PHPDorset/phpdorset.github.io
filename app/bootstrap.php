@@ -70,6 +70,22 @@ $app->get(
     }
 );
 
+$app->get(
+    '/contact',
+    function () use ($app) {
+        return $app->redirect('get-involved', 301);
+    }
+);
+
+$app->get(
+    '/sponsors',
+    function () use ($app) {
+        return $app->redirect('/', 301);
+    }
+);
+
+
+
 
 
 return $app;

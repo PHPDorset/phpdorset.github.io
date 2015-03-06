@@ -234,6 +234,14 @@
             "title" : "Functional Programming",
             "avatar" : "/images/alexdave.jpg",
             "video" : "http://player.vimeo.com/video/91962484"
+        },
+        "march": {
+            "cues": {
+            },
+            "speaker" : "Michael Heap",
+            "title" : "Vagrant and Ansible",
+            "avatar" : "/images/michael.jpg",
+            "abstract" : "<p>'It works on my box'. 'I don't have a day to help Dave set up his new PC'. 'I swear I had the same version installed!'</p><p>Sound familiar? It was for me too before I started using Vagrant and Ansible.</p><p>Vagrant is a tool for automating the creation of virtual machines. Of course, that's only half of the battle - once you have a machine you need to configure it. That's where Ansible comes in.</p><p>Ansible is a powerful server automation tool (think Puppet or Chef, but with a much lower learning curve), allowing you to install software and configure things as you need in a reproducible way.</p><p>By the end of this talk, everyone will be able to go home and create a Vagrant box that installs PHP, Apache2 and configures an example website with a custom VirtualHost in under 30 minutes.</p>"
         }
     }
 }

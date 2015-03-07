@@ -65,9 +65,7 @@ $app->get(
 
 $app->get(
     '/talks',
-    function () use ($app) {
-        return $app['twig']->render('talk_list.twig');
-    }
+    "presentation.controller:fetchTalkList"
 );
 
 $app->get(
@@ -79,6 +77,13 @@ $app->get(
 
 $app->get(
     '/sponsors',
+    function () use ($app) {
+        return $app->redirect('/', 301);
+    }
+);
+
+$app->get(
+    '/about',
     function () use ($app) {
         return $app->redirect('/', 301);
     }

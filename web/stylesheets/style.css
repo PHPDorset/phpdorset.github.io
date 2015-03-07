@@ -59,6 +59,11 @@ h1{
     color:#e3ebef;
     padding:25px;
     border-bottom:2px solid #103c50;
+    font-size:15px;
+}
+
+#strapline h2{
+    font-size:18px;
 }
 
 #strapline p{
@@ -131,7 +136,7 @@ a{
 }
 
 a:hover{
-    color: #ffe98e;
+    color: #5abbf0;
     text-decoration:underline;
 }
 
@@ -144,10 +149,19 @@ a.btn{
     color:#e3ebef;
     border-bottom:2px solid #0f3040;
     text-decoration:none;
+    font-size:14px;
+}
+
+a.btn:hover. a.btn:active{
+    color: #5abbf0;
 }
 
 .banner .wrapper .info a.btn{
     margin-top:0px;
+}
+
+.banner .wrapper .info a.btn:hover{
+    margin-top:2px;
 }
 
 
@@ -190,6 +204,10 @@ h2,h3,h4{
     vertical-align: top;
 }
 
+#sponsors .wrapper > div p {
+    text-align: left;
+}
+
 #footer{
     background-color: #0d121a;
     color: #365776;
@@ -220,11 +238,10 @@ h2,h3,h4{
 }
 
 .pod{
+    margin:1%;
     width:48%;
     float:left;
     padding:3%;
-    margin:1%;
-    min-height:250px;
     background-color:#192B37;
     border-top:6px solid #103c50;
 }
@@ -239,36 +256,49 @@ h2,h3,h4{
 
 }
 
-ul.talk_list{
-    margin:0;
-    padding:0;
-}
-
-ul.talk_list li {
-    list-style:none;
-}
-
-ul.talk_list li a{
-    margin-bottom:10px;
-    padding:20px;
-    display:block;
-    text-decoration: none;
-    color: #e3ebef;
-    background-color:#192b37;
-    border-top:6px solid #103c50;
-}
-
-ul.talk_list li a:hover{
-    color:#e3ebef;
-    background-color: #141d28;
-}
-
-ul.talk_list li img{
+.talk_list img{
     border-radius:50%;
     height:85px;
     margin-top:10px;
     margin-bottom:10px;
+}
 
+.abstract{
+    display:none;
+    background:#192B37;
+    border-bottom:2px solid #103c50;
+}
+
+.abstract .wrapper > div{
+    display:inline-block;
+    padding:40px 10px 40px 10px;
+    text-align:left;
+
+}
+
+.abstract .wrapper .bio{
+    width:39%;
+    vertical-align: top;
+    text-align:center;
+    font-size:18px;
+}
+
+.abstract .wrapper .bio img{
+    border-radius:50%;
+    height:140px;
+    margin-top:10px;
+    margin-bottom:10px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.abstract .wrapper .text{
+    vertical-align: top;
+    font-size:15px;
+    margin-left:auto;
+    margin-right:auto;
+    width:60%;
 }
 
 
@@ -280,6 +310,7 @@ canvas{
 #canvas_holder{
     width:61.80%;
     float:left;
+    margin-bottom:20px;
 
 }
 
@@ -355,5 +386,36 @@ canvas{
 
     .banner .wrapper > div {
         height: 200px;
+    }
+
+    #canvas_holder{
+        display:none;
+    }
+
+    .abstract{
+        display:block;
+    }
+
+    #media_holder #video_wrapper, .pod{
+        width:100%;
+        float:none;
+
+    }
+
+    .notmobile{
+        display:none !important;
+    }
+
+    .btn{
+        margin-top:20px;
+    }
+
+    ul.talk_list li {
+        margin:0;
+    }
+
+    .pod {
+        margin: 0;
+        width:100%;
     }
 }

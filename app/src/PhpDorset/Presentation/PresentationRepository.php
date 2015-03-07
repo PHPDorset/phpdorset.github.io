@@ -49,6 +49,67 @@ class PresentationRepository
     }
 
     /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchAbstract($year, $month)
+    {
+        return $this->cues[$year][$month]['abstract'];
+    }
+
+    /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchAvatar($year, $month)
+    {
+        return $this->cues[$year][$month]['avatar'];
+    }
+
+    /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchFeedbackUrl($year, $month)
+    {
+        return $this->cues[$year][$month]['feedbackUrl'];
+    }
+
+
+    /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchTitle($year, $month)
+    {
+        return $this->cues[$year][$month]['title'];
+    }
+
+    /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchSpeaker($year, $month)
+    {
+        return $this->cues[$year][$month]['speaker'];
+    }
+
+    /**
+     * @param $year
+     * @param $month
+     * @return mixed
+     */
+    public function fetchResources($year, $month)
+    {
+        return $this->cues[$year][$month]['resources'];
+    }
+
+    /**
      * @return array
      */
     public function fetchAll()

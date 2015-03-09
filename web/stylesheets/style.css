@@ -192,6 +192,7 @@ h2,h3,h4{
 
 #sponsors h6{
     font-size:18px;
+    margin-bottom:16px;
 }
 
 #sponsors .wrapper > div {
@@ -206,6 +207,22 @@ h2,h3,h4{
 
 #sponsors .wrapper > div p {
     text-align: left;
+}
+
+#sponsors img {
+    width: 85px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#sponsors a {
+    color: #878c8f;
+    text-decoration: none;
+}
+
+#sponsors a:hover {
+    color: #5abbf0;
+    text-decoration:underline;
 }
 
 #footer{

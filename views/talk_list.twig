@@ -31,7 +31,9 @@
 
                     <p>{{ talk.speaker }} - {{ month|capitalize }}, {{ year|capitalize }}</p>
 
-                    <a class="btn" href="/talks/{{ year }}/{{ month }}">View this talk</a>
+                    <a class="btn" href="/talks/{{ year }}/{{ month }}">
+                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                    </a>
 
                         {#{% if talk.cues|length > 0 and talk.video %}#}
 

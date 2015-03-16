@@ -36,15 +36,17 @@
                     $('.abstract').show();
                 {% endif %}
 
-                $('.abstractOpen').click(function(e){
-                    if($(this).hasClass('visible')){
-                        $('.abstract').slideUp();
-                        $(this).text('View abstract').removeClass('visible');
-                    } else {
-                        $('.abstract').slideDown();
-                        $(this).text('Hide abstract').addClass('visible');
-                    }
+                $('.abstractOpen').click(function (e) {
+                    $('.abstract').slideDown();
+                    $(this).hide();
+                    $('.abstractClose').show();
                 });
+
+                $('.abstractClose').click(function (e) {
+                    $('.abstract').slideUp();
+                    $(this).hide();
+                    $('.abstractOpen').show();
+                }).hide();
             });
 
         </script>
@@ -89,15 +91,24 @@
                 {% endif %}
 
                 {% if abstract and (presentation or video) %}
-                <a href="#" class="abstractOpen btn notmobile">View abstract</a>
+                    <a href="#" class="abstractOpen btn notmobile">
+                        <span class="glyphicon glyphicon-collapse-down"></span>&nbsp;&nbsp;View abstract
+                    </a>
+                    <a href="#" class="abstractClose btn notmobile">
+                        <span class="glyphicon glyphicon-collapse-up"></span>&nbsp;&nbsp;Hide abstract
+                    </a>
                 {% endif %}
 
                 {% if presentation %}
-                <a class="btn" href="{{ pdf_url }}">Download slides</a>
+                <a class="btn" href="{{ pdf_url }}">
+                    <span class="glyphicon glyphicon-download"></span>&nbsp;&nbsp;Download slides
+                </a>
                 {% endif %}
 
                 {% if feedbackUrl %}
-                    <a class="btn" href="{{ feedbackUrl }}">Give feedback</a>
+                    <a class="btn" href="{{ feedbackUrl }}">
+                        <span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;Give feedback
+                    </a>
                 {% endif %}
 
 
@@ -117,9 +128,14 @@
                 <div id="canvas_holder">
                     <canvas id="presentation"></canvas>
                     {% if presentation %}
-                        <a id="prev" class="btn notmobile" onclick="goPrevious()">&leftarrow; Previous slide</a>
-                        <a id="next" class="btn notmobile" onclick="goNext()">Next slide &rightarrow;</a><br/><br/>
-                        {%  if cues|length > 0 %}
+                        <a id="prev" class="btn notmobile" onclick="goPrevious()">
+                            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Previous slide
+                        </a>
+                        <a id="next" class="btn notmobile" onclick="goNext()">
+                            Next slide&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                        <br/><br/>
+                        {% if cues|length > 0 %}
                             <p class="notmobile">Slides for this talk are synced to the video</p>
                         {% endif %}
                     {% endif %}

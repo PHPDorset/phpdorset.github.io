@@ -1,17 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 21/04/2014
- * Time: 23:01
- */
 
 namespace PhpDorset\Presentation;
 
-/**
- * Class PresentationRepository
- * @package PhpDorset\Presentation
- */
 class PresentationRepository
 {
     /**
@@ -20,93 +10,27 @@ class PresentationRepository
     protected $cues;
 
     /**
-     * @param string $cueDatabase
+     * @param array $cues
      */
-    public function __construct($cueDatabase)
+    public function __construct(array $cues)
     {
-        $this->cues = json_decode(file_get_contents($cueDatabase), true);
+        $this->cues = $cues;
     }
 
     /**
      * @param string $year
      * @param string $month
-     * @return array
+     * @return Presentation|null
      */
-    public function fetchCues($year, $month)
+    public function fetchPresentation($year, $month)
     {
-        return $this->cues[$year][$month]['cues'];
-    }
+        $month = strtolower($month);
 
+        if (!isset($this->cues[$year][$month])) {
+            return null;
+        }
 
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchVideo($year, $month)
-    {
-        return $this->cues[$year][$month]['video'];
-    }
-
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchAbstract($year, $month)
-    {
-        return $this->cues[$year][$month]['abstract'];
-    }
-
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchAvatar($year, $month)
-    {
-        return $this->cues[$year][$month]['avatar'];
-    }
-
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchFeedbackUrl($year, $month)
-    {
-        return $this->cues[$year][$month]['feedbackUrl'];
-    }
-
-
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchTitle($year, $month)
-    {
-        return $this->cues[$year][$month]['title'];
-    }
-
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchSpeaker($year, $month)
-    {
-        return $this->cues[$year][$month]['speaker'];
-    }
-
-    /**
-     * @param $year
-     * @param $month
-     * @return mixed
-     */
-    public function fetchResources($year, $month)
-    {
-        return $this->cues[$year][$month]['resources'];
+        return Presentation::createFromArray($month, $year, $this->cues[$year][$month]);
     }
 
     /**

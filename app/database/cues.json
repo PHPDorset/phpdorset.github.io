@@ -1,15 +1,35 @@
 {
-    "2015" : {
-        "march" : {
-            "speaker" : "Chris Sherry",
-            "title" : "WordPress for the modern PHP developer",
-            "avatar" : "/images/chris.jpeg",
-            "abstract" : "<p>It powers 23% of the internet, so its more than likely you are maintaining a codebase built on Wordpress. Many of these projects have outgrown their humble beginnings as blogs or websites and are now highly customised web applications. However the modern tools we use as PHP developers to aid our development, particularly in teams, can be tricky to utilise with the popular blogging platform. </p><p>This technical talk will guide you through how to make the use of Composer, Git and other tools familiar to PHP developers within your Wordpress install - and help you take back control of your themes, plugins, database and environments in a growing application.</p>",
-            "feedbackUrl" : "https://joind.in/13715",
-            "resources" : {
-                "Base Orchestration and Synchronization Helper" : "https://wearebase.com/about/blog/2015/deployment-database-and-asset-management/"
+    "2015": {
+        "april": {
+            "speaker": "Derick Rethans",
+            "title": "Text wrangling and wordsmithing with MongoDB",
+            "avatar": "/images/derickr.jpg",
+            "abstract": "Text wrangling and wordsmithing with MongoDB",
+            "feedbackUrl": "https://joind.in/14372",
+            "resources": {
+                "Derick Rethans": "http://derickrethans.nl/talks/textwrangling-phpdorset15",
+                "Atomic Operations": "http://www.mongodb.org/display/DOCS/Atomic+Operations",
+                "BSON Spec": "http://bsonspec.org/",
+                "Download MongoDB": "http://www.mongodb.org/downloads",
+                "Ghenghis": "http://genghisapp.com/",
+                "Google S2 Internals": "https://docs.google.com/presentation/d/1Hl4KapfAENAOf4gv-pSngKwvS_jwNVHRPZTTDzXXn6Q/view#slide=id.i0",
+                "Indexing Freeform-Tagged Data": "http://drck.me/freetagidx-9gm",
+                "London MongoDB UG": "http://www.meetup.com/London-MongoDB-User-Group",
+                "MongoDB Cursors with PHP": "http://drck.me/mongocur-9f8",
+                "MongoDB geohashes": "http://www.kchodorow.com/blog/2011/06/08/mongo-in-flatland/",
+                "Single machine replicaset tutorial": "http://www.mongodb.org/display/DOCS/Replica+Set+Tutorial"
+            }
+        },
+        "march": {
+            "speaker": "Chris Sherry",
+            "title": "WordPress for the modern PHP developer",
+            "avatar": "/images/chris.jpeg",
+            "abstract": "<p>It powers 23% of the internet, so its more than likely you are maintaining a codebase built on Wordpress. Many of these projects have outgrown their humble beginnings as blogs or websites and are now highly customised web applications. However the modern tools we use as PHP developers to aid our development, particularly in teams, can be tricky to utilise with the popular blogging platform. </p><p>This technical talk will guide you through how to make the use of Composer, Git and other tools familiar to PHP developers within your Wordpress install - and help you take back control of your themes, plugins, database and environments in a growing application.</p>",
+            "feedbackUrl": "https://joind.in/13715",
+            "resources": {
+                "Base Orchestration and Synchronization Helper": "https://wearebase.com/about/blog/2015/deployment-database-and-asset-management/"
             },
-            "cues" : {
+            "cues": {
                 "1": "00:02",
                 "2": "00:04",
                 "3": "00:09",

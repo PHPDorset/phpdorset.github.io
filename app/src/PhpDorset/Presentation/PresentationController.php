@@ -1,20 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 21/04/2014
- * Time: 22:32
- */
 
 namespace PhpDorset\Presentation;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-/**
- * Class PresentationController
- * @package PhpDorset\Presentation
- */
 class PresentationController
 {
     /**

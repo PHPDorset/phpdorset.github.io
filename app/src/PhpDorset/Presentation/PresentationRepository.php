@@ -1,17 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 21/04/2014
- * Time: 23:01
- */
 
 namespace PhpDorset\Presentation;
 
-/**
- * Class PresentationRepository
- * @package PhpDorset\Presentation
- */
 class PresentationRepository
 {
     /**

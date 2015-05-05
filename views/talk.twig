@@ -32,7 +32,7 @@
             var url = '{{ pdf_url }}';
 
             $(document).ready(function() {
-                {% if not presentation %}
+                {% if not hasPresentation %}
                     $('.abstract').show();
                 {% endif %}
 
@@ -90,7 +90,7 @@
                     <div id="video"></div>
                 {% endif %}
 
-                {% if abstract and (presentation or video) %}
+                {% if abstract and (hasPresentation or video) %}
                     <a href="#" class="abstractOpen btn notmobile">
                         <span class="glyphicon glyphicon-collapse-down"></span>&nbsp;&nbsp;View abstract
                     </a>
@@ -99,7 +99,7 @@
                     </a>
                 {% endif %}
 
-                {% if presentation %}
+                {% if hasPresentation %}
                 <a class="btn" href="{{ pdf_url }}">
                     <span class="glyphicon glyphicon-download"></span>&nbsp;&nbsp;Download slides
                 </a>
@@ -124,10 +124,10 @@
 
 
             </div>
-            {% if presentation %}
+            {% if hasPresentation %}
                 <div id="canvas_holder">
                     <canvas id="presentation"></canvas>
-                    {% if presentation %}
+                    {% if hasPresentation %}
                         <a id="prev" class="btn notmobile" onclick="goPrevious()">
                             <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Previous slide
                         </a>

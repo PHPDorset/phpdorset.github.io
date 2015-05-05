@@ -123,6 +123,10 @@ h1{
     text-align:right;
 }
 
+.banner:nth-child(5){
+    background-color:#192b37;
+    text-align:left;
+}
 
 .banner .wrapper .info{
     padding:20px;

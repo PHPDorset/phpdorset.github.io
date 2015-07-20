@@ -154,6 +154,7 @@ a.btn{
     border-bottom:2px solid #0f3040;
     text-decoration:none;
     font-size:14px;
+    cursor:pointer;
 }
 
 a.btn:hover. a.btn:active{

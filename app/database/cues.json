@@ -1,5 +1,11 @@
 {
     "2015": {
+        "june": {
+            "speaker": "Christopher Hoult",
+            "title": "Your API is a UI",
+            "avatar": "/images/chault.jpg",
+            "abstract": "Whether you’re creating a complex web application or a simple library, everything you create has a user. Why, then, do we concentrate on our users when developing a user interface, but so often forget them when developing APIs? In this talk, Christopher presents a whirlwind overview of a variety of different User Experience considerations when designing your APIs."
+        },
         "april": {
             "speaker": "Derick Rethans",
             "title": "Text wrangling and wordsmithing with MongoDB",

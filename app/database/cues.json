@@ -1,5 +1,17 @@
 {
     "2015": {
+        "august": {
+            "speaker": "David Yell",
+            "title": "Don't code, bake. An introduction to CakePHP",
+            "avatar": "/images/yelldavid.jpg",
+            "abstract": "Learn about CakePHP, the RAD PHP framework for awesome people. Find out why I love CakePHP and learn about all the things which make up the framework."
+        },
+        "july": {
+            "speaker": "Marcus Bointon",
+            "title": "Modern networking for PHP developers",
+            "avatar": "/images/SynchroM.jpg",
+            "abstract": "Many developers are stuck in the world of old-school IPv4 - it's an easy and comfortable place to be! But beneath the cosy world of PHP, your network layer has been undergoing major changes that might be outside your comfort zone. IPv6, SPDY (aka HTTP/2.0) and SSL are all important technologies that you need to get to grips with, both inside and outside PHP. This talk covers the key features of these technologies and how you can use them to improve your app's availability, performance and security"
+        },
         "june": {
             "speaker": "Christopher Hoult",
             "title": "Your API is a UI",

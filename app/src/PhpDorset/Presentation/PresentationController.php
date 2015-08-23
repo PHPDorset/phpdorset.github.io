@@ -59,6 +59,7 @@ class PresentationController
                 'pdf_url' => $presentation->getPdf(),
                 'cues' => $presentation->getCues(),
                 'resources' => $presentation->getResources(),
+                'twitter' => $presentation->getTwitter(),
                 'errors' => $errors
             )
         );

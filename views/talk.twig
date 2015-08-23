@@ -70,12 +70,14 @@
     <div class="abstract ">
         <div class="wrapper">
             <div class="bio">
+                <a href="https://twitter.com/{{ twitter }}">
                 <img src="{{ avatar }}"/>
 
                 {{ speaker }}
+                </a>
             </div>
             <div class="text">
-                {{ abstract|raw }}
+                {{ abstract|raw|nl2br }}
             </div>
         </div>
     </div>

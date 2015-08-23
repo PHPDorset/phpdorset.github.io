@@ -15,6 +15,7 @@ class Presentation
     protected $title = '';
     protected $video = '';
     protected $year = '';
+    protected $twitter = '';
 
     /**
      * @param string $abstract
@@ -193,6 +194,22 @@ class Presentation
     }
 
     /**
+     * @param string $twitter
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = str_replace('https://twitter.com/', '', $twitter);
+    }
+
+    /**
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
      * @param string $month
      * @param string $year
      * @param array $data
@@ -210,6 +227,7 @@ class Presentation
         $presentation->setSpeaker(isset($data['speaker']) ? $data['speaker'] : '');
         $presentation->setTitle(isset($data['title']) ? $data['title'] : '');
         $presentation->setVideo(isset($data['video']) ? $data['video'] : '');
+        $presentation->setTwitter(isset($data['twitter']) ? $data['twitter'] : '');
         $presentation->setYear($year);
 
         if (isset($data['cues'])) {

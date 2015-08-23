@@ -1,5 +1,12 @@
 {
     "2015": {
+        "september": {
+          "speaker": "Gary Hockin",
+          "title": "ZF2 Service Manager: From Zero to Epic",
+          "avatar": "/images/geeh.jpg",
+          "abstract": "“Dependency injection is everywhere, and dependency injection containers and programmatic service locators are very popular right now. Zend Framework 2’s Service Manager is one of the cornerstone’s of the framework, but using the right feature at the right time can be difficult. Join us as we cover exactly how and when you can use the Service Manager, from the simplest “invokables”, through “factories” and “abstract factories”, all the way to “initializers” and “delegators”.\n\nLearn how you can use *all* of Zend\\ServiceManager, as a stand-alone component, or in the context of ZF2’s MVC. Whatever your knowledge of the Service Manager, if you’ve only used some of the Service Manager, or if you consider yourself already an expert (or even if these words mean nothing to you!) there’s something to be gained for everyone in this session.”",
+          "twitter": "GeeH"
+        },
         "august": {
             "speaker": "David Yell",
             "title": "Don't code, bake. An introduction to CakePHP",

@@ -1,11 +1,10 @@
 {
     "2015": {
         "september": {
-          "speaker": "Gary Hockin",
-          "title": "ZF2 Service Manager: From Zero to Epic",
-          "avatar": "/images/geeh.jpg",
-          "abstract": "“Dependency injection is everywhere, and dependency injection containers and programmatic service locators are very popular right now. Zend Framework 2’s Service Manager is one of the cornerstone’s of the framework, but using the right feature at the right time can be difficult. Join us as we cover exactly how and when you can use the Service Manager, from the simplest “invokables”, through “factories” and “abstract factories”, all the way to “initializers” and “delegators”.\n\nLearn how you can use *all* of Zend\\ServiceManager, as a stand-alone component, or in the context of ZF2’s MVC. Whatever your knowledge of the Service Manager, if you’ve only used some of the Service Manager, or if you consider yourself already an expert (or even if these words mean nothing to you!) there’s something to be gained for everyone in this session.”",
-          "twitter": "GeeH"
+          "speaker": "James Titcumb / Marco Pivetta",
+          "title": "Diving into HHVM Extensions / Extremely defensive PHP",
+          "avatar": "/images/asgrim-ocramius.jpg",
+          "abstract": "<strong>Diving into HHVM Extensions: </strong>HHVM is currently gaining popularity at quite a pace, and it's a pretty exciting time for PHP runtimes. Have you ever wondered what is going on beneath this slick and super-speedy engine? I wondered that myself, so I dived into the internals of HHVM, discovering a treasure trove of awesome stuff. In this talk, I'll show you how HHVM itself works with a guided tour of the codebase, demonstrating how it all pieces together. I'll also show you a couple of ways to write your own incredible HHVM extension. You don't need to know C++ to understand this talk - just PHP language knowledge is enough. <br/><br/> <strong>Extremely defensive PHP: </strong>What if I told you that your carefully designed and tested code was fragile? What if I told you that you can trust nobody? What does \"fragile\" even mean? We are going to look at fragile code, fix it, and lastly learn about various Poka-Yoke techniques that make our code very hard to break."
         },
         "august": {
             "speaker": "David Yell",

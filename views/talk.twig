@@ -69,13 +69,15 @@
 
     <div class="abstract ">
         <div class="wrapper">
-            <div class="bio">
-                <a href="https://twitter.com/{{ twitter }}">
-                <img src="{{ avatar }}"/>
+            {% if twitter %}
+                <div class="bio">
+                    <a href="https://twitter.com/{{ twitter }}">
+                    <img src="{{ avatar }}"/>
 
-                {{ speaker }}
-                </a>
-            </div>
+                    {{ speaker }}
+                    </a>
+                </div>
+            {% endif %}
             <div class="text">
                 {{ abstract|raw|nl2br }}
             </div>

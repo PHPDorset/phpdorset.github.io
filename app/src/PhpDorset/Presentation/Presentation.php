@@ -138,10 +138,16 @@ class Presentation
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getSpeaker()
     {
+        $speakers = explode('/', $this->speaker);
+
+        if (count($speakers) > 1){
+            $this->speaker = $speakers;
+        }
+
         return $this->speaker;
     }
 
@@ -194,15 +200,22 @@ class Presentation
     }
 
     /**
-     * @param string $twitter
+     * @param string|array $twitter
      */
     public function setTwitter($twitter)
     {
-        $this->twitter = str_replace('https://twitter.com/', '', $twitter);
+        $twitter = str_replace('https://twitter.com/', '', $twitter);
+        $twitters = explode('/', $twitter);
+
+        if (count($twitters) > 1){
+            $this->twitter = $twitters;
+        }
+
+        $this->twitter = $twitter;
     }
 
     /**
-     * @return string
+     * @return string|array
      */
     public function getTwitter()
     {

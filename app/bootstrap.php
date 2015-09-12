@@ -23,7 +23,7 @@ $app->register(new Silex\Provider\ServiceControllerServiceProvider);
 
 $app['talk.controller'] = $app->share(
     function () use ($app) {
-        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig'], $app['eventbrite']);
+        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig']);
     }
 );
 

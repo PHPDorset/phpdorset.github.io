@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpDorset\Presentation;
+namespace PhpDorset\Talk;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class PresentationController
+class TalkController
 {
     /**
-     * @var PresentationRepository
+     * @var TalkRepository
      */
     protected $repository;
 
@@ -18,10 +18,10 @@ class PresentationController
     private $twig;
 
     /**
-     * @param PresentationRepository $eventRepository
+     * @param TalkRepository $eventRepository
      * @param \Twig_Environment $twig
      */
-    public function __construct(PresentationRepository $eventRepository, \Twig_Environment $twig)
+    public function __construct(TalkRepository $eventRepository, \Twig_Environment $twig)
     {
         $this->repository = $eventRepository;
         $this->twig = $twig;
@@ -38,9 +38,9 @@ class PresentationController
 
         $errors = [];
 
-        $presentation = $this->repository->fetchPresentation($year, $month);
+        $talk = $this->repository->fetchTalk($year, $month);
 
-        if (is_null($presentation) || !file_exists(realpath($_SERVER["DOCUMENT_ROOT"]) . $presentation->getPdf())) {
+        if (is_null($talk) || !file_exists(realpath($_SERVER["DOCUMENT_ROOT"]) . $talk->getPdf())) {
             $hasPdfFile = false;
         }
 
@@ -48,18 +48,18 @@ class PresentationController
             'talk.twig',
             array(
                 'hasPresentation' => $hasPdfFile,
-                'avatar' => $presentation->getAvatar(),
-                'speaker' => $presentation->getSpeaker(),
-                'year' => $presentation->getYear(),
-                'month' => $presentation->getMonth(),
-                'title' => $presentation->getTitle(),
-                'feedbackUrl' => $presentation->getFeedbackUrl(),
-                'abstract' => $presentation->getAbstract(),
-                'video_url' => $presentation->getVideo(),
-                'pdf_url' => $presentation->getPdf(),
-                'cues' => $presentation->getCues(),
-                'resources' => $presentation->getResources(),
-                'twitter' => $presentation->getTwitter(),
+                'avatar' => $talk->getAvatar(),
+                'speaker' => $talk->getSpeaker(),
+                'year' => $talk->getYear(),
+                'month' => $talk->getMonth(),
+                'title' => $talk->getTitle(),
+                'feedbackUrl' => $talk->getFeedbackUrl(),
+                'abstract' => $talk->getAbstract(),
+                'video_url' => $talk->getVideo(),
+                'pdf_url' => $talk->getPdf(),
+                'cues' => $talk->getCues(),
+                'resources' => $talk->getResources(),
+                'twitter' => $talk->getTwitter(),
                 'errors' => $errors
             )
         );

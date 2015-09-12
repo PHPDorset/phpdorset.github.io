@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDorset\Presentation;
+namespace PhpDorset\Talk;
 
-class Presentation
+class Talk
 {
     protected $abstract = '';
     protected $avatar = '';
@@ -142,12 +142,6 @@ class Presentation
      */
     public function getSpeaker()
     {
-        $speakers = explode('/', $this->speaker);
-
-        if (count($speakers) > 1){
-            $this->speaker = $speakers;
-        }
-
         return $this->speaker;
     }
 
@@ -226,30 +220,30 @@ class Presentation
      * @param string $month
      * @param string $year
      * @param array $data
-     * @return Presentation
+     * @return Talk
      */
-    public static function createFromArray($month, $year, array $data)
+    public static function createFromArray($year, $month, array $data)
     {
-        $presentation = new Presentation();
-        $presentation->setAbstract(isset($data['abstract']) ? $data['abstract'] : '');
-        $presentation->setAvatar(isset($data['avatar']) ? $data['avatar'] : '');
-        $presentation->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
-        $presentation->setMonth($month);
-        $presentation->setPdf("/presentations/{$year}_{$month}.pdf");
-        $presentation->setResources(isset($data['resources']) ? $data['resources'] : []);
-        $presentation->setSpeaker(isset($data['speaker']) ? $data['speaker'] : '');
-        $presentation->setTitle(isset($data['title']) ? $data['title'] : '');
-        $presentation->setVideo(isset($data['video']) ? $data['video'] : '');
-        $presentation->setTwitter(isset($data['twitter']) ? $data['twitter'] : '');
-        $presentation->setYear($year);
+        $talk = new Talk();
+        $talk->setAbstract(isset($data['abstract']) ? $data['abstract'] : '');
+        $talk->setAvatar(isset($data['avatar']) ? $data['avatar'] : '');
+        $talk->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
+        $talk->setMonth($month);
+        $talk->setPdf("/pdfs/{$year}_{$month}.pdf");
+        $talk->setResources(isset($data['resources']) ? $data['resources'] : []);
+        $talk->setSpeaker(isset($data['speaker']) ? $data['speaker'] : '');
+        $talk->setTitle(isset($data['title']) ? $data['title'] : '');
+        $talk->setVideo(isset($data['video']) ? $data['video'] : '');
+        $talk->setTwitter(isset($data['twitter']) ? $data['twitter'] : '');
+        $talk->setYear($year);
 
         if (isset($data['cues'])) {
-            $presentation->setCues(array_map(function ($cue) {
+            $talk->setCues(array_map(function ($cue) {
                 list($mins, $secs) = explode(':', $cue);
                 return ($mins * 60) + ($secs);
             }, $data['cues']));
         }
 
-        return $presentation;
+        return $talk;
     }
 }

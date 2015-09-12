@@ -30,15 +30,16 @@ class TalkController
     /**
      * @param $year
      * @param $month
-     * @return JsonResponse
+     * @param $key
+     * @return string
      */
-    public function fetchCuesByYearAndMonth($year, $month)
+    public function fetchTalk($year, $month, $key)
     {
         $hasPdfFile = true;
 
         $errors = [];
 
-        $talk = $this->repository->fetchTalk($year, $month);
+        $talk = $this->repository->fetchTalk($year, $month, $key);
 
         if (is_null($talk) || !file_exists(realpath($_SERVER["DOCUMENT_ROOT"]) . $talk->getPdf())) {
             $hasPdfFile = false;
@@ -61,6 +62,29 @@ class TalkController
                 'resources' => $talk->getResources(),
                 'twitter' => $talk->getTwitter(),
                 'errors' => $errors
+            )
+        );
+    }
+
+    /**
+     * @param $year
+     * @param $month
+     * @return JsonResponse
+     */
+    public function fetchTalksByYearAndMonth($year, $month)
+    {
+        $talks = $this->repository->fetchTalks($year, $month);
+
+        if (count($talks) === 1){
+            return $this->fetchTalk($year, $month, 0);
+        }
+
+        return $this->twig->render(
+            'talk_selection.twig',
+            array(
+                'talks' => $talks,
+                'month' => $month,
+                'year' => $year
             )
         );
     }

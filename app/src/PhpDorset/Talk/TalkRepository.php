@@ -20,17 +20,40 @@ class TalkRepository
     /**
      * @param string $year
      * @param string $month
-     * @return Talk|null
+     * @return Talk[]
      */
-    public function fetchTalk($year, $month)
+    public function fetchTalks($year, $month)
     {
         $month = strtolower($month);
 
-        if (!isset($this->talks[$year][$month])) {
+        $talks = $this->talks[$year][$month];
+
+        if (!isset($talks)) {
+            return [];
+        }
+
+        return array_map(function($talk) use ($year, $month){
+            return Talk::createFromArray($year,$month, $talk);
+        }, $talks);
+    }
+
+    /**
+     * @param string $year
+     * @param string $month
+     * @param $key
+     * @return Talk
+     */
+    public function fetchTalk($year, $month, $key)
+    {
+        $month = strtolower($month);
+
+        $talk = $this->talks[$year][$month][$key];
+
+        if (!isset($talk)) {
             return null;
         }
 
-        return Talk::createFromArray($year,$month, $this->talks[$year][$month]);
+        return Talk::createFromArray($year,$month, $talk);
     }
 
     /**

@@ -55,7 +55,12 @@ $app->get(
 
 $app->get(
     '/talks/{year}/{month}',
-    [$app['talk.controller'], 'fetchCuesByYearAndMonth']
+    [$app['talk.controller'], 'fetchTalksByYearAndMonth']
+);
+
+$app->get(
+    '/talks/{year}/{month}/{key}',
+    [$app['talk.controller'], 'fetchTalk']
 );
 
 $app->get(

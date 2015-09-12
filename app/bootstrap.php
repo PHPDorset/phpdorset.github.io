@@ -17,7 +17,7 @@ $app->register(
     )
 );
 
-$app->register(new PhpDorset\Eventbrite\EventbriteProvider());
+//$app->register(new PhpDorset\Eventbrite\EventbriteProvider());
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider);
 

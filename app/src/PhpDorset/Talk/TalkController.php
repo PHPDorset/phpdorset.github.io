@@ -2,6 +2,7 @@
 
 namespace PhpDorset\Talk;
 
+use PhpDorset\Eventbrite\EventbriteService;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -18,13 +19,20 @@ class TalkController
     private $twig;
 
     /**
+     * @var EventbriteService
+     */
+    private $eventbrite;
+
+    /**
      * @param TalkRepository $eventRepository
      * @param \Twig_Environment $twig
+     * @param EventbriteService $eventbrite
      */
-    public function __construct(TalkRepository $eventRepository, \Twig_Environment $twig)
+    public function __construct(TalkRepository $eventRepository, \Twig_Environment $twig, EventbriteService $eventbrite)
     {
         $this->repository = $eventRepository;
         $this->twig = $twig;
+        $this->eventbrite = $eventbrite;
     }
 
     /**
@@ -76,7 +84,7 @@ class TalkController
         $talks = $this->repository->fetchTalks($year, $month);
 
         if (count($talks) === 1){
-            return $this->fetchTalk($year, $month, 0);
+            return $this->fetchTalk($year, $month, 1);
         }
 
         return $this->twig->render(
@@ -110,4 +118,50 @@ class TalkController
             )
         );
     }
+
+    public function fetchHomepageTalks()
+    {
+
+        $nextMonth = new \DateTime('now', new \DateTimeZone('Europe/London'));
+        $nextMonth->add(new \DateInterval('P1M'));
+
+        $talksNextMonth = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
+
+        $thisMonth = clone $nextMonth;
+        $thisMonth->sub(new \DateInterval('P1M'));
+
+        $talksThisMonth = $this->repository->fetchTalks($thisMonth->format('Y'), strtolower($thisMonth->format('F')));
+
+        return $this->twig->render(
+            'homepage.twig',
+            array(
+                'talksNextMonth' => $talksNextMonth,
+                'talksThisMonth' => $talksThisMonth,
+                'currentDate' => new \DateTime('now', new \DateTimeZone('Europe/London'))
+            )
+        );
+
+
+    }
+
+    public function createTalk()
+    {
+        $events = $this->eventbrite->getEvents();
+
+        echo '<pre>';print_r($events);exit;
+
+
+        return $this->twig->render(
+            'talk_create.twig'
+        );
+    }
+
+    public function createFormAction()
+    {
+
+
+
+
+    }
+
 }

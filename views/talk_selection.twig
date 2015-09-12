@@ -21,7 +21,7 @@
         {% for key, talk in talks %}
             <div class="pod">
                 {% if talk.avatar %}
-                    <img src="{{ talk.avatar }}"/>
+                    <img class="circle large" src="{{ talk.avatar }}"/>
                 {% endif %}
 
                 <h3>{{ talk.title }}</h3>

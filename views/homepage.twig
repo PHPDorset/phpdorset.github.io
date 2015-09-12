@@ -12,71 +12,152 @@
         </div>
     </div>
 
+    {% if talksNextMonth is not empty %}
+
+        {% set colwidth = (talksNextMonth|length) %}
+        {% if talksNextMonth|length == 1 %}
+            {% set colwidth = 2 %}
+        {% endif %}
+
+        <div class="banner clearfix">
+            <div class="wrapper clearfix">
+                {% for key, talk in talksNextMonth %}
+                    <div class="col-{{ colwidth }}">
+                        <div class="inner clearfix">
+                            <div class="image">
+                                <img alt="{{ talk.speaker }}'s avatar" class="circle large" src="{{ talk.avatar }}"/>
+                            </div>
+
+                            <div class="info">
+                                <h3>
+                                    {% if talk.date < currentDate %}
+                                        Recent Talk
+                                    {% else %}
+                                        Upcoming Talk
+                                    {% endif %}
+                                </h3>
+
+                                <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
+
+                                {{ talk.title }}
+                                <br/>
+
+                                {{ talk.date|date("jS F Y") }}
+
+                                <br/><br/>
+                                <a class="btn" href="http://www.eventbrite.co.uk/o/phpdorset-5284449005">
+                                    <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;Sign up for free
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% if talksNextMonth|length < 2 %}
+                    <div class="col-{{ colwidth }}">
+                        <div class="inner clearfix">
+
+                            <div class="image">
+                                <a href="https://www.google.com/maps?ll=50.717601,-1.899877&z=15&t=m&hl=en-US&gl=GB&mapclient=embed&cid=17690204135300394123">
+                                    <img title="St. Ambrose Church Hall" alt="St. Ambrose Church Hall" class="circle" src="http://maps.googleapis.com/maps/api/staticmap?center=50.717411,+-1.900293&zoom=18&scale=false&size=300x300&maptype=satellite&format=png&visual_refresh=true">
+                                </a>
+                            </div>
+
+                            <div class="info">
+                                <h4>Talks</h4>
+                                <p>7:30pm<br/><a href="https://www.google.com/maps?ll=50.717601,-1.899877&z=15&t=m&hl=en-US&gl=GB&mapclient=embed&cid=17690204135300394123">St. Ambrose Church Hall</a></p>
+
+                                <h4>Socials</h4>
+                                <p>8:30/9:00pm+<br/><a href="https://www.google.co.uk/maps/place/Camden+Bar+Westbourne">Camden Bar</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if talksNextMonth|length > 1 %}
+                    <div style="clear:both">
+                        Talk 7:30pm <a href="https://www.google.com/maps?ll=50.717601,-1.899877&z=15&t=m&hl=en-US&gl=GB&mapclient=embed&cid=17690204135300394123">St. Ambrose Church Hall</a> | Social 8:30/9:00pm+ <a href="https://www.google.co.uk/maps/place/Camden+Bar+Westbourne">Camden Bar</a><br/><br/>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
     <div class="banner clearfix">
+        <div class="wrapper clearfix">
 
-        <div class="wrapper">
+            {% set colwidth = (talksThisMonth|length) %}
+            {% if talksThisMonth|length == 1 %}
+                {% set colwidth = 2 %}
+            {% endif %}
 
-            <div class="info rightalign">
-                <h3>Last Event - Don't code, bake. An introduction to CakePHP</h3>
-                <p>
-                    3rd August 2015 - <a href="https://twitter.com/YellDavid">David Yell</a><br/>
-                    <strong>Talk 7:30pm <a href="https://www.google.co.uk/maps/place/St+Ambrose+Church/">St. Ambrose Church Hall</a></strong><br/>
-                    Social 8:30/9:00pm+ <a  href="https://www.google.co.uk/maps/place/Camden+Bar+Westbourne">Camden Bar</a>
-                </p>
-                <a class="btn" href="/talks/2015/august">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
-                </a>
+            {% for key, talk in talksThisMonth %}
+                <div class="col-{{ colwidth }}">
+                    <div class="inner clearfix">
+                        <div class="image">
+                            <img alt="{{ talk.speaker }}'s avatar" class="circle large" src="{{ talk.avatar }}"/>
+                        </div>
 
-            </div>
+                        <div class="info">
+                            <h3>
+                                {% if talk.date < currentDate %}
+                                    Recent Talk
+                                {% else %}
+                                    Upcoming Talk
+                                {% endif %}
+                            </h3>
 
-            <div class="image" style="background-image: url('images/banners/david-yell-august-2015.jpg');"></div>
+                            <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
 
+                            {{ talk.title }}
+
+                            <br/><br/>
+
+                            {% if talksThisMonth|length > 1 %}
+                                 <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}/{{ key }}">
+                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                                 </a>
+                            {% else %}
+                                 <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}">
+                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                                 </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% if talksThisMonth|length == 1 %}
+                <div class="col-{{ colwidth }}">
+                    <div class="inner clearfix">
+
+                        <div class="image">
+                            <img title="St. Ambrose Church Hall" alt="phpdorset" class="circle" src="/images/logo-transparent.png">
+                        </div>
+
+                        <div class="info">
+                            <h3>Speakers Wanted</h3>
+                            <h4>Talk at PHPDorset</h4>
+                            <p>Whether you've never given a talk before, our friendly environment is the perfect place to start!</p>
+                            <a class="btn" href="mailto:phpdorset@gmail.com?subject=I would like to talk at PHPDorset">
+                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;Email us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
-
     </div>
 
-    <div class="banner clearfix">
+    {#<div class="banner clearfix">#}
 
-        <div class="wrapper">
+        {#<div class="wrapper">#}
 
-            <div class="image" style="background-image: url('images/banners/asgrim-ocramius.jpg');"></div>
+            {#<div class="info">#}
+                {#<h4>Title</h4>#}
+            {#</div>#}
 
-            <div class="info">
-                <h3>Next Event - James Titcumb / Marco Pivetta</h3>
-                <p>
-                    7th September 2015 - <a href="https://twitter.com/asgrim">James Titcumb</a> / <a href="https://twitter.com/Ocramius">Marco Pivetta</a><br/>
-                    <strong>Talk 6:00pm <a href="https://www.google.co.uk/maps/place/65+Seamoor+Rd,+Bournemouth+BH4+9AE">We Are Base Offices</a></strong><br/>
-                    Social 7:00pm+ <a  href="https://www.google.co.uk/maps/place/Camden+Bar+Westbourne">Camden Bar</a>
-                </p>
+        {#</div>#}
 
-                <a class="btn" href="https://www.eventbrite.co.uk/e/phpdorset-september-james-titcumb-marco-pivetta-tickets-18010155861">
-                    <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;Free Registration
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="banner clearfix" id="southcoast">
-
-        <div class="wrapper">
-
-            <div class="info">
-                <h4>PHPDorset Tees and Hoodies</h4>
-                <p>Show your support for PHPDorset</p>
-
-                <a class="btn" href="http://phpdorset.spreadshirt.co.uk/" target="_blank">
-                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;Visit the store
-                </a>
-            </div>
-
-            <div class="image" style="background-image: url('images/banners/swag.jpg');"></div>
-
-        </div>
-
-    </div>
+    {#</div>#}
 
     <div id="sponsors">
 

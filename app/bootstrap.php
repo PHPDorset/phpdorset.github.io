@@ -2,6 +2,9 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$dotenv = new Dotenv\Dotenv('../');
+$dotenv->load();
+
 $app = new Silex\Application();
 
 // add the current url to the app object.
@@ -14,11 +17,13 @@ $app->register(
     )
 );
 
+$app->register(new PhpDorset\Eventbrite\EventbriteProvider());
+
 $app->register(new Silex\Provider\ServiceControllerServiceProvider);
 
 $app['talk.controller'] = $app->share(
     function () use ($app) {
-        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig']);
+        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig'], $app['eventbrite']);
     }
 );
 
@@ -35,12 +40,7 @@ $app->get(
 
 $app->get(
     '/',
-    function () use ($app) {
-        return $app['twig']->render(
-            'homepage.twig',
-            array()
-        );
-    }
+    [$app['talk.controller'], 'fetchHomepageTalks']
 );
 
 $app->get(
@@ -69,9 +69,18 @@ $app->get(
 );
 
 $app->get(
+    '/talk/create',
+    [$app['talk.controller'], 'createTalk']
+);
+
+
+$app->get(
     '/contact',
     function () use ($app) {
-        return $app->redirect('get-involved', 301);
+        return $app['twig']->render(
+            'contact.twig',
+            array()
+        );
     }
 );
 

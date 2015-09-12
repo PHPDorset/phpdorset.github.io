@@ -1,2 +1,2 @@
 serve:
-	@cd web && php -S localhost:3000
+	@cd web && php -d variables_order=EGPCS -S localhost:3000

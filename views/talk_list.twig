@@ -25,7 +25,7 @@
 
                     <div class="pod">
                         {% if talk.avatar %}
-                            <img src="{{ talk.avatar }}"/>
+                            <img class="circle large" src="{{ talk.avatar }}"/>
                         {% endif %}
 
                         <h3>{{ talk.title }}</h3>
@@ -34,17 +34,19 @@
 
                         {% if talks|length > 1 %}
                             <a class="btn" href="/talks/{{ year }}/{{ month }}/{{ key }}">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                            </a>
                         {% else %}
                             <a class="btn" href="/talks/{{ year }}/{{ month }}">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                            </a>
                         {% endif %}
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
-                        </a>
 
                     </div>
                 {% endfor %}
             {% endfor %}
         {% endfor %}
-</div>
+    </div>
 
 
 

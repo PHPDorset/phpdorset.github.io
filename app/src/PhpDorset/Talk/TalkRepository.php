@@ -26,6 +26,10 @@ class TalkRepository
     {
         $month = strtolower($month);
 
+        if(!isset($this->talks[$year][$month])){
+            return [];
+        }
+
         $talks = $this->talks[$year][$month];
 
         if (!isset($talks)) {

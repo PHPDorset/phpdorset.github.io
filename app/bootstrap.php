@@ -2,8 +2,8 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = new Dotenv\Dotenv('../');
-$dotenv->load();
+//$dotenv = new Dotenv\Dotenv('../');
+//$dotenv->load();
 
 $app = new Silex\Application();
 
@@ -17,13 +17,13 @@ $app->register(
     )
 );
 
-$app->register(new PhpDorset\Eventbrite\EventbriteProvider());
+//$app->register(new PhpDorset\Eventbrite\EventbriteProvider());
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider);
 
 $app['talk.controller'] = $app->share(
     function () use ($app) {
-        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig'], $app['eventbrite']);
+        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig']);
     }
 );
 

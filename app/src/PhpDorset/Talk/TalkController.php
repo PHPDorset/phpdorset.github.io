@@ -19,20 +19,13 @@ class TalkController
     private $twig;
 
     /**
-     * @var EventbriteService
-     */
-    private $eventbrite;
-
-    /**
      * @param TalkRepository $eventRepository
      * @param \Twig_Environment $twig
-     * @param EventbriteService $eventbrite
      */
-    public function __construct(TalkRepository $eventRepository, \Twig_Environment $twig, EventbriteService $eventbrite)
+    public function __construct(TalkRepository $eventRepository, \Twig_Environment $twig)
     {
         $this->repository = $eventRepository;
         $this->twig = $twig;
-        $this->eventbrite = $eventbrite;
     }
 
     /**
@@ -140,26 +133,6 @@ class TalkController
                 'currentDate' => new \DateTime('now', new \DateTimeZone('Europe/London'))
             )
         );
-
-
-    }
-
-    public function createTalk()
-    {
-        $events = $this->eventbrite->getEvents();
-
-        echo '<pre>';print_r($events);exit;
-
-
-        return $this->twig->render(
-            'talk_create.twig'
-        );
-    }
-
-    public function createFormAction()
-    {
-
-
 
 
     }

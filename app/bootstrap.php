@@ -16,21 +16,21 @@ $app->register(
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider);
 
-$app['presentation.controller'] = $app->share(
+$app['talk.controller'] = $app->share(
     function () use ($app) {
-        return new PhpDorset\Presentation\PresentationController($app['presentation.repo'], $app['twig']);
+        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig']);
     }
 );
 
-$app['presentation.repo'] = $app->share(function () {
-    return new PhpDorset\Presentation\PresentationRepository(
-        json_decode(file_get_contents(__DIR__ . '/database/cues.json'), true)
+$app['talk.repo'] = $app->share(function () {
+    return new PhpDorset\Talk\TalkRepository(
+        json_decode(file_get_contents(__DIR__ . '/database/talks.json'), true)
     );
 });
 
 $app->get(
-    '/api/v1/presentations/{year}/{month}/cues.json',
-    "presentation.controller:fetchCuesByYearAndMonth"
+    '/api/v1/talks/{year}/{month}/talks.json',
+    "talk.controller:fetchCuesByYearAndMonth"
 );
 
 $app->get(
@@ -55,12 +55,17 @@ $app->get(
 
 $app->get(
     '/talks/{year}/{month}',
-    [$app['presentation.controller'], 'fetchCuesByYearAndMonth']
+    [$app['talk.controller'], 'fetchTalksByYearAndMonth']
+);
+
+$app->get(
+    '/talks/{year}/{month}/{key}',
+    [$app['talk.controller'], 'fetchTalk']
 );
 
 $app->get(
     '/talks',
-    "presentation.controller:fetchTalkList"
+    [$app['talk.controller'], 'fetchTalkList']
 );
 
 $app->get(

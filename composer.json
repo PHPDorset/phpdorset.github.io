@@ -5,7 +5,8 @@
         "php": ">=5.3.0",
         "silex/silex": "~1.1",
         "twig/twig": ">=1.8,<2.0-dev",
-        "roave/security-advisories": "dev-master"
+        "guzzlehttp/guzzle": "4.*",
+        "vlucas/phpdotenv": "^2.0"
     },
     "autoload": {
         "psr-4": {"PhpDorset\\": "app/src/PhpDorset"}

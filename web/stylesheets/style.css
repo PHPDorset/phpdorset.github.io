@@ -89,38 +89,51 @@ h1{
     border-bottom: 2px solid rgba(0,0,0,0.5);
 }
 
-.clearfix:after{content: ".";display:block;height:1%;clear:both;visibility:hidden;margin:0;line-height:0.1em;}
 
-.banner .wrapper > div {
-    float:left;
-    padding:0;
-    margin:0;
-    height:200px;
+.banner .inner{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
 }
 
-.banner .wrapper .image{
-    background-position:center;
-    background-repeat:no-repeat;
+.banner .inner .image{
+    float:left;
+    width:40%;
+    text-align:center;
+    min-width:85px;
+}
+
+.banner .inner .info{
+    float:left;
+    width:60%;
+}
+
+.clearfix:after{content: ".";display:block;height:1%;clear:both;visibility:hidden;margin:0;line-height:0.1em;}
+
+.banner div.col-1{
+    width:100%;
+}
+
+.banner div.col-2{
+    float:left;
     width:50%;
-    background-size: 100%;
-    height:200px;
-    margin:0;
-    padding:0;
+}
+
+.banner div.col-3{
+    float:left;
+    width:33.3%;
 }
 
 .banner:nth-child(2){
     background-color:#137B3A;
-    text-align:right;
 }
 
 .banner:nth-child(3){
     background-color:#AA801A;
-    text-align:left;
 }
 
 .banner:nth-child(4){
     background-color:#AA331A;
-    text-align:right;
 }
 
 .banner:nth-child(5){
@@ -128,10 +141,6 @@ h1{
     text-align:left;
 }
 
-.banner .wrapper .info{
-    padding:20px;
-    width:39%;
-}
 
 
 a{
@@ -169,6 +178,9 @@ a.btn:hover. a.btn:active{
     margin-top:2px;
 }
 
+.banner .info h3{
+    font-size:18px;
+}
 
 a.btn:hover{
     border-bottom:0;
@@ -276,15 +288,15 @@ h2,h3,h4{
 .pod .btn{
     margin-left:10px;
     margin-right:10px;
-
 }
 
-.talk_list img{
+img.circle{
     border-radius:50%;
-    height:85px;
     margin-top:10px;
     margin-bottom:10px;
+    height:120px;
 }
+
 
 .abstract{
     display:none;
@@ -377,18 +389,23 @@ canvas{
         float: none;
     }
 
-    .banner .wrapper > div {
-        height: 220px;
+    img.circle{
+        height:85px;
     }
+
 }
 @media only screen and (max-width : 600px) {
     #masthead .phpdorset-logo{
         width:100%;
     }
 
-    .banner .wrapper .image {
+    img.circle{
         background: none;
         display: none;
+    }
+
+    .banner .inner{
+        padding:20px;
     }
 
     .banner .wrapper .info {
@@ -405,10 +422,6 @@ canvas{
 
     #masthead {
         height: 155px;
-    }
-
-    .banner .wrapper > div {
-        height: 200px;
     }
 
     #canvas_holder{
@@ -440,5 +453,10 @@ canvas{
     .pod {
         margin: 0;
         width:100%;
+    }
+
+    .banner div .col-1, .banner div .col-2, .banner div .col-3{
+        width:100%;
+        float:none;
     }
 }

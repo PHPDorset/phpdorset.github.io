@@ -15,4 +15,10 @@
             <directory>./app/tests/</directory>
         </testsuite>
     </testsuites>
+
+    <php>
+        <!--
+            <env name="EVENTBRITE_OAUTH" value="YOUR OAUTH TOKEN" />
+        -->
+    </php>
 </phpunit>

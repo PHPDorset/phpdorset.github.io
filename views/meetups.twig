@@ -1,0 +1,19 @@
+{% extends "master.twig" %}
+
+{% block main_content %}
+    <div class="inner cover">
+        {% for event in events %}
+            <div class="meetup">
+                <h3 class="digital">
+                    <a href="{{ event.url }}" target="_blank">{{ event.name }}</a>
+                </h3>
+
+                <p>{{ event.description }}</p>
+
+                <p>{{ event.start|date('l F d Y g:ia') }} to {{ event.end|date('g:ia') }}</p>
+            </div>
+        {% else %}
+            <p>There are no events at this time.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

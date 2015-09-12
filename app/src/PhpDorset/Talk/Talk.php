@@ -18,6 +18,11 @@ class Talk
     protected $twitter = '';
 
     /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
      * @param string $abstract
      */
     public function setAbstract($abstract)
@@ -217,6 +222,23 @@ class Talk
     }
 
     /**
+     * @return \DateTime|null
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+
+    /**
      * @param string $month
      * @param string $year
      * @param array $data
@@ -227,6 +249,7 @@ class Talk
         $talk = new Talk();
         $talk->setAbstract(isset($data['abstract']) ? $data['abstract'] : '');
         $talk->setAvatar(isset($data['avatar']) ? $data['avatar'] : '');
+        $talk->setDate(isset($data['twitter']) ? new \DateTime($data['date'], new \DateTimeZone('Europe/London')) : null);
         $talk->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
         $talk->setMonth($month);
         $talk->setPdf("/pdfs/{$year}_{$month}.pdf");

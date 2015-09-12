@@ -1,23 +1,5 @@
 {
     "2015": {
-        "october": {
-            "1" : {
-                "date": "2015-10-07",
-                "speaker": "James Titcumb",
-                "title": "Diving into HHVM Extensions",
-                "avatar": "/images/james.png",
-                "abstract": "HHVM is currently gaining popularity at quite a pace, and it's a pretty exciting time for PHP runtimes. Have you ever wondered what is going on beneath this slick and super-speedy engine? I wondered that myself, so I dived into the internals of HHVM, discovering a treasure trove of awesome stuff. In this talk, I'll show you how HHVM itself works with a guided tour of the codebase, demonstrating how it all pieces together. I'll also show you a couple of ways to write your own incredible HHVM extension. You don't need to know C++ to understand this talk - just PHP language knowledge is enough.",
-                "twitter": "asgrim"
-            },
-            "2" : {
-                "date": "2015-09-07",
-                "speaker": "Marco Pivetta",
-                "title": "Extremely defensive PHP",
-                "avatar": "/images/ocramius.png",
-                "abstract": "What if I told you that your carefully designed and tested code was fragile? What if I told you that you can trust nobody? What does \"fragile\" even mean? We are going to look at fragile code, fix it, and lastly learn about various Poka-Yoke techniques that make our code very hard to break.",
-                "twitter": "ocramius"
-            }
-        },
         "september": {
             "1" : {
                 "date": "2015-09-07",

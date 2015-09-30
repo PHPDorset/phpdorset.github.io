@@ -1,5 +1,15 @@
 {
     "2015": {
+        "october": {
+          "1" : {
+            "date": "2015-10-05",
+            "speaker": "Dave Hulbert",
+            "title": "Practical intro to using PhpSpec. AKA how to be lazy and write better code.",
+            "avatar": "/images/dave.jpeg",
+            "abstract": "PhpSpec is a tool for \"SpecBDD\". Basically test-driven development (TDD) but without the word \"test\" in it. This talk shows how to effectively use PhpSpec for fun and/or profit, and the advantages to using it along side other tools like PHPUnit and why it's \"literally\" made of awesomesauce. We'll start off with a breakneck primer on unit testing with PHPUnit and basic TDD concepts. Then we'll move on to getting set up with PhpSpec, followed by a guided tour of its main features. By the end of the talk you'll have techniques to take advantage of your natural inclination to laziness to actually help you write better code.",
+            "twitter": "dave1010"
+          }
+        },
         "september": {
             "1" : {
                 "date": "2015-09-07",
@@ -7,7 +17,8 @@
                 "title": "Diving into HHVM Extensions",
                 "avatar": "/images/james.png",
                 "abstract": "HHVM is currently gaining popularity at quite a pace, and it's a pretty exciting time for PHP runtimes. Have you ever wondered what is going on beneath this slick and super-speedy engine? I wondered that myself, so I dived into the internals of HHVM, discovering a treasure trove of awesome stuff. In this talk, I'll show you how HHVM itself works with a guided tour of the codebase, demonstrating how it all pieces together. I'll also show you a couple of ways to write your own incredible HHVM extension. You don't need to know C++ to understand this talk - just PHP language knowledge is enough.",
-                "twitter": "asgrim"
+                "twitter": "asgrim",
+                "video": "http://player.vimeo.com/video/139081731"
             },
             "2" : {
                 "date": "2015-09-07",
@@ -15,7 +26,8 @@
                 "title": "Extremely defensive PHP",
                 "avatar": "/images/ocramius.png",
                 "abstract": "What if I told you that your carefully designed and tested code was fragile? What if I told you that you can trust nobody? What does \"fragile\" even mean? We are going to look at fragile code, fix it, and lastly learn about various Poka-Yoke techniques that make our code very hard to break.",
-                "twitter": "ocramius"
+                "twitter": "ocramius",
+                "video": "http://player.vimeo.com/video/140114867"
             }
         },
         "august": {

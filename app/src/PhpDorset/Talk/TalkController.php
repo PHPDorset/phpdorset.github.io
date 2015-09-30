@@ -115,7 +115,7 @@ class TalkController
     public function fetchHomepageTalks()
     {
 
-        $nextMonth = new \DateTime('now', new \DateTimeZone('Europe/London'));
+        $nextMonth = new \DateTime('now');
         $nextMonth->add(new \DateInterval('P1M'));
 
         $talksNextMonth = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
@@ -130,7 +130,7 @@ class TalkController
             array(
                 'talksNextMonth' => $talksNextMonth,
                 'talksThisMonth' => $talksThisMonth,
-                'currentDate' => new \DateTime('now', new \DateTimeZone('Europe/London'))
+                'currentDate' => new \DateTime('now')
             )
         );
 

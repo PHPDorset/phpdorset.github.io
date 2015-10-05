@@ -2,19 +2,12 @@
 
 {% block main_content %}
 
-    <div id="strapline">
-        <div class="wrapper">
-
-            <p>
-                PHP Dorset is a local user group, open to all. Monthly talk and meet on the first monday of the month in Westbourne, Dorset.
-            </p>
-
-        </div>
-    </div>
+    {% include 'homepage/cta.twig' %}
 
     {% if talksNextMonth is not empty %}
 
         {% set colwidth = (talksNextMonth|length) %}
+
         {% if talksNextMonth|length == 1 %}
             {% set colwidth = 2 %}
         {% endif %}
@@ -22,61 +15,15 @@
         <div class="banner clearfix">
             <div class="wrapper clearfix">
                 {% for key, talk in talksNextMonth %}
-                    <div class="col-{{ colwidth }}">
-                        <div class="inner clearfix">
-                            <div class="image">
-                                <img alt="{{ talk.speaker }}'s avatar" class="circle large" src="{{ talk.avatar }}"/>
-                            </div>
-
-                            <div class="info">
-                                <h3>
-                                    {% if talk.date < currentDate %}
-                                        Recent Talk
-                                    {% else %}
-                                        Upcoming Talk
-                                    {% endif %}
-                                </h3>
-
-                                <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
-
-                                {{ talk.title }}
-                                <br/>
-
-                                {{ talk.date|date("jS F Y") }}
-
-                                <br/><br/>
-                                <a class="btn" href="http://www.eventbrite.co.uk/o/phpdorset-5284449005">
-                                    <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;Sign up for free
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    {% include 'homepage/upcoming-talk.twig' %}
                 {% endfor %}
 
                 {% if talksNextMonth|length < 2 %}
-                    <div class="col-{{ colwidth }}">
-                        <div class="inner clearfix">
-
-                            <div class="image">
-                                <a href="https://www.google.com/maps?ll=50.717601,-1.899877&z=15&t=m&hl=en-US&gl=GB&mapclient=embed&cid=17690204135300394123">
-                                    <img title="St. Ambrose Church Hall" alt="St. Ambrose Church Hall" class="circle" src="http://maps.googleapis.com/maps/api/staticmap?center=50.717411,+-1.900293&zoom=18&scale=false&size=300x300&maptype=satellite&format=png&visual_refresh=true">
-                                </a>
-                            </div>
-
-                            <div class="info">
-                                <h4>Talks</h4>
-                                <p>7:30pm<br/><a href="https://www.google.com/maps?ll=50.717601,-1.899877&z=15&t=m&hl=en-US&gl=GB&mapclient=embed&cid=17690204135300394123">St. Ambrose Church Hall</a></p>
-
-                                <h4>Socials</h4>
-                                <p>8:30/9:00pm+<br/><a href="https://www.google.co.uk/maps/place/Camden+Bar+Westbourne">Camden Bar</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    {% include 'homepage/venue.twig' %}
                 {% endif %}
+
                 {% if talksNextMonth|length > 1 %}
-                    <div style="clear:both">
-                        Talk 7:30pm <a href="https://www.google.com/maps?ll=50.717601,-1.899877&z=15&t=m&hl=en-US&gl=GB&mapclient=embed&cid=17690204135300394123">St. Ambrose Church Hall</a> | Social 8:30/9:00pm+ <a href="https://www.google.co.uk/maps/place/Camden+Bar+Westbourne">Camden Bar</a><br/><br/>
-                    </div>
+                    {% include 'homepage/venue-summary.twig' %}
                 {% endif %}
             </div>
         </div>
@@ -86,111 +33,21 @@
         <div class="wrapper clearfix">
 
             {% set colwidth = (talksThisMonth|length) %}
+
             {% if talksThisMonth|length == 1 %}
                 {% set colwidth = 2 %}
             {% endif %}
 
             {% for key, talk in talksThisMonth %}
-                <div class="col-{{ colwidth }}">
-                    <div class="inner clearfix">
-                        <div class="image">
-                            <img alt="{{ talk.speaker }}'s avatar" class="circle large" src="{{ talk.avatar }}"/>
-                        </div>
-
-                        <div class="info">
-                            <h3>
-                                {% if talk.date < currentDate %}
-                                    Recent Talk
-                                {% else %}
-                                    Upcoming Talk
-                                {% endif %}
-                            </h3>
-
-                            <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
-
-                            {{ talk.title }}
-
-                            <br/><br/>
-
-                            {% if talksThisMonth|length > 1 %}
-                                 <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}/{{ key }}">
-                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
-                                 </a>
-                            {% else %}
-                                 <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}">
-                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
-                                 </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                {% include 'homepage/recent-talk.twig' %}
             {% endfor %}
+
             {% if talksThisMonth|length == 1 %}
-                <div class="col-{{ colwidth }}">
-                    <div class="inner clearfix">
-
-                        <div class="image">
-                            <img title="St. Ambrose Church Hall" alt="phpdorset" class="circle" src="/images/logo-transparent.png">
-                        </div>
-
-                        <div class="info">
-                            <h3>Speakers Wanted</h3>
-                            <h4>Talk at PHPDorset</h4>
-                            <p>Whether you've never given a talk before, our friendly environment is the perfect place to start!</p>
-                            <a class="btn" href="mailto:phpdorset@gmail.com?subject=I would like to talk at PHPDorset">
-                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;Email us
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% include 'homepage/speakers-wanted.twig' %}
             {% endif %}
         </div>
     </div>
 
-    {#<div class="banner clearfix">#}
-
-        {#<div class="wrapper">#}
-
-            {#<div class="info">#}
-                {#<h4>Title</h4>#}
-            {#</div>#}
-
-        {#</div>#}
-
-    {#</div>#}
-
-    <div id="sponsors">
-
-        <div class="wrapper">
-
-            <h5>Sponsors</h5>
-
-            <div>
-                <a href="http://shop.oreilly.com/">
-                    <img src="/images/orm.jpg" alt="O'Reilly User Group Program" />
-                    <h6>O'Reilly User Group Program</h6>
-                </a>
-                <p>PHP Dorset is proud to be part of the O'Reilly User Group Program, which means our members can benefit from discounts (40% off printed books, 50% off e-books) and other goodies!</p>
-            </div>
-
-            <div>
-                <a href="https://www.jetbrains.com/phpstorm/">
-                    <img src="/images/logo_phpstorm.png" alt="JetBrains PhpStorm" />
-                    <h6>JetBrains PhpStorm</h6>
-                </a>
-                <p>The editor that actually gets your code and deeply understands its structure, supporting PHP 5.3, 5.4 & 5.5 for modern and legacy projects. Provides the best code autocompletion, refactorings, on-the-fly error prevention, supports language mixtures and more.</p>
-            </div>
-
-            <div>
-                <a href="https://www.facebook.com/camdenwestbourne">
-                    <img src="/images/camdenBar.jpg" alt="Camden Bar Westbourne"/>
-                    <h6>Camden Bar Westbourne</h6>
-                </a>
-                <p>Our current post-talk spot. Camden Bar give PHPDorset members special deals on food and drink, drop us a line to find out more.</p>
-            </div>
-
-        </div>
-
-    </div>
+    {% include 'homepage/sponsors.twig' %}
 
 {% endblock %}

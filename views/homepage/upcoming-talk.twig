@@ -1,0 +1,29 @@
+<div class="col-{{ colwidth }}">
+    <div class="inner clearfix">
+        <div class="image">
+            <img alt="{{ talk.speaker }}'s avatar" class="circle large" src="{{ talk.avatar }}"/>
+        </div>
+
+        <div class="info">
+            <h3>
+                {% if talk.date < currentDate %}
+                    Recent Talk
+                {% else %}
+                    Upcoming Talk
+                {% endif %}
+            </h3>
+
+            <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
+
+            {{ talk.title }}
+            <br/>
+
+            {{ talk.date|date("jS F Y") }}
+
+            <br/><br/>
+            <a class="btn" href="http://www.eventbrite.co.uk/o/phpdorset-5284449005">
+                <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;Sign up for free
+            </a>
+        </div>
+    </div>
+</div>

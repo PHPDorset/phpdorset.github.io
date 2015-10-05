@@ -1,0 +1,33 @@
+<div class="col-{{ colwidth }}">
+    <div class="inner clearfix">
+        <div class="image">
+            <img alt="{{ talk.speaker }}'s avatar" class="circle large" src="{{ talk.avatar }}"/>
+        </div>
+
+        <div class="info">
+            <h3>
+                {% if talk.date < currentDate %}
+                    Recent Talk
+                {% else %}
+                    Upcoming Talk
+                {% endif %}
+            </h3>
+
+            <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
+
+            {{ talk.title }}
+
+            <br/><br/>
+
+            {% if talksThisMonth|length > 1 %}
+                <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}/{{ key }}">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                </a>
+            {% else %}
+                <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,5 +1,23 @@
 {
     "2015": {
+        "november": {
+            "1" : {
+                "date": "2015-11-02",
+                "speaker": "Michael Godfrey",
+                "title": "JS Framework Fatigue: A Survival Guide",
+                "avatar": "/images/crudbetter.png",
+                "abstract": "2013 was the year of BackboneJS. 2014 belonged to AngularJS. 2015 has seen the ReactJS uprising. Youth and exuberance can keep up, but for those of us with one toe in the grave it’s exhausting. For businesses it’s even worse. Before a business has finished writing their new shiny in AngularJS, a rival has come along and taken advantage of ReactJS (virtual DOM n’all). The rate of browser development ensures that this framework madness isn’t likely to slow down, so what can we as developers do to help? In search of an answer, this talk will couple old-fashioned techniques with modern JS build and test tools. It may even include a demo!",
+                "twitter": "crudbetter"
+            },
+            "2" : {
+                "date": "2015-11-02",
+                "speaker": "Peter Ruczynski",
+                "title": "Clean Code",
+                "avatar": "/images/softbass.png",
+                "abstract": "Clean code does not just mean making your code look tidy and neat. This brief talk aims to show you some techniques which will help you to improve your code so that it is easier to read, easier to maintain, easier to debug, easier to test and easier for others to work on.",
+                "twitter": "softbass"
+            }
+        },
         "october": {
           "1" : {
             "date": "2015-10-05",

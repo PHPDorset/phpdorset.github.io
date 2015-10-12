@@ -94,7 +94,10 @@ $app->get(
 $app->get(
     '/about',
     function () use ($app) {
-        return $app->redirect('/', 301);
+        return $app['twig']->render(
+            'about.twig',
+            array()
+        );
     }
 );
 

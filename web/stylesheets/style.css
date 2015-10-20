@@ -392,7 +392,7 @@ canvas{
     border-top:6px solid #103c50;
     position:relative;
     margin-top:15px;
-    width:40%;
+    max-width:600px;
 }
 
 .document h3 a, .document h4 a{
@@ -431,6 +431,16 @@ canvas{
 @media only screen and (max-width : 600px) {
     #masthead .phpdorset-logo{
         width:100%;
+    }
+
+    #masthead ul.navigation{
+        padding:0;
+    }
+
+    #masthead ul.navigation li a{
+        font-size:0.8em;
+        padding-bottom:10px;
+        margin:12px 0;
     }
 
     img.circle{

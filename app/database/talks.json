@@ -3,11 +3,16 @@
         "november": {
             "1" : {
                 "date": "2015-11-02",
-                "speaker": "Michael Godfrey",
-                "title": "JS Framework Fatigue: A Survival Guide",
-                "avatar": "/images/crudbetter.png",
-                "abstract": "2013 was the year of BackboneJS. 2014 belonged to AngularJS. 2015 has seen the ReactJS uprising. Youth and exuberance can keep up, but for those of us with one toe in the grave it’s exhausting. For businesses it’s even worse. Before a business has finished writing their new shiny in AngularJS, a rival has come along and taken advantage of ReactJS (virtual DOM n’all). The rate of browser development ensures that this framework madness isn’t likely to slow down, so what can we as developers do to help? In search of an answer, this talk will couple old-fashioned techniques with modern JS build and test tools. It may even include a demo!",
-                "twitter": "crudbetter"
+                "speaker": "Jonathan Ginn",
+                "title": "Taming Wordpress Theming with Twig & Timber",
+                "avatar": "/images/jonginn.png",
+                "abstract": "Fed up with WordPress' templating system or feel like it could be so much better?\n\n<strong>Timber is the answer.</strong>\n\nTimber turns WordPress into a logical system of templates and views, gifting you the full power of Twig (and more) to turn your WordPress theme into a powerful system of controllers and views, with sensible, reusable code. Whether you're a front-end dev or back-end dev, Timber is sure to make you love WordPress again.\n\nJon will run through the basics of Twig as a templating system and show the advanced opportunities for Wordpress developers that Timber offers.\n\nJon is a 'Developer Evangelist' at Base, splitting his time between front-end dev and running digital events in the Dorset area.",
+                "twitter": "jonginn",
+                "resources": {
+                    "Twig": "http://twig.sensiolabs.org/",
+                    "Timber": "http://upstatement.com/timber/",
+                    "WordPress": "https://wordpress.org/"
+                }
             },
             "2" : {
                 "date": "2015-11-02",

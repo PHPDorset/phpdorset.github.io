@@ -249,7 +249,7 @@ class Talk
         $talk = new Talk();
         $talk->setAbstract(isset($data['abstract']) ? $data['abstract'] : '');
         $talk->setAvatar(isset($data['avatar']) ? $data['avatar'] : '');
-        $talk->setDate(isset($data['twitter']) ? new \DateTime($data['date'], new \DateTimeZone('Europe/London')) : null);
+        $talk->setDate(isset($data['date']) ? new \DateTime($data['date'], new \DateTimeZone('Europe/London')) : null);
         $talk->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
         $talk->setMonth($month);
         $talk->setPdf("/pdfs/{$year}_{$month}.pdf");

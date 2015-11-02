@@ -114,7 +114,6 @@ class TalkController
 
     public function fetchHomepageTalks()
     {
-
         $nextMonth = new \DateTime('now');
         $nextMonth->add(new \DateInterval('P1M'));
 
@@ -133,8 +132,5 @@ class TalkController
                 'currentDate' => new \DateTime('now')
             )
         );
-
-
     }
-
 }

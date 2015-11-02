@@ -108,6 +108,7 @@ h1{
     width:60%;
 }
 
+
 .clearfix:after{content: ".";display:block;height:1%;clear:both;visibility:hidden;margin:0;line-height:0.1em;}
 
 .banner div.col-1{
@@ -290,6 +291,10 @@ h2,h3,h4{
     margin-right:10px;
 }
 
+.pod.left{
+    text-align:left;
+}
+
 img.circle{
     border-radius:50%;
     margin-top:10px;
@@ -380,6 +385,35 @@ canvas{
     width:100%;
 }
 
+.document{
+    background-color:#192B37;
+    text-align:left;
+    padding:20px;
+    border-top:6px solid #103c50;
+    position:relative;
+    margin-top:15px;
+    max-width:600px;
+}
+
+.document h3 a, .document h4 a{
+    text-decoration: none;
+}
+
+.document h3{
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.document h4{
+    font-size:18px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.fontup{
+    font-size:1.2em;
+}
 
 
 @media only screen and (max-width : 800px) {
@@ -397,6 +431,16 @@ canvas{
 @media only screen and (max-width : 600px) {
     #masthead .phpdorset-logo{
         width:100%;
+    }
+
+    #masthead ul.navigation{
+        padding:0;
+    }
+
+    #masthead ul.navigation li a{
+        font-size:0.8em;
+        padding-bottom:10px;
+        margin:14px 0;
     }
 
     img.circle{

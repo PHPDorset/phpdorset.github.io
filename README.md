@@ -12,7 +12,7 @@ PHP Dorset Site based on Silex + Twig
 
 ### Quick start, just using PHP
 
-You will need: [composer](https://getcomposer.org/download/), [git](http://git-scm.com/downloads) and [PHP](http://php.net/) (5.4+)
+You will need: [composer](https://getcomposer.org/download/), [git](http://git-scm.com/downloads) and [PHP](http://php.net/) (5.6+)
 
     git clone git@github.com:PHPDorset/phpdorset.github.io.git phpdorset
     cd phpdorset

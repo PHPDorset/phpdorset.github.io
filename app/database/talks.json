@@ -1,5 +1,37 @@
 {
     "2015": {
+        "december": {
+            "1" : {
+                "date": "2015-12-07",
+                "speaker": "Dan Leech",
+                "title": "The PHP Benchmark",
+                "avatar": "/images/dantleech.png",
+                "abstract": "Making performant systems is often a goal in web development. There are many ways to monitor and verify performance, from commercial services such as Newrelic, using profilers such as Blackfire or XDebug, or simply using Curl or Firebug. These methods, however, act upon the whole request. How should we measure and profile the performance of units of code?\n\nIn this talk Daniel Leech will talk about benchmarking code in PHP and will present a tool with which to do it: PHPBench.\n\nDaniel Leech is an open source PHP developer involved in the Symfony CMF and is the developer of PHPBench.",
+                "twitter": "dantleech",
+                "resources": {
+                    "PHPBench": "http://www.phpbench.com/",
+                    "Dan Leech": "http://www.dantleech.com/",
+                    "Symfony CMF": "http://cmf.symfony.com/",
+                    "PHP Content Repository": "http://phpcr.github.io/"
+                }
+            },
+            "2" : {
+                "date": "2015-12-07",
+                "speaker": "Alex Ross",
+                "title": "Faster Websites with PHP 7",
+                "avatar": "/images/rossey.jpg",
+                "abstract": "PHP 7 will be released in November 2015. With it’s impressive 100%+ speed improvements and lower memory usage find out about the new PHP 7 spaceships, return & scalar type hints\n\nAlex is an Engineer at Base where he is part of the Passenger team that is helping to shape the transport industry with mobile applications.",
+                "twitter": "rossey",
+                "resources": {
+                    "DUnit": "https://github.com/Vectorface/dunit",
+                    "PHP 7 Dev Box": "https://github.com/rlerdorf/php7dev.git",
+                    "Migrating PHP 5.6. to PHP 7": "http://php.net/manual/en/migration70.php",
+                    "Speeding up the Web with PHP 7": "http://talks.php.net/fluent15#/",
+                    "Getting Ready for PHP 7": "https://www.digitalocean.com/company/blog/getting-ready-for-php-7",
+                    "What to expect in PHP 7": "https://blog.engineyard.com/2015/what-to-expect-php-7"
+                }
+            }
+        },
         "november": {
             "1" : {
                 "date": "2015-11-02",

@@ -114,27 +114,29 @@ class TalkController
 
     public function fetchHomepageTalks()
     {
+        $months = [];
 
         $nextMonth = new \DateTime('now');
         $nextMonth->add(new \DateInterval('P1M'));
 
-        $talksNextMonth = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
+        $months[$nextMonth->format('c')] = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
 
         $thisMonth = clone $nextMonth;
         $thisMonth->sub(new \DateInterval('P1M'));
 
-        $talksThisMonth = $this->repository->fetchTalks($thisMonth->format('Y'), strtolower($thisMonth->format('F')));
+        $months[$thisMonth->format('c')] = $this->repository->fetchTalks($thisMonth->format('Y'), strtolower($thisMonth->format('F')));
+
+        $lastMonth = clone $thisMonth;
+        $lastMonth->sub(new \DateInterval('P1M'));
+
+        $months[$lastMonth->format('c')] = $this->repository->fetchTalks($lastMonth->format('Y'), strtolower($lastMonth->format('F')));
 
         return $this->twig->render(
             'homepage.twig',
             array(
-                'talksNextMonth' => $talksNextMonth,
-                'talksThisMonth' => $talksThisMonth,
-                'currentDate' => new \DateTime('now')
+                'months' => $months,
+                'currentDate' => (new \DateTime('now'))->format('Y-m-d')
             )
         );
-
-
     }
-
 }

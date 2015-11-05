@@ -21,14 +21,3 @@ You will need: [composer](https://getcomposer.org/download/), [git](http://git-s
     
 Then browse to [http://localhost:8000](http://localhost:8000)
 
-### Vagrant (PuPHPet) box
-
-You will need: [git](http://git-scm.com/downloads), [Vagrant](http://www.vagrantup.com/downloads.html).
-
-Run `vagrant up` to start the vagrant box and provision.
-
-Ansible will provision Ubuntu 14.04 LTS box with
-
- - Latest Nginx
- - PHP 5.6
- - Composer

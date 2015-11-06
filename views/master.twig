@@ -36,6 +36,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+    <script>
+        $(function () {
+            $('div#masthead span.phpdorset-logo a').bind('contextmenu', function () {
+                $('div#press-kit').slideToggle();
+                return false;
+            });
+        });
+    </script>
+
     {% block extra_headers %}
 
     {% endblock %}
@@ -47,6 +56,15 @@
 
 <div class="site-wrapper">
 
+    <div id="press-kit" class="wrapper" style="display:none">
+        <p>Hello! It looks like your trying to download the logo for PHP Dorset, would you like the high-res version?</p>
+        <p>
+            <a href="https://onedrive.live.com/redir?resid=3FD058F9748E21C3!151&authkey=!AMGS0k_OZIQWdtg&ithint=file%2czip" class="btn">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>&nbsp;&nbsp;Download logos
+            </a>
+        </p>
+    </div>
+
     {% block masthead %}
         <div id="masthead">
 
@@ -54,7 +72,8 @@
 
                 <span class="phpdorset-logo">
                     <a href="/">
-                    <img alt="php dorset" src="/images/logo-transparent.png">
+                        <img alt="php dorset" src="/images/logo-transparent.png">
+
                         <h1>PHP Dorset</h1>
                     </a>
                 </span>
@@ -75,7 +94,6 @@
 
 
     {% include 'mast_foot.twig' %}
-
 
 
 </div>

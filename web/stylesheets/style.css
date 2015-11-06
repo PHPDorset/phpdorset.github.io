@@ -385,6 +385,13 @@ canvas{
     width:100%;
 }
 
+#press-kit {
+    display:none;
+    height:120px;
+    padding:20px 0px 0px 0px;
+    margin-bottom: 20px;
+}
+
 .document{
     background-color:#192B37;
     text-align:left;

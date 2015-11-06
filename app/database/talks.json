@@ -20,7 +20,7 @@
                 "speaker": "Alex Ross",
                 "title": "Faster Websites with PHP 7",
                 "avatar": "/images/rossey.jpg",
-                "abstract": "PHP 7 will be released in November 2015. With it’s impressive 100%+ speed improvements and lower memory usage find out about the new PHP 7 spaceships, return & scalar type hints\n\nAlex is an Engineer at Base where he is part of the Passenger team that is helping to shape the transport industry with mobile applications.",
+                "abstract": "PHP 7 will be released in November 2015. With it’s impressive 100%+ speed improvements and lower memory usage find out about the new PHP 7 spaceships, return & scalar type hints\n\nAlex is an Engineer at Base where he is part of the team working on <a href='http://www.discoverpassenger.com/'>Passenger</a>, a mobile app platform set to revolutionise public transport.",
                 "twitter": "rossey",
                 "resources": {
                     "DUnit": "https://github.com/Vectorface/dunit",

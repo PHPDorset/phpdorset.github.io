@@ -32,21 +32,18 @@
             var url = '{{ pdf_url }}';
 
             $(document).ready(function() {
-                {% if not hasPresentation %}
-                    $('.abstract').show();
-                {% endif %}
 
                 $('.abstractOpen').click(function (e) {
                     $('.abstract').slideDown();
                     $(this).hide();
                     $('.abstractClose').show();
-                });
+                }).hide();
 
                 $('.abstractClose').click(function (e) {
                     $('.abstract').slideUp();
                     $(this).hide();
                     $('.abstractOpen').show();
-                }).hide();
+                });
             });
 
         </script>

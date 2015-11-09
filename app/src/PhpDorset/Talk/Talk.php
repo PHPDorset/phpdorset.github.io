@@ -252,7 +252,7 @@ class Talk
         $talk->setDate(isset($data['date']) ? new \DateTime($data['date'], new \DateTimeZone('Europe/London')) : null);
         $talk->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
         $talk->setMonth($month);
-        $talk->setPdf("/pdfs/{$year}_{$month}.pdf");
+        $talk->setPdf("/pdfs/{$data['slides']}");
         $talk->setResources(isset($data['resources']) ? $data['resources'] : []);
         $talk->setSpeaker(isset($data['speaker']) ? $data['speaker'] : '');
         $talk->setTitle(isset($data['title']) ? $data['title'] : '');

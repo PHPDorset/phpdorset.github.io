@@ -304,7 +304,6 @@ img.circle{
 
 
 .abstract{
-    display:none;
     background:#192B37;
     border-bottom:2px solid #103c50;
 }
@@ -477,10 +476,6 @@ canvas{
 
     #canvas_holder{
         display:none;
-    }
-
-    .abstract{
-        display:block;
     }
 
     #media_holder #video_wrapper, .pod{

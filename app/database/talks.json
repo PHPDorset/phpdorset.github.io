@@ -44,7 +44,8 @@
                     "Twig": "http://twig.sensiolabs.org/",
                     "Timber": "http://upstatement.com/timber/",
                     "WordPress": "https://wordpress.org/"
-                }
+                },
+                "slides": "2015_november_jon.pdf"
             },
             "2" : {
                 "date": "2015-11-02",
@@ -52,7 +53,8 @@
                 "title": "Clean Code",
                 "avatar": "/images/softbass.png",
                 "abstract": "Clean code does not just mean making your code look tidy and neat. This brief talk aims to show you some techniques which will help you to improve your code so that it is easier to read, easier to maintain, easier to debug, easier to test and easier for others to work on.",
-                "twitter": "softbass"
+                "twitter": "softbass",
+                "slides": "2015_november_peter.pdf"
             }
         },
         "october": {
@@ -120,6 +122,7 @@
                 "abstract": "Text wrangling and wordsmithing with MongoDB",
                 "feedbackUrl": "https://joind.in/14372",
                 "twitter": "derickr",
+                "slides": "2015_april.pdf",
                 "resources": {
                     "Derick Rethans": "http://derickrethans.nl/talks/textwrangling-phpdorset15",
                     "Atomic Operations": "http://www.mongodb.org/display/DOCS/Atomic+Operations",
@@ -146,6 +149,7 @@
                 "resources": {
                     "Base Orchestration and Synchronization Helper": "https://wearebase.com/about/blog/2015/deployment-database-and-asset-management/"
                 },
+                "slides": "2015_march.pdf",
                 "cues": {
                     "1": "00:02",
                     "2": "00:04",
@@ -292,7 +296,8 @@
                 "abstract": "<p>What are mocks, what are the consequences of using them, and when should you use them?</p>",
                 "twitter": "stuherbert",
                 "cues": {},
-                "video": "http://player.vimeo.com/video/111983092"
+                "video": "http://player.vimeo.com/video/111983092",
+                "slides": "2014_november.pdf"
             }
         },
         "september": {
@@ -313,7 +318,8 @@
                 "abstract": "<p>All Hail Our 'Bot Masters (or chat-ops for fun & profit)</p><p>As developers we spend the majority of our time on writing code for our products, clients, employers, open source projects etc, but how much extra stuff do we 'hack' together time and time again for those 1-off tasks that just aren't 1-off</p><p>We have been experimenting with a concept from Github known as Chat-Ops in which you tie your services into a chat client (HipChat, Campfire, Slack, IRC) and have a 'bot running with a variety of commands that can make your life easier, through notifications from Github pull requests, new issues, or server monitoring alerts, or even asking the bot to do deploys, check the server status, parse the logs (or retrieve images of ceiling cat)</p><p>This talk introduces hubot and some of the things we've been doing with it.</p>",
                 "twitter": "fully_baked",
                 "cues": {},
-                "video": "http://player.vimeo.com/video/100841860"
+                "video": "http://player.vimeo.com/video/100841860",
+                "slides": "2014_july.pdf"
             }
         },
         "june": {
@@ -324,7 +330,8 @@
                 "abstract": "Security is an enormous topic, and it’s really, really complicated. If you’re not careful, you’ll find yourself vulnerable to any number of attacks which you definitely don’t want to be on the receiving end of. This talk will give you just a taster of the vast array of things there is to know about security in modern web applications, such as writing secure PHP web applications and securing a Linux server. Whether you are writing anything beyond a basic brochure website, or even developing a complicated business web application, this talk will give you insights to some of the things you need to be aware of.",
                 "twitter": "asgrim",
                 "cues": {},
-                "video": "http://player.vimeo.com/video/97645043"
+                "video": "http://player.vimeo.com/video/97645043",
+                "slides": "2014_june.pdf"
             }
         },
         "may": {
@@ -335,7 +342,8 @@
                 "abstract": "<p>In the PHP world functions are generally sneered at due to their simplicity and perceived as an evil side effect of spaghetti code. This is not necessarily the case however as when functions are combined in a logical manner they can be very powerful.</p><p>In fact they can be deployed to great effect in all manner of applications to create advanced and potentially less error prone software. This talk will take the form of a gentle introduction to functional programming concepts in a PHP context.</p><p>It will cater to a variety of levels of knowledge. Right from those who have never heard of functional programming to coders who have been practicing aspects for years in other languages (JavaScript!) - perhaps without even knowing.</p><p>During my talk you’ll hear some history, functional theory (introduced gently I promise) and of course some practical examples. You definitely do not need to be a mathematician or expert/functional coder to enjoy this session.</p>",
                 "twitter": "treffynnon",
                 "cues": {},
-                "video": "http://player.vimeo.com/video/96925133"
+                "video": "http://player.vimeo.com/video/96925133",
+                "slides": "2014_may.pdf"
             }
         },
         "april": {
@@ -398,7 +406,8 @@
                 "title": "Silex and Twig",
                 "avatar": "/images/alexdave.jpg",
                 "video": "http://player.vimeo.com/video/91962484",
-                "twitter": "dave1010"
+                "twitter": "dave1010",
+                "slides": "2014_april.pdf"
             }
         },
         "march": {

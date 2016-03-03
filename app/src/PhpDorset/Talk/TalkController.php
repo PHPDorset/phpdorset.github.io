@@ -114,28 +114,47 @@ class TalkController
 
     public function fetchHomepageTalks()
     {
+        $currentDate = (new \DateTime('now'));
+
+        $talksThisMonthInTheFuture = 0;
+
         $months = [];
 
         $nextMonth = new \DateTime('now');
         $nextMonth->add(new \DateInterval('P1M'));
 
-        $months[$nextMonth->format('c')] = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
-
         $thisMonth = clone $nextMonth;
         $thisMonth->sub(new \DateInterval('P1M'));
-
-        $months[$thisMonth->format('c')] = $this->repository->fetchTalks($thisMonth->format('Y'), strtolower($thisMonth->format('F')));
 
         $lastMonth = clone $thisMonth;
         $lastMonth->sub(new \DateInterval('P1M'));
 
-        $months[$lastMonth->format('c')] = $this->repository->fetchTalks($lastMonth->format('Y'), strtolower($lastMonth->format('F')));
+        $nextMonthTalks = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
+        $thisMonthTalks = $this->repository->fetchTalks($thisMonth->format('Y'), strtolower($thisMonth->format('F')));
+        $lastMonthTalks =  $this->repository->fetchTalks($lastMonth->format('Y'), strtolower($lastMonth->format('F')));
+
+        if(is_array($thisMonthTalks)) {
+            $talksThisMonthInTheFuture = array_filter(
+                $thisMonthTalks,
+                function (Talk $talk) use ($currentDate) {
+                    return $talk->getDate() >= $currentDate;
+                }
+            );
+        }
+
+        if(count($talksThisMonthInTheFuture) < 1 ){
+            $months[$nextMonth->format('c')] = $nextMonthTalks;
+        }
+
+        $months[$thisMonth->format('c')] = $thisMonthTalks;
+
+        $months[$lastMonth->format('c')] = $lastMonthTalks;
 
         return $this->twig->render(
             'homepage.twig',
             array(
                 'months' => $months,
-                'currentDate' => (new \DateTime('now'))->format('Y-m-d')
+                'currentDate' => $currentDate->format('Y-m-d')
             )
         );
     }

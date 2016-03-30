@@ -120,11 +120,10 @@ class TalkController
 
         $months = [];
 
-        $nextMonth = new \DateTime('now');
-        $nextMonth->add(new \DateInterval('P1M'));
+        $thisMonth = new \DateTime('first day of this month');
 
-        $thisMonth = clone $nextMonth;
-        $thisMonth->sub(new \DateInterval('P1M'));
+        $nextMonth = clone $thisMonth;
+        $nextMonth->add(new \DateInterval('P1M'));
 
         $lastMonth = clone $thisMonth;
         $lastMonth->sub(new \DateInterval('P1M'));

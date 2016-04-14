@@ -421,6 +421,15 @@ canvas{
     font-size:1.2em;
 }
 
+.novideo{
+    margin:40px 20% 0 20%;
+}
+
+.novideo img{
+    width:100%;
+    max-width:300px;
+    margin-bottom:20px;
+}
 
 @media only screen and (max-width : 800px) {
 

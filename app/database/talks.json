@@ -1,5 +1,17 @@
 {
     "2016": {
+        "may": {
+            "1" : {
+                "date": "2016-05-09",
+                "cues": {},
+                "speaker": "Michael Heap",
+                "title": "Becoming Indiana Jones",
+                "avatar": "/images/michael.jpg",
+                "abstract": "Code archaeology is one of the most important skills you will ever learn as a developer. How many times have you been thrown into legacy projects with no environment setup, no documentation, and little support from coworkers? The ability to hit the ground running on new applications is a sought-after skill for many employers. In this talk, we will take an open-source project that we have never seen before and work through the steps required to get it up and running so we can start contributing today.",
+                "twitter": "mheap",
+                "slides":""
+            }
+        },
       "april": {
         "1" : {
           "date": "2016-04-04",
@@ -8,7 +20,7 @@
           "avatar": "/images/rawkode.jpeg",
           "abstract": "Docker, the hottest technology around at the moment. It swept the Ops world by storm in 2014, became mainstream in 2015, and now it’s set to dominate the developer world, in 2016. Docker is a tool that allows you to package your application up into a single-runnable distributable binary - akin to the phar, but in Hulk mode. Docker allows you, a developer, to specify the exact environment your application needs to run, across development; test; staging; and production. In this talk I will cover the creation of this utopian distributable and show you how to can compose your entire production infrastructure locally with only a small YAML file and without installing a single thing. Lets say hello, to Docker. ",
           "twitter": "rawkode",
-          "slides":""
+          "slides":"2016_april_davidmckay.pdf"
         }
       },
       "march": {

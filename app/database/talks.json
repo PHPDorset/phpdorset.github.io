@@ -1,5 +1,17 @@
 {
     "2016": {
+        "june": {
+            "1" : {
+                "date": "2016-06-06",
+                "cues": {},
+                "speaker": "Richard Baker",
+                "title": "Faster PHP apps using queues and workers",
+                "avatar": "/images/r_bake_r.jpg",
+                "abstract": "PHP apps typically perform tasks in a synchronous manner; Resizing an image or sending a push notification. For most applications this works well, but as apps grow or experience increased traffic, each task adds extra milliseconds to a request, leaving users waiting.\n\nA common solution is to defer these tasks to the background using a cron task. However, there is a better way. Job queues not only help to decouple your application and improve resilience but will also cut request times.\n\nIn this talk I we’ll explore some common queue systems; the features and tradeoffs of each solution, what to queue, refactoring existing code into jobs, and running workers. By the end you’ll be ready to build your next app one job at a time.",
+                "twitter": "r_bake_r",
+                "slides":""
+            }
+        },
         "may": {
             "1" : {
                 "date": "2016-05-09",

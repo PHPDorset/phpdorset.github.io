@@ -1,5 +1,20 @@
 {
     "2016": {
+        "july": {
+            "1": {
+                "date": "2016-07-04",
+                "speaker": "Dan Leech",
+                "title": "Bolt CMS",
+                "avatar": "/images/dantleech.png",
+                "abstract": "Bolt describes itself as: ... an open source Content Management Tool, which strives to be as simple and straightforward as possible. It is quick to set up, easy to configure, uses elegant templates, and above all: It’s a joy to use. Bolt is PHP CMS based on Silex, Symfony components and Twig. It can be seen as a modern alternative to Wordpress. In this talk Dan will relate his recent (and ongoing) experience with Bolt, discussing its Developer eXperience, capabilities, extendability and applicability. Can be Bolt be an alternative to Wordpress or even larger CMS systems? Lets discuss and find out!",
+                "twitter": "dantleech",
+                "resources": {
+                    "PHPBench": "http://www.bolt.cm/",
+                    "Dan Leech": "http://www.dantleech.com/",
+                },
+                "slides":""
+            }
+        },
         "june": {
             "1" : {
                 "date": "2016-06-06",

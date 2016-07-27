@@ -125,19 +125,19 @@ h1{
     width:33.3%;
 }
 
-.banner:nth-child(2){
+.banner:nth-child(3){
     background-color:#137B3A;
 }
 
-.banner:nth-child(3){
+.banner:nth-child(4){
     background-color:#AA801A;
 }
 
-.banner:nth-child(4){
+.banner:nth-child(5){
     background-color:#AA331A;
 }
 
-.banner:nth-child(5){
+.banner:nth-child(6){
     background-color:#192b37;
     text-align:left;
 }
@@ -431,6 +431,32 @@ canvas{
     margin-bottom:20px;
 }
 
+.google-maps {
+    position: relative;
+    padding-bottom:300px;
+height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.map-overlay{
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index:9999;
+    background:#3d7b94;
+    padding:10px;
+    border-radius:2px;
+    text-align:left;
+    width:400px;
+}
+
 @media only screen and (max-width : 800px) {
 
     #sponsors .wrapper > div {
@@ -440,6 +466,10 @@ canvas{
 
     img.circle{
         height:85px;
+    }
+
+    .map-overlay{
+        width:200px;
     }
 
 }
@@ -513,5 +543,21 @@ canvas{
     .banner div .col-1, .banner div .col-2, .banner div .col-3{
         width:100%;
         float:none;
+    }
+
+    .map-overlay{
+        position:relative;
+        width:100%;
+        padding:10px;
+        text-align:center;
+    }
+
+    .google-maps{
+        padding:25px;
+        height:auto;
+    }
+
+    .google-maps iframe{
+        display:none;
     }
 }

@@ -1,5 +1,15 @@
 {
     "2016": {
+        "august": {
+            "1": {
+                "date": "2016-08-01",
+                "speaker": "Chris Sherry",
+                "title": "Pull requests for teams",
+                "avatar": "/images/chris.png",
+                "abstract": "<p>This short talk covers the basics of feature branching and pull requests, detailing when to make a pull request, how to make sure your pull request will pass code review, and why pull requests are important for developing software in teams.</p>",
+                "twitter": "tweetingsherry"
+            }
+        },
         "july": {
             "1": {
                 "date": "2016-07-04",
@@ -227,7 +237,7 @@
             "1" : {
                 "speaker": "Chris Sherry",
                 "title": "WordPress for the modern PHP developer",
-                "avatar": "/images/chris.jpeg",
+                "avatar": "/images/chris.png",
                 "abstract": "<p>It powers 23% of the internet, so its more than likely you are maintaining a codebase built on Wordpress. Many of these projects have outgrown their humble beginnings as blogs or websites and are now highly customised web applications. However the modern tools we use as PHP developers to aid our development, particularly in teams, can be tricky to utilise with the popular blogging platform. </p><p>This technical talk will guide you through how to make the use of Composer, Git and other tools familiar to PHP developers within your Wordpress install - and help you take back control of your themes, plugins, database and environments in a growing application.</p>",
                 "feedbackUrl": "https://joind.in/13715",
                 "twitter": "tweetingsherry",
@@ -345,7 +355,7 @@
                     "107": "40:02",
                     "108": "40:06",
                     "109": "40:12",
-                    "1": "40:22"
+                    "110": "40:22"
                 },
                 "video": "http://player.vimeo.com/video/121300214"
             }

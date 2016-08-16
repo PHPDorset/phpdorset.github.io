@@ -36,34 +36,13 @@ class TalkController
      */
     public function fetchTalk($year, $month, $key)
     {
-        $hasPdfFile = true;
-
-        $errors = [];
-
         $talk = $this->repository->fetchTalk($year, $month, $key);
-
-        if (is_null($talk) || !file_exists(realpath($_SERVER["DOCUMENT_ROOT"]) . $talk->getPdf())) {
-            $hasPdfFile = false;
-        }
 
         return $this->twig->render(
             'talk.twig',
-            array(
-                'hasPresentation' => $hasPdfFile,
-                'avatar' => $talk->getAvatar(),
-                'speaker' => $talk->getSpeaker(),
-                'year' => $talk->getYear(),
-                'month' => $talk->getMonth(),
-                'title' => $talk->getTitle(),
-                'feedbackUrl' => $talk->getFeedbackUrl(),
-                'abstract' => $talk->getAbstract(),
-                'video_url' => $talk->getVideo(),
-                'pdf_url' => $talk->getPdf(),
-                'cues' => $talk->getCues(),
-                'resources' => $talk->getResources(),
-                'twitter' => $talk->getTwitter(),
-                'errors' => $errors
-            )
+            [
+                'talk' => $talk
+            ]
         );
     }
 

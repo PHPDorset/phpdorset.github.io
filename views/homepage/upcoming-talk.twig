@@ -18,6 +18,16 @@
             <a class="btn" href="http://www.eventbrite.co.uk/o/phpdorset-5284449005">
                 <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;Sign up for free
             </a>
+
+            {% if talks|length > 1 %}
+              <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}/{{ key }}">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+              </a>
+            {% else %}
+              <a class="btn" href="/talks/{{ talk.year }}/{{ talk.month }}">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;View this talk
+              </a>
+            {% endif %}
         </div>
     </div>
 </div>

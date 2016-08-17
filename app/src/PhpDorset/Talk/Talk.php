@@ -115,7 +115,7 @@ class Talk
      */
     public function getPdf()
     {
-        return $this->pdf;
+        return sprintf('/pdfs/%s', $this->pdf);
     }
 
     /**
@@ -237,6 +237,13 @@ class Talk
         $this->date = $date;
     }
 
+    /**
+     * @return bool
+     */
+    public function isInTheFuture()
+    {
+        return $this->date > (new \DateTime('now'));
+    }
 
     /**
      * @param string $month
@@ -252,7 +259,7 @@ class Talk
         $talk->setDate(isset($data['date']) ? new \DateTime($data['date'], new \DateTimeZone('Europe/London')) : null);
         $talk->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
         $talk->setMonth($month);
-        $talk->setPdf("/pdfs/{$data['slides']}");
+        $talk->setPdf($data['slides']);
         $talk->setResources(isset($data['resources']) ? $data['resources'] : []);
         $talk->setSpeaker(isset($data['speaker']) ? $data['speaker'] : '');
         $talk->setTitle(isset($data['title']) ? $data['title'] : '');

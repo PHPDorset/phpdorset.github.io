@@ -4,51 +4,51 @@
 
     <script src="/scripts/popcorn-complete.min.js"></script>
 
-    {% if(errors is empty) %}
+    <script type="application/javascript">
 
-        <script type="application/javascript">
+        {% if talk.cues is not empty %}
 
-            // ensure the web page (DOM) has loaded
-            document.addEventListener("DOMContentLoaded", function () {
+          // ensure the web page (DOM) has loaded
+          document.addEventListener("DOMContentLoaded", function () {
 
-                // Create a popcorn instance by calling the Vimeo player plugin
-                var video = Popcorn.vimeo(
-                        '#video',
-                        '{{ video_url }}');
+              // Create a popcorn instance by calling the Vimeo player plugin
+              var video = Popcorn.vimeo(
+                      '#video',
+                      '{{ talk.video }}');
 
-                {% for key, cue in cues %}
+              {% for key, cue in talk.cues %}
 
                 video.cue( {{cue}}, function(key) {
                     renderPage({{key}});
                 });
 
-                {% endfor %}
+              {% endfor %}
 
-                // play the video right away
-                video.play();
+              // play the video right away
+              video.play();
 
-            }, false);
+          }, false);
 
-            var url = '{{ pdf_url }}';
+        {% endif %}
 
-            $(document).ready(function() {
+        var url = '{{ talk.pdf }}';
 
-                $('.abstractOpen').click(function (e) {
-                    $('.abstract').slideDown();
-                    $(this).hide();
-                    $('.abstractClose').show();
-                }).hide();
+        $(document).ready(function() {
 
-                $('.abstractClose').click(function (e) {
-                    $('.abstract').slideUp();
-                    $(this).hide();
-                    $('.abstractOpen').show();
-                });
+            $('.abstractOpen').click(function (e) {
+                $('.abstract').slideDown();
+                $(this).hide();
+                $('.abstractClose').show();
+            }).hide();
+
+            $('.abstractClose').click(function (e) {
+                $('.abstract').slideUp();
+                $(this).hide();
+                $('.abstractOpen').show();
             });
+        });
 
-        </script>
-
-    {% endif %}
+    </script>
 
 {% endblock %}
 
@@ -58,7 +58,7 @@
         <div class="wrapper">
 
             <h2>
-                {{ title }} - {{ month|capitalize }} {{ year }}
+                {{ talk.title }} - {{ talk.month|capitalize }} {{ talk.year }}
             </h2>
 
         </div>
@@ -66,28 +66,39 @@
 
     <div class="abstract ">
         <div class="wrapper">
-            {% if twitter %}
+            {% if talk.twitter %}
                 <div class="bio">
-                    <a href="https://twitter.com/{{ twitter }}">
-                    <img src="{{ avatar }}"/>
+                    <a href="https://twitter.com/{{ talk.twitter }}">
+                    <img src="{{ talk.avatar }}"/>
 
-                    {{ speaker }}
+                    {{ talk.speaker }}
                     </a>
                 </div>
             {% endif %}
             <div class="text">
-                {{ abstract|raw|nl2br }}
+                {{ talk.abstract|raw|nl2br }}
             </div>
         </div>
     </div>
 
-    {% if(errors is empty) %}
+    {% if talk.inTheFuture %}
+
+      <div>
+        <p>
+          <a class="btn" href="http://www.eventbrite.co.uk/o/phpdorset-5284449005">
+            <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;Sign up for free
+          </a>
+        </p>
+        <br/>
+      </div>
+
+    {% else %}
 
         <div id="media_holder" class="clearfix">
 
             <div id="video_wrapper">
 
-                {% if video_url %}
+                {% if talk.video %}
                     <div id="video"></div>
                 {% else %}
                     <div class="novideo">
@@ -97,7 +108,7 @@
                     </div>
                 {% endif %}
 
-                {% if abstract and (hasPresentation or video) %}
+                {% if talk.abstract and (talk.pdf or talk.video) %}
                     <a href="#" class="abstractOpen btn notmobile">
                         <span class="glyphicon glyphicon-collapse-down"></span>&nbsp;&nbsp;View abstract
                     </a>
@@ -106,24 +117,24 @@
                     </a>
                 {% endif %}
 
-                {% if hasPresentation %}
-                <a class="btn" href="{{ pdf_url }}">
+                {% if talk.pdf %}
+                <a class="btn" href="{{ talk.pdf }}">
                     <span class="glyphicon glyphicon-download"></span>&nbsp;&nbsp;Download slides
                 </a>
                 {% endif %}
 
-                {% if feedbackUrl %}
-                    <a class="btn" href="{{ feedbackUrl }}">
+                {% if talk.feedbackUrl %}
+                    <a class="btn" href="{{ talk.feedbackUrl }}">
                         <span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;Give feedback
                     </a>
                 {% endif %}
 
 
-                {% if resources|length > 0 %}
+                {% if talk.resources|length > 0 %}
                     <br/> <br/>
                     <h3>Resources</h3>
                 <p>
-                    {% for title, url in resources %}
+                    {% for title, url in talk.resources %}
                         <a href="{{ url }}">{{ title }}</a><br/>
                     {% endfor %}
                 </p>
@@ -131,36 +142,23 @@
 
 
             </div>
-            {% if hasPresentation %}
+
+            {% if talk.pdf %}
                 <div id="canvas_holder">
                     <canvas id="presentation"></canvas>
-                    {% if hasPresentation %}
-                        <a id="prev" class="btn notmobile" onclick="goPrevious()">
-                            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Previous slide
-                        </a>
-                        <a id="next" class="btn notmobile" onclick="goNext()">
-                            Next slide&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
-                        </a>
-                        <br/><br/>
-                        {% if cues|length > 0 %}
-                            <p class="notmobile">Slides for this talk are synced to the video</p>
-                        {% endif %}
+                    <a id="prev" class="btn notmobile" onclick="goPrevious()">
+                        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Previous slide
+                    </a>
+                    <a id="next" class="btn notmobile" onclick="goNext()">
+                        Next slide&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
+                    </a>
+                    <br/><br/>
+                    {% if talk.cues|length > 0 %}
+                        <p class="notmobile">Slides for this talk are synced to the video</p>
                     {% endif %}
                 </div>
             {% endif %}
         </div>
-
-    {% else %}
-
-        <h2>Whoops!</h2>
-        <h4>This talk could not be displayed for the following reasons</h4>
-        <ul>
-            {% for error in errors %}
-                <li>
-                    {{ error }}
-                </li>
-            {% endfor %}
-        </ul>
 
     {% endif %}
 
@@ -169,10 +167,8 @@
 {% block extra_scripts %}
 
 
-    {% if(errors is empty) %}
-        <script type="text/javascript" src="/scripts/pdf.js"></script>
-        <script src="/scripts/pdf_config.js"></script>
-    {% endif %}
+    <script type="text/javascript" src="/scripts/pdf.js"></script>
+    <script src="/scripts/pdf_config.js"></script>
 
 
 {% endblock %}

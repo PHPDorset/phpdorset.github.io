@@ -13,7 +13,7 @@
         "october": {
             "1": {
                 "date": "2016-10-03",
-                "speaker": "Ian Poulson",
+                "speaker": "Iain Poulson",
                 "avatar": "/images/ian.jpeg",
                 "twitter": "polevaultweb",
                 "title": "Automated Acceptance Testing with Codeception",

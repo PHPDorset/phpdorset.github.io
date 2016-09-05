@@ -5,7 +5,15 @@
         </div>
 
         <div class="info">
-            <h3>Upcoming Talk</h3>
+            {% if talk.date|date('Ymd') == currentDate|date('Ymd') %}
+
+              <h3>TONIGHT</h3>
+
+            {% else %}
+
+              <h3>Upcoming Talk</h3>
+
+            {% endif %}
 
             <h4><a href="http://twitter.com/{{ talk.twitter }}">{{ talk.speaker }}</a></h4>
 

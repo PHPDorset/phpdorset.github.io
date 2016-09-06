@@ -43,7 +43,8 @@
                 "title": "Some OOP Stuff [Lightning Talk] ",
                 "avatar": "/images/dave.jpeg",
                 "abstract": "Dave gave us a short talk on 10 simple ways you can improve your object oriented programming.",
-                "twitter": "dave1010"
+                "twitter": "dave1010",
+                "slides": "2016_september_dave.pdf"
             }
         },
         "august": {

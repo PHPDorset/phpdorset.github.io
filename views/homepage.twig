@@ -27,7 +27,7 @@
 
                     {#<br><h3>{{ month|date('F Y') }}</h3>#}
 
-                    {% for talk in talks %}
+                    {% for key, talk in talks %}
 
                         {% if talk.date|date('U') >= currentDate|date('U') %}
                             {% include 'homepage/upcoming-talk.twig' %}

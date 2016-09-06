@@ -18,6 +18,14 @@
                 "twitter": "polevaultweb",
                 "title": "Automated Acceptance Testing with Codeception",
                 "abstract": "<p>One of the biggest drains on our development team is manually performing acceptance tests for each release of our WordPress plugins. It's time consuming and expensive, in terms of both man hours and time taken away from actual product development. Manual testing like this just doesn't scale.</p><p> So what's the solution? Hire a tester or a testing team? Still not scalable. This talk covers how it is possible to automate 99% of manual tests with the testing framework Codeception, and how we are integrating it into our testing process.</p>"
+            },
+            "2": {
+                "date": "2016-10-03",
+                "speaker": "Chris Sherry",
+                "title": "Speaking and Slidedeck tips [Lightning Talk]",
+                "avatar": "/images/chris.png",
+                "abstract": "<p>This is a short talk about the tips and advice I have picked up over the last couple of years about speaking, and specifically creating slidedecks for talks.</p>",
+                "twitter": "tweetingsherry"
             }
         },
         "september" : {
@@ -28,6 +36,14 @@
                 "twitter": "adamtomat",
                 "title": "Pattern Libraries & WordPress - Chasing the Holy Grail ",
                 "abstract": "<p>When working with WordPress, it’s common for frontend code to live within your theme; often mixing presentation with logic. Pattern Libraries help with this separation and allow you to build a backend-agnostic design system. In practice keeping the two in sync is fiddly & time consuming that makes future iteration difficult. As soon as they fall out of sync, the cons start to outweigh the pros.</p><p>This talk will show you how to maintain a clear separation between your front-end & WordPress code, without any of the integration headaches. It will also cover pattern library best practices, how to integrate a pattern library with WordPress and how embracing both can be empowering.</p>"
+            },
+            "2": {
+                "date": "2016-09-05",
+                "speaker": "Dave Hulbert",
+                "title": "Some OOP Stuff [Lightning Talk] ",
+                "avatar": "/images/dave.jpeg",
+                "abstract": "Dave gave us a short talk on 10 simple ways you can improve your object oriented programming.",
+                "twitter": "dave1010"
             }
         },
         "august": {

@@ -35,7 +35,10 @@
                 "avatar": "/images/adam.jpg",
                 "twitter": "adamtomat",
                 "title": "Pattern Libraries & WordPress - Chasing the Holy Grail ",
-                "abstract": "<p>When working with WordPress, it’s common for frontend code to live within your theme; often mixing presentation with logic. Pattern Libraries help with this separation and allow you to build a backend-agnostic design system. In practice keeping the two in sync is fiddly & time consuming that makes future iteration difficult. As soon as they fall out of sync, the cons start to outweigh the pros.</p><p>This talk will show you how to maintain a clear separation between your front-end & WordPress code, without any of the integration headaches. It will also cover pattern library best practices, how to integrate a pattern library with WordPress and how embracing both can be empowering.</p>"
+                "abstract": "<p>When working with WordPress, it’s common for frontend code to live within your theme; often mixing presentation with logic. Pattern Libraries help with this separation and allow you to build a backend-agnostic design system. In practice keeping the two in sync is fiddly & time consuming that makes future iteration difficult. As soon as they fall out of sync, the cons start to outweigh the pros.</p><p>This talk will show you how to maintain a clear separation between your front-end & WordPress code, without any of the integration headaches. It will also cover pattern library best practices, how to integrate a pattern library with WordPress and how embracing both can be empowering.</p>",
+                "resources": {
+                    "Slides": "https://adamtomat.github.io/pl-and-wp/#/"
+                }
             },
             "2": {
                 "date": "2016-09-05",

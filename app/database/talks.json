@@ -7,7 +7,8 @@
                 "title": "A beginner's guide to deployments",
                 "avatar": "/images/michael.jpg",
                 "twitter": "mheap",
-                "abstract": "Deploying an application means different things to different people. It may be as simple as running `git pull` on a server, or as complex as building RPMs and deploying to a canary set of servers. This talk covers both ends of the spectrum and the points in between. We’ll outline several tried and tested deployment methodologies that everyone can use, whether you’re working with a simple WordPress site or a dozen micro-services."
+                "abstract": "Deploying an application means different things to different people. It may be as simple as running `git pull` on a server, or as complex as building RPMs and deploying to a canary set of servers. This talk covers both ends of the spectrum and the points in between. We’ll outline several tried and tested deployment methodologies that everyone can use, whether you’re working with a simple WordPress site or a dozen micro-services.",
+                "slides" : ""
             }
         },
         "october": {
@@ -17,7 +18,15 @@
                 "avatar": "/images/ian.jpeg",
                 "twitter": "polevaultweb",
                 "title": "Automated Acceptance Testing with Codeception",
-                "abstract": "<p>One of the biggest drains on our development team is manually performing acceptance tests for each release of our WordPress plugins. It's time consuming and expensive, in terms of both man hours and time taken away from actual product development. Manual testing like this just doesn't scale.</p><p> So what's the solution? Hire a tester or a testing team? Still not scalable. This talk covers how it is possible to automate 99% of manual tests with the testing framework Codeception, and how we are integrating it into our testing process.</p>"
+                "abstract": "<p>One of the biggest drains on our development team is manually performing acceptance tests for each release of our WordPress plugins. It's time consuming and expensive, in terms of both man hours and time taken away from actual product development. Manual testing like this just doesn't scale.</p><p> So what's the solution? Hire a tester or a testing team? Still not scalable. This talk covers how it is possible to automate 99% of manual tests with the testing framework Codeception, and how we are integrating it into our testing process.</p>",
+                "slides": "2016_october_ian.pdf",
+                "resources": {
+                    "Example Repository" : "https://github.com/polevaultweb/wpos3-acceptance-testing-example",
+                    "Trish Khoo Talk on Testing": "http://businessofsoftware.org/2016/06/rock-solid-software-testing-without-hiring-an-army-trish- khoo-google-bos2015/",
+                    "Codeception" : "http://codeception.com/",
+                    "WPBrowser" : "https://github.com/lucatume/wp-browser",
+                    "Codeception WordPress Plugin": "https://deliciousbrains.com/codeception-automate-wordpress-plugin-testing/"
+                }
             },
             "2": {
                 "date": "2016-10-03",
@@ -25,7 +34,8 @@
                 "title": "Speaking and Slidedeck tips [Lightning Talk]",
                 "avatar": "/images/chris.png",
                 "abstract": "<p>This is a short talk about the tips and advice I have picked up over the last couple of years about speaking, and specifically creating slidedecks for talks.</p>",
-                "twitter": "tweetingsherry"
+                "twitter": "tweetingsherry",
+                "slides": "2016_october_chris.pdf"
             }
         },
         "september" : {
@@ -36,9 +46,7 @@
                 "twitter": "adamtomat",
                 "title": "Pattern Libraries & WordPress - Chasing the Holy Grail ",
                 "abstract": "<p>When working with WordPress, it’s common for frontend code to live within your theme; often mixing presentation with logic. Pattern Libraries help with this separation and allow you to build a backend-agnostic design system. In practice keeping the two in sync is fiddly & time consuming that makes future iteration difficult. As soon as they fall out of sync, the cons start to outweigh the pros.</p><p>This talk will show you how to maintain a clear separation between your front-end & WordPress code, without any of the integration headaches. It will also cover pattern library best practices, how to integrate a pattern library with WordPress and how embracing both can be empowering.</p>",
-                "resources": {
-                    "Slides": "https://adamtomat.github.io/pl-and-wp/#/"
-                }
+                "slides" : "2016_september.pdf"
             },
             "2": {
                 "date": "2016-09-05",

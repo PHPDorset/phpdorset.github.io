@@ -19,7 +19,7 @@
                 "avatar": "/images/michael.jpg",
                 "twitter": "mheap",
                 "abstract": "Deploying an application means different things to different people. It may be as simple as running `git pull` on a server, or as complex as building RPMs and deploying to a canary set of servers. This talk covers both ends of the spectrum and the points in between. We’ll outline several tried and tested deployment methodologies that everyone can use, whether you’re working with a simple WordPress site or a dozen micro-services.",
-                "slides" : ""
+                "slides" : "2016_november.pdf"
             }
         },
         "october": {

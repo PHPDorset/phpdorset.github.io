@@ -16,6 +16,7 @@ class Talk
     protected $video = '';
     protected $year = '';
     protected $twitter = '';
+    protected $ticketLink = '';
 
     /**
      * @var \DateTime
@@ -246,6 +247,22 @@ class Talk
     }
 
     /**
+     * @return string
+     */
+    public function getTicketLink()
+    {
+        return $this->ticketLink;
+    }
+
+    /**
+     * @param string $ticketLink
+     */
+    public function setTicketLink($ticketLink)
+    {
+        $this->ticketLink = $ticketLink;
+    }
+
+    /**
      * @param string $month
      * @param string $year
      * @param array $data
@@ -266,6 +283,7 @@ class Talk
         $talk->setVideo(isset($data['video']) ? $data['video'] : '');
         $talk->setTwitter(isset($data['twitter']) ? $data['twitter'] : '');
         $talk->setYear($year);
+        $talk->setTicketLink(isset($data['ticketLink']) ? $data['ticketLink'] : 'http://www.eventbrite.co.uk/o/phpdorset-5284449005');
 
         if (isset($data['cues'])) {
             $talk->setCues(array_map(function ($cue) {

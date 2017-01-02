@@ -1,4 +1,18 @@
 {
+    "2017": {
+        "january": {
+            "1": {
+                "date": "2017-01-09",
+                "speaker": "Bournemouth Chamber of Trade & Commerce",
+                "title": "This event is run by BCTC - An Overview On Cybercrime.",
+                "avatar": "/images/bctc.jpg",
+                "twitter": "bmthchamber",
+                "abstract": "Ross Martin is giving a overview on cybercrime, highlighting the most common threats and how to protect yourself..<br/><br/>Non-members are able to frequent two events before becoming BCTC members. <strong>Places are limited, only registered guests will be guaranteed entry. To find out more on how to become a member</strong>",
+                "slides" : "",
+                "ticketLink": "https://www.eventbrite.com/e/bh-banter-about-january-2017-tickets-29478852040"
+            }
+        }
+    },
     "2016": {
         "december": {
             "1": {

@@ -1,15 +1,23 @@
 {
     "2017": {
-        "january": {
+        "february": {
             "1": {
-                "date": "2017-01-09",
-                "speaker": "Bournemouth Chamber of Trade & Commerce",
-                "title": "This event is run by BCTC - An Overview On Cybercrime.",
-                "avatar": "/images/bctc.jpg",
-                "twitter": "bmthchamber",
-                "abstract": "Ross Martin is giving a overview on cybercrime, highlighting the most common threats and how to protect yourself..<br/><br/>Non-members are able to frequent two events before becoming BCTC members. <strong>Places are limited, only registered guests will be guaranteed entry. To find out more on how to become a member</strong>",
-                "slides" : "",
-                "ticketLink": "https://www.eventbrite.com/e/bh-banter-about-january-2017-tickets-29478852040"
+                "date": "2017-02-06",
+                "speaker": "Jonathan Ginn",
+                "title": "Flexbox is boss",
+                "avatar": "/images/jonginn.png",
+                "abstract": "You might have heard of CSS Flexbox layouts but haven't tried it yet. Or you might not have heard of it at all. In this brief talk, Jon will go through the features that Flexbox brings to CSS and answer all of your questions, including: \"What is Flexbox?\", \"Why is it awesome?\", \"Can I start using it right away?\" and \"Is he going to keep talking?\"",
+                "twitter": "jonginn",
+                "slides" : ""
+            },
+            "2": {
+                "date": "2017-02-06",
+                "speaker": "Dave Hulbert",
+                "title": "Third Party Party [Discussion]",
+                "avatar": "/images/dave.jpeg",
+                "abstract": "We'll be having an open discussion about some of our most useful, favourite, can't-live-without, always install, third party libraries. <br><br> We'll go ahead an include all third party bits in this, Composer Packages, GitHub libraries, WordPress plugins, third party IDE tools, anything that is made by someone else, that you rely upon. <br><br> Hopefully it'll be a great opportunity for all of us to find out about libraries we've been living without and alternatives to dependencies we've been depending on. <br><br>We've got some space left for anyone that wants to try out a talk on something they are passionate about. We're always happy to help out first time speakers or speakers that want try a new topic on a group of friendly faces, just drop us a line!",
+                "twitter": "dave1010",
+                "slides" : ""
             }
         }
     },

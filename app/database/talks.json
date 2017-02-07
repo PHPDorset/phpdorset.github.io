@@ -8,7 +8,7 @@
                 "avatar": "/images/jonginn.png",
                 "abstract": "You might have heard of CSS Flexbox layouts but haven't tried it yet. Or you might not have heard of it at all. In this brief talk, Jon will go through the features that Flexbox brings to CSS and answer all of your questions, including: \"What is Flexbox?\", \"Why is it awesome?\", \"Can I start using it right away?\" and \"Is he going to keep talking?\"",
                 "twitter": "jonginn",
-                "slides" : ""
+                "slides" : "2017_february.pdf"
             },
             "2": {
                 "date": "2017-02-06",

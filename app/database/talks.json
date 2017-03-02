@@ -1,5 +1,25 @@
 {
     "2017": {
+        "march": {
+            "1": {
+                "date": "2017-03-07",
+                "speaker": "Alex Ross",
+                "title": "Load Balancing with Nginx",
+                "avatar": "/images/rossey.jpg",
+                "abstract": "Nginx can be used for lots of utility purposes. Alex shares with us how it can be used as a load balancer to direct traffic between multiple servers",
+                "twitter": "rossey",
+                "slides" : ""
+            },
+            "2": {
+                "date": "2017-03-07",
+                "speaker": "[VIDEO]",
+                "title": "Design How Your Objects Talk Through Mocking",
+                "avatar": "/images/video.png",
+                "abstract": "We'll be watching Konstantin Kudryashov's talk as a video and having an open discussion: <br><br>What should you test with your unit tests? Some people will say that unit behaviour is best tested through it's outcomes. But what if communication between units itself is more important than the results of it? This session will introduce you to two different ways of unit-testing and show you a way to assert your object behaviours through their communications.",
+                "twitter": "phpdorset",
+                "slides" : ""
+            }
+        },
         "february": {
             "1": {
                 "date": "2017-02-06",

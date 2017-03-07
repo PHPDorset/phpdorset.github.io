@@ -1,8 +1,18 @@
 {
     "2017": {
+        "april": {
+            "1": {
+                "date": "2017-04-03",
+                "speaker": "Lighting Talks",
+                "title": "An evening of lightning talks!",
+                "avatar": "/images/lightning.png",
+                "abstract": "We're inviting everyone to stand up this month and give their own lightning talk. It can be about anything you'd like to share, or something you found that you thought was interesting - or maybe something you just want to know more about. Perhaps you have a good story to tell or just want to let people know a little more about yourself! Send us a tweet and let us know what you'd like to talk about and we'll add you to this list.",
+                "twitter": "phpdorset"
+            }
+        },
         "march": {
             "1": {
-                "date": "2017-03-07",
+                "date": "2017-03-06",
                 "speaker": "Alex Ross",
                 "title": "Load Balancing with Nginx",
                 "avatar": "/images/rossey.jpg",
@@ -11,13 +21,16 @@
                 "slides" : ""
             },
             "2": {
-                "date": "2017-03-07",
+                "date": "2017-03-06",
                 "speaker": "[VIDEO]",
                 "title": "Design How Your Objects Talk Through Mocking",
                 "avatar": "/images/video.png",
                 "abstract": "We'll be watching Konstantin Kudryashov's talk as a video and having an open discussion: <br><br>What should you test with your unit tests? Some people will say that unit behaviour is best tested through it's outcomes. But what if communication between units itself is more important than the results of it? This session will introduce you to two different ways of unit-testing and show you a way to assert your object behaviours through their communications.",
                 "twitter": "phpdorset",
-                "slides" : ""
+                "slides" : "",
+                "resources": {
+                    "Watch the video on youtube": "https://www.youtube.com/watch?v=X6y-OyMPqfw"
+                }
             }
         },
         "february": {

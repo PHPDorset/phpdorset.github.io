@@ -1,5 +1,16 @@
 {
     "2017": {
+        "july": {
+            "1": {
+                "date": "2017-07-03",
+                "speaker": "Jonathan Clark",
+                "title": "Bitcoin and Blockchain Basics [Lightning Talk]",
+                "avatar": "/images/jonclark.jpg",
+                "abstract": "Learn about the fundamentals of the Blockchain technology and cryptocurrencies, covering the basics of what they are, how to buy them, how mining works, and how the blockchain works.",
+                "twitter": "jammyclarkie",
+                "slides": ""
+            }
+        },
         "april": {
             "1": {
                 "date": "2017-04-03",

@@ -2,8 +2,6 @@
 
 namespace PhpDorset\Talk;
 
-use PhpDorset\Eventbrite\EventbriteService;
-use Silex\Application;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class TalkController
@@ -11,7 +9,7 @@ class TalkController
     /**
      * @var TalkRepository
      */
-    protected $repository;
+    private $repository;
 
     /**
      * @var \Twig_Environment

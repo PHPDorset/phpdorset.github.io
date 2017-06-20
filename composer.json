@@ -4,8 +4,7 @@
     "require": {
         "php": ">=5.6.0",
         "silex/silex": "~1.1",
-        "twig/twig": ">=1.8,<2.0-dev",
-        "guzzlehttp/guzzle": "4.*"
+        "twig/twig": ">=1.8,<2.0-dev"
     },
     "autoload": {
         "psr-4": {"PhpDorset\\": "app/src/PhpDorset"}

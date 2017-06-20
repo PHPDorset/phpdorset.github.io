@@ -9,6 +9,15 @@
                 "abstract": "Learn about the fundamentals of the Blockchain technology and cryptocurrencies, covering the basics of what they are, how to buy them, how mining works, and how the blockchain works.",
                 "twitter": "jammyclarkie",
                 "slides": ""
+            },
+            "2": {
+                "date": "2017-07-03",
+                "speaker": "Chris Sherry",
+                "title": "Interactive Festival Map - A Personal Project",
+                "avatar": "/images/chris.png",
+                "abstract": "At one of Mobile Dorset's lean coffee sessions, There was a conversation about a way to show a user's location ontop of an image - that image being a map for a theme park or event. Off the back of that conversation I went on to build a prototype with javascript and test it in a real world situation for the Teddy Rocks Festival. This talk shares my thought process, decisions, challenges and what I learnt from the project. I'd love to discuss my approach and share ideas on how to move the project forward for next year.",
+                "twitter": "tweetingsherry",
+                "slides": ""
             }
         },
         "april": {

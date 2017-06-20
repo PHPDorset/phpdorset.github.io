@@ -2,9 +2,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-//$dotenv = new Dotenv\Dotenv('../');
-//$dotenv->load();
-
 $app = new Silex\Application();
 
 // add the current url to the app object.

@@ -10,8 +10,6 @@
         "psr-4": {"PhpDorset\\": "app/src/PhpDorset"}
     },
     "require-dev": {
-        "symfony/browser-kit": ">=2.3,<2.4-dev",
-        "symfony/css-selector": "2.4.*@dev"
     },
     "extra": {
         "heroku": {

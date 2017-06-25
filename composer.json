@@ -4,7 +4,8 @@
     "require": {
         "php": ">=7.0",
         "silex/silex": "^2.0",
-        "twig/twig": "^2.0"
+        "twig/twig": "^2.0",
+        "symfony/yaml": "^3.3"
     },
     "autoload": {
         "psr-4": {"PhpDorset\\": "app/src/PhpDorset"}

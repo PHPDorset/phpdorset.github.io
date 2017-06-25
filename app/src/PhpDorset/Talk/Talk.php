@@ -2,295 +2,225 @@
 
 namespace PhpDorset\Talk;
 
-class Talk
+final class Talk
 {
-    protected $abstract = '';
-    protected $avatar = '';
-    protected $cues = [];
-    protected $feedbackUrl = '';
-    protected $month = '';
-    protected $pdf = '';
-    protected $resources = [];
-    protected $speaker = '';
-    protected $title = '';
-    protected $video = '';
-    protected $year = '';
-    protected $twitter = '';
-    protected $ticketLink = '';
+    /**
+     * @var string
+     */
+    private $abstract;
 
     /**
-     * @var \DateTime
+     * @var string
+     */
+    private $avatar;
+
+    /**
+     * @var string[]
+     */
+    private $cues;
+
+    /**
+     * @var string
+     */
+    private $feedbackUrl;
+
+    /**
+     * @var string
+     */
+    private $month;
+
+    /**
+     * @var string
+     */
+    private $pdf;
+
+    /**
+     * @var string[]
+     */
+    private $resources;
+
+    /**
+     * @var string[]
+     */
+    private $speaker;
+
+    /**
+     * @var string
+     */
+    private $title;
+
+    /**
+     * @var string
+     */
+    private $video;
+
+    /**
+     * @var string
+     */
+    private $year;
+
+    /**
+     * @var string
+     */
+    private $twitter;
+
+    /**
+     * @var \DateTimeImmutable
      */
     private $date;
 
-    /**
-     * @param string $abstract
-     */
-    public function setAbstract($abstract)
+    private function __construct()
     {
-        $this->abstract = (string)$abstract;
+    }
+
+    public function __set($key, $value)
+    {
+        throw new \BadMethodCallException('Talk is Immutable');
     }
 
     /**
      * @return string
      */
-    public function getAbstract()
+    public function getAbstract(): string
     {
         return $this->abstract;
     }
 
     /**
-     * @param string $avatar
-     */
-    public function setAvatar($avatar)
-    {
-        $this->avatar = (string)$avatar;
-    }
-
-    /**
      * @return string
      */
-    public function getAvatar()
+    public function getAvatar(): string
     {
         return $this->avatar;
     }
 
     /**
-     * @param array $cues
-     */
-    public function setCues(array $cues)
-    {
-        $this->cues = $cues;
-    }
-
-    /**
      * @return array
      */
-    public function getCues()
+    public function getCues(): array
     {
         return $this->cues;
     }
 
     /**
-     * @param string $feedbackUrl
-     */
-    public function setFeedbackUrl($feedbackUrl)
-    {
-        $this->feedbackUrl = (string)$feedbackUrl;
-    }
-
-    /**
      * @return string
      */
-    public function getFeedbackUrl()
+    public function getFeedbackUrl(): string
     {
         return $this->feedbackUrl;
     }
 
     /**
-     * @param string $month
-     */
-    public function setMonth($month)
-    {
-        $this->month = (string)$month;
-    }
-
-    /**
      * @return string
      */
-    public function getMonth()
+    public function getMonth(): string
     {
         return $this->month;
     }
 
     /**
-     * @param string $pdf
-     */
-    public function setPdf($pdf)
-    {
-        $this->pdf = (string)$pdf;
-    }
-
-    /**
      * @return string
      */
-    public function getPdf()
+    public function getPdf(): string
     {
         return sprintf('/pdfs/%s', $this->pdf);
     }
 
     /**
-     * @param array $resources
-     */
-    public function setResources(array $resources)
-    {
-        $this->resources = $resources;
-    }
-
-    /**
      * @return array
      */
-    public function getResources()
+    public function getResources(): array
     {
         return $this->resources;
     }
 
     /**
-     * @param string $speaker
+     * @return string
      */
-    public function setSpeaker($speaker)
-    {
-        $this->speaker = (string)$speaker;
-    }
-
-    /**
-     * @return string|array
-     */
-    public function getSpeaker()
+    public function getSpeaker(): string
     {
         return $this->speaker;
     }
 
     /**
-     * @param string $title
-     */
-    public function setTitle($title)
-    {
-        $this->title = (string)$title;
-    }
-
-    /**
      * @return string
      */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
-     * @param string $video
-     */
-    public function setVideo($video)
-    {
-        $this->video = (string)$video;
-    }
-
-    /**
      * @return string
      */
-    public function getVideo()
+    public function getVideo(): string
     {
         return $this->video;
     }
 
     /**
-     * @param string $year
-     */
-    public function setYear($year)
-    {
-        $this->year = (string)$year;
-    }
-
-    /**
      * @return string
      */
-    public function getYear()
+    public function getYear(): string
     {
         return $this->year;
     }
 
     /**
-     * @param string|array $twitter
+     * @return string
      */
-    public function setTwitter($twitter)
-    {
-        $twitter = str_replace('https://twitter.com/', '', $twitter);
-        $twitters = explode('/', $twitter);
-
-        if (count($twitters) > 1){
-            $this->twitter = $twitters;
-        }
-
-        $this->twitter = $twitter;
-    }
-
-    /**
-     * @return string|array
-     */
-    public function getTwitter()
+    public function getTwitter(): string
     {
         return $this->twitter;
     }
 
     /**
-     * @return \DateTime|null
+     * @return \DateTimeImmutable
      */
-    public function getDate()
+    public function getDate(): \DateTimeImmutable
     {
         return $this->date;
     }
 
     /**
-     * @param \DateTime $date
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-    }
-
-    /**
      * @return bool
      */
-    public function isInTheFuture()
+    public function isInTheFuture(): bool
     {
-        return $this->date > (new \DateTime('now'));
-    }
-
-    /**
-     * @return string
-     */
-    public function getTicketLink()
-    {
-        return $this->ticketLink;
-    }
-
-    /**
-     * @param string $ticketLink
-     */
-    public function setTicketLink($ticketLink)
-    {
-        $this->ticketLink = $ticketLink;
+        return $this->date > (new \DateTimeImmutable('now', new \DateTimeZone('Europe/London')));
     }
 
     /**
      * @param string $month
      * @param string $year
-     * @param array $data
-     * @return Talk
+     * @param string[] $data
+     *
+     * @return self
      */
-    public static function createFromArray($year, $month, array $data)
+    public static function createFromArray(string $year, string $month, array $data)
     {
-        $talk = new Talk();
-        $talk->setAbstract(isset($data['abstract']) ? $data['abstract'] : '');
-        $talk->setAvatar(isset($data['avatar']) ? $data['avatar'] : '');
-        $talk->setDate(isset($data['date']) ? new \DateTime($data['date'], new \DateTimeZone('Europe/London')) : null);
-        $talk->setFeedbackUrl(isset($data['feedbackUrl']) ? $data['feedbackUrl'] : '');
-        $talk->setMonth($month);
-        $talk->setPdf($data['slides']);
-        $talk->setResources(isset($data['resources']) ? $data['resources'] : []);
-        $talk->setSpeaker(isset($data['speaker']) ? $data['speaker'] : '');
-        $talk->setTitle(isset($data['title']) ? $data['title'] : '');
-        $talk->setVideo(isset($data['video']) ? $data['video'] : '');
-        $talk->setTwitter(isset($data['twitter']) ? $data['twitter'] : '');
-        $talk->setYear($year);
-        $talk->setTicketLink(isset($data['ticketLink']) ? $data['ticketLink'] : 'http://www.eventbrite.co.uk/o/phpdorset-5284449005');
+        $date = isset($data['date'])
+            ? new \DateTimeImmutable($data['date'], new \DateTimeZone('Europe/London'))
+            : new \DateTimeImmutable(sprintf('%s %s',$month, $year), new \DateTimeZone('Europe/London'));
 
-        if (isset($data['cues'])) {
-            $talk->setCues(array_map(function ($cue) {
-                list($mins, $secs) = explode(':', $cue);
-                return ($mins * 60) + ($secs);
-            }, $data['cues']));
-        }
+        $talk = new Talk();
+        $talk->abstract = $data['abstract'] ?? '';
+        $talk->avatar = $data['avatar'] ?? '';
+        $talk->date = $date;
+        $talk->feedbackUrl = $data['feedbackUrl'] ?? '';
+        $talk->month = $month;
+        $talk->pdf = $data['slides'] ?? '';
+        $talk->resources = $data['resources'] ?? [];
+        $talk->speaker = $data['speaker'];
+        $talk->title = $data['title'];
+        $talk->video = $data['video'] ?? '';
+        $talk->twitter = str_replace('https://twitter.com/', '', isset($data['twitter']) ? $data['twitter'] : null);
+        $talk->year = $year;
+
+        $talk->cues = array_map(function (string $cue) {
+            list($mins, $secs) = explode(':', $cue);
+            return ($mins * 60) + ($secs);
+        }, $data['cues'] ?? []);
 
         return $talk;
     }

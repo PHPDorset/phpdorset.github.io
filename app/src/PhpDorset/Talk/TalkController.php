@@ -4,7 +4,7 @@ namespace PhpDorset\Talk;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class TalkController
+final class TalkController
 {
     /**
      * @var TalkRepository
@@ -30,9 +30,10 @@ class TalkController
      * @param $year
      * @param $month
      * @param $key
+     *
      * @return string
      */
-    public function fetchTalk($year, $month, $key)
+    public function fetchTalk(string $year, string $month, string $key): string
     {
         $talk = $this->repository->fetchTalk($year, $month, $key);
 
@@ -47,13 +48,14 @@ class TalkController
     /**
      * @param $year
      * @param $month
-     * @return JsonResponse
+     *
+     * @return string
      */
-    public function fetchTalksByYearAndMonth($year, $month)
+    public function fetchTalksByYearAndMonth(string $year, string $month): string
     {
         $talks = $this->repository->fetchTalks($year, $month);
 
-        if (count($talks) === 1){
+        if (count($talks) === 1) {
             return $this->fetchTalk($year, $month, 1);
         }
 
@@ -70,7 +72,7 @@ class TalkController
     /**
      * @return JsonResponse
      */
-    public function fetchAll()
+    public function fetchAll(): JsonResponse
     {
         $events = $this->repository->fetchAll();
         return new JsonResponse($events);
@@ -79,7 +81,7 @@ class TalkController
     /**
      * @return string
      */
-    public function fetchTalkList()
+    public function fetchTalkList(): string
     {
         return $this->twig->render(
             'talk_list.twig',
@@ -89,7 +91,10 @@ class TalkController
         );
     }
 
-    public function fetchHomepageTalks()
+    /**
+     * @return string
+     */
+    public function fetchHomepageTalks(): string
     {
         $currentDate = (new \DateTime('now'));
 
@@ -107,9 +112,9 @@ class TalkController
 
         $nextMonthTalks = $this->repository->fetchTalks($nextMonth->format('Y'), strtolower($nextMonth->format('F')));
         $thisMonthTalks = $this->repository->fetchTalks($thisMonth->format('Y'), strtolower($thisMonth->format('F')));
-        $lastMonthTalks =  $this->repository->fetchTalks($lastMonth->format('Y'), strtolower($lastMonth->format('F')));
+        $lastMonthTalks = $this->repository->fetchTalks($lastMonth->format('Y'), strtolower($lastMonth->format('F')));
 
-        if(is_array($thisMonthTalks)) {
+        if (is_array($thisMonthTalks)) {
             $talksThisMonthInTheFuture = array_filter(
                 $thisMonthTalks,
                 function (Talk $talk) use ($currentDate) {
@@ -118,7 +123,7 @@ class TalkController
             );
         }
 
-        if(count($talksThisMonthInTheFuture) < 1 ){
+        if (count($talksThisMonthInTheFuture) < 1) {
             $months[$nextMonth->format('c')] = $nextMonthTalks;
         }
 

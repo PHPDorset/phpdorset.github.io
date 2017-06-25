@@ -2,14 +2,12 @@
     "name": "phpdorset/phpdorset",
     "description": "The PHP Dorset Website",
     "require": {
-        "php": ">=5.6.0",
-        "silex/silex": "~1.1",
-        "twig/twig": ">=1.8,<2.0-dev"
+        "php": ">=7.0",
+        "silex/silex": "^2.0",
+        "twig/twig": "^2.0"
     },
     "autoload": {
         "psr-4": {"PhpDorset\\": "app/src/PhpDorset"}
-    },
-    "require-dev": {
     },
     "extra": {
         "heroku": {

@@ -2,12 +2,12 @@
 
 namespace PhpDorset\Talk;
 
-class TalkRepository
+final class TalkRepository
 {
     /**
-     * @var array
+     * @var array[year][month][id]
      */
-    protected $talks;
+    private $talks;
 
     /**
      * @param array $talks
@@ -20,9 +20,10 @@ class TalkRepository
     /**
      * @param string $year
      * @param string $month
+     *
      * @return Talk[]
      */
-    public function fetchTalks($year, $month)
+    public function fetchTalks(string $year, string $month): array
     {
         $month = strtolower($month);
 
@@ -45,9 +46,10 @@ class TalkRepository
      * @param string $year
      * @param string $month
      * @param $key
+     *
      * @return Talk
      */
-    public function fetchTalk($year, $month, $key)
+    public function fetchTalk(string $year, string $month, string $key): Talk
     {
         $month = strtolower($month);
 
@@ -61,9 +63,9 @@ class TalkRepository
     }
 
     /**
-     * @return array
+     * @return Talk[]
      */
-    public function fetchAll()
+    public function fetchAll(): array
     {
         return $this->talks;
     }

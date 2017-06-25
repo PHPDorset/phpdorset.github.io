@@ -4,8 +4,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-// add the current url to the app object.
-$app['current_url'] = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : null;
+$app['current_url'] = function ($app) {
+    return $app['request_stack']->getCurrentRequest()->server->get('REQUEST_URI');
+};
 
 $app->register(
     new Silex\Provider\TwigServiceProvider(),
@@ -14,21 +15,17 @@ $app->register(
     )
 );
 
-//$app->register(new PhpDorset\Eventbrite\EventbriteProvider());
+$app->register(new Silex\Provider\ServiceControllerServiceProvider());
 
-$app->register(new Silex\Provider\ServiceControllerServiceProvider);
+$app['talk.controller'] = function () use ($app) {
+    return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig']);
+};
 
-$app['talk.controller'] = $app->share(
-    function () use ($app) {
-        return new PhpDorset\Talk\TalkController($app['talk.repo'], $app['twig']);
-    }
-);
-
-$app['talk.repo'] = $app->share(function () {
+$app['talk.repo'] = function () {
     return new PhpDorset\Talk\TalkRepository(
         json_decode(file_get_contents(__DIR__ . '/database/talks.json'), true)
     );
-});
+};
 
 $app->get(
     '/api/v1/talks/{year}/{month}/talks.json',

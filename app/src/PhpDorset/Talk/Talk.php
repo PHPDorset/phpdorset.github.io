@@ -69,6 +69,11 @@ final class Talk
      */
     private $date;
 
+    /**
+     * @var string
+     */
+    private $ticketLink;
+
     private function __construct()
     {
     }
@@ -191,6 +196,14 @@ final class Talk
     }
 
     /**
+     * @return string
+     */
+    public function getTicketLink(): string
+    {
+        return $this->ticketLink;
+    }
+
+    /**
      * @param string $month
      * @param string $year
      * @param string[] $data
@@ -216,6 +229,7 @@ final class Talk
         $talk->video = $data['video'] ?? '';
         $talk->twitter = str_replace('https://twitter.com/', '', isset($data['twitter']) ? $data['twitter'] : null);
         $talk->year = $year;
+        $talk->ticketLink = $data['ticketLink'] ?? 'https://phpdorset.eventbrite.co.uk';
 
         $talk->cues = array_map(function (string $cue) {
             list($mins, $secs) = explode(':', $cue);

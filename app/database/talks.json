@@ -1,5 +1,17 @@
 {
     "2017": {
+        "august": {
+            "1": {
+                "date": "2017-08-07",
+                "speaker": "Derick Rethans",
+                "title": "Storing Non-Scalar Data",
+                "avatar": "/images/derickr.jpg",
+                "abstract": "In this presentation we will look at storing complex data in a single field. Many noSQL solutions are created around this (such as Redis' lists, sets and hashes; MongoDB's and CouchDB's records), and many relational database now also support storing complex data in a single field through specific data types (such as PostGreSQL's JSONB or hstore, MySQL's JSON). <br /><br />Each of the different database engines support different things, and handle these data types in different ways. In this session we compare the different approaches to storage, indexing and interactions with these data types in different databases.",
+                "twitter": "derickr",
+                "slides": "",
+                "ticketLink": "https://phpdorset-august-17.eventbrite.com/?aff=web1"
+            }
+        },
         "july": {
             "1": {
                 "date": "2017-07-03",

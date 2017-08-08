@@ -1,5 +1,17 @@
 {
     "2017": {
+        "september": {
+            "1": {
+                "date": "2017-09-04",
+                "speaker": "Chris Hoult",
+                "title": "Graphs are Everywhere",
+                "avatar": "/images/chault.jpg",
+                "abstract": "No - not charts! Graphs are a data structure that are more than just the nodes and edges they contain: from mapping networks to representing arithmetic, from writing chat-bots to inferring relationships, applying graphs to a problem can quite often provide an elegant solution. In this light-hearted and accessible talk, I will cover the basics of graphs as well as go over a few simple but fun examples of this versatile concept.",
+                "twitter": "choult",
+                "slides": "",
+                "ticketLink": "https://phpdorset-september-17.eventbrite.com/?aff=web1"
+            }
+        },
         "august": {
             "1": {
                 "date": "2017-08-07",

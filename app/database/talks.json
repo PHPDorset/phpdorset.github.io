@@ -1,5 +1,17 @@
 {
     "2017": {
+        "october": {
+            "1": {
+                "date": "2017-10-03",
+                "speaker": "Katy Ereira",
+                "title": "Chatbots and PHP",
+                "avatar": "/images/kereira.jpeg",
+                "abstract": "Chatbots are rapidly gaining in popularity; changing the way in which users engage with organisations online. I'm going to talk about how you would get started writing a bot in PHP using Botman, and how to harness the power of artificial intelligence and natural language processing.",
+                "twitter": "maccath",
+                "slides": "",
+                "ticketLink": "https://phpdorset-september-17.eventbrite.com/?aff=web1"
+            }
+        },
         "september": {
             "1": {
                 "date": "2017-09-04",

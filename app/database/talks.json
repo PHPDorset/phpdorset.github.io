@@ -8,7 +8,7 @@
                 "avatar": "/images/kereira.jpeg",
                 "abstract": "Chatbots are rapidly gaining in popularity; changing the way in which users engage with organisations online. I'm going to talk about how you would get started writing a bot in PHP using Botman, and how to harness the power of artificial intelligence and natural language processing.",
                 "twitter": "maccath",
-                "slides": "",
+                "slides": "2017_september.pdf",
                 "ticketLink": "https://phpdorset-september-17.eventbrite.com/?aff=web1"
             }
         },

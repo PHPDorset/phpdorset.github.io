@@ -8,7 +8,7 @@
                 "avatar": "/images/kereira.jpeg",
                 "abstract": "Chatbots are rapidly gaining in popularity; changing the way in which users engage with organisations online. I'm going to talk about how you would get started writing a bot in PHP using Botman, and how to harness the power of artificial intelligence and natural language processing.",
                 "twitter": "maccath",
-                "slides": "2017_september.pdf",
+                "slides": "",
                 "ticketLink": "https://phpdorset-september-17.eventbrite.com/?aff=web1"
             }
         },
@@ -20,7 +20,7 @@
                 "avatar": "/images/chault.jpg",
                 "abstract": "No - not charts! Graphs are a data structure that are more than just the nodes and edges they contain: from mapping networks to representing arithmetic, from writing chat-bots to inferring relationships, applying graphs to a problem can quite often provide an elegant solution. In this light-hearted and accessible talk, I will cover the basics of graphs as well as go over a few simple but fun examples of this versatile concept.",
                 "twitter": "choult",
-                "slides": "",
+                "slides": "2017_september.pdf",
                 "ticketLink": "https://phpdorset-september-17.eventbrite.com/?aff=web1"
             }
         },
@@ -32,7 +32,6 @@
                 "avatar": "/images/derickr.jpg",
                 "abstract": "In this presentation we will look at storing complex data in a single field. Many noSQL solutions are created around this (such as Redis' lists, sets and hashes; MongoDB's and CouchDB's records), and many relational database now also support storing complex data in a single field through specific data types (such as PostGreSQL's JSONB or hstore, MySQL's JSON). <br /><br />Each of the different database engines support different things, and handle these data types in different ways. In this session we compare the different approaches to storage, indexing and interactions with these data types in different databases.",
                 "twitter": "derickr",
-                "slides": "",
                 "ticketLink": "https://phpdorset-august-17.eventbrite.com/?aff=web1"
             }
         },
@@ -44,7 +43,6 @@
                 "avatar": "/images/jonclark.jpg",
                 "abstract": "Learn about the fundamentals of the Blockchain technology and cryptocurrencies, covering the basics of what they are, how to buy them, how mining works, and how the blockchain works.",
                 "twitter": "jammyclarkie",
-                "slides": "",
                 "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-july-17-bitcoin-and-blockchain-basics-interactive-festival-map-a-personal-project-tickets-35468459116"
             },
             "2": {
@@ -54,7 +52,6 @@
                 "avatar": "/images/chris.png",
                 "abstract": "At one of Mobile Dorset's lean coffee sessions, There was a conversation about a way to show a user's location ontop of an image - that image being a map for a theme park or event. Off the back of that conversation I went on to build a prototype with javascript and test it in a real world situation for the Teddy Rocks Festival. This talk shares my thought process, decisions, challenges and what I learnt from the project. I'd love to discuss my approach and share ideas on how to move the project forward for next year.",
                 "twitter": "tweetingsherry",
-                "slides": "",
                 "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-july-17-bitcoin-and-blockchain-basics-interactive-festival-map-a-personal-project-tickets-35468459116"
             }
         },
@@ -65,8 +62,7 @@
                 "title": "An evening of lightning talks!",
                 "avatar": "/images/lightning.png",
                 "abstract": "We're inviting everyone to stand up this month and give their own lightning talk. It can be about anything to do with web or app development that you'd like to share, or something you found that you thought was interesting - or maybe something you just want to know more about. Send us a tweet and let us know what you'd like to talk about and we'll add you to this list.<br><br><ul><li><strong>Ben Cable:  Dank Tools: The merits of re-inventing the wheel</strong><p>An oft repeated phrase in computing is \"Don't re-invent the wheel\". This is largely good advice, but sometimes, going against the grain can be fun, and beneficial!</p></li><li><strong>Michael Craddock:  WordPress with Docker and Bedrock</strong><p>A quick run through on how Michael set up a Docker development environment using the Bedrock boilerplate for local Wordpress development</p></li><li><strong>Richard Baker:  Mysql</strong><p>Wierdness and some tips</p></li><li><strong>Simon Lewis: Exceptions</strong><p>TBC!</p></li><li><strong>Chris Sherry: Design Pattern Blankety-Blank</strong><p>A fun game to introduce software programming design patterns and their usages</p></li></ul><p><em>Talks may not be in this order!</em></p>",
-                "twitter": "phpdorset",
-                "slides" : ""
+                "twitter": "phpdorset"
             }
         },
         "march": {
@@ -76,8 +72,7 @@
                 "title": "Load Balancing with Nginx",
                 "avatar": "/images/rossey.jpg",
                 "abstract": "Nginx can be used for lots of utility purposes. Alex shares with us how it can be used as a load balancer to direct traffic between multiple servers",
-                "twitter": "rossey",
-                "slides" : ""
+                "twitter": "rossey"
             },
             "2": {
                 "date": "2017-03-06",
@@ -86,7 +81,6 @@
                 "avatar": "/images/video.png",
                 "abstract": "We'll be watching Konstantin Kudryashov's talk as a video and having an open discussion: <br><br>What should you test with your unit tests? Some people will say that unit behaviour is best tested through it's outcomes. But what if communication between units itself is more important than the results of it? This session will introduce you to two different ways of unit-testing and show you a way to assert your object behaviours through their communications.",
                 "twitter": "phpdorset",
-                "slides" : "",
                 "resources": {
                     "Watch the video on youtube": "https://www.youtube.com/watch?v=X6y-OyMPqfw"
                 }

@@ -143,7 +143,7 @@
 
             </div>
 
-            {% if talk.pdf %}
+            {% if talk.pdf != '/pdfs/' %}
                 <div id="canvas_holder">
                     <canvas id="presentation"></canvas>
                     <a id="prev" class="btn notmobile" onclick="goPrevious()">

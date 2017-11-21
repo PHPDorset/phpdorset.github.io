@@ -1,5 +1,16 @@
 {
     "2017": {
+        "december": {
+            "1": {
+                "date": "2017-12-04",
+                "speaker": "Nick Whitelegg",
+                "title": "EPHP - Developing a PHP learning tool",
+                "avatar": "/images/nwl.jpeg",
+                "abstract": "<p><strong>EPHP - Developing a PHP learning tool  using xdebug, PHP-Parser, websockets and Ratchet</strong></p><p>Students frequently struggle to learn the basics of PHP and my theory is that the inability to visualise the components of a PHP web application and how they interact could be an important cause. \"EPHP\" an online learning tool I am developing to help introductory students learn PHP by visualising the client-server communication of a PHP-based application, the input to a PHP script, and the database results.</p><p>The tool has been used on a real group of students earlier this year; since then, I have been developing EPHP further into a new version, ephpii. Unlike the original, this version uses xdebug and DBGp to debug students' scripts, allowing much more flexibility than the original version. To allow instant client-side notification of the line-by-line stepthrough of the debugger, websockets and Ratchet are used together with ZeroMQ for communication between the debug client and websocket server. PHP-Parser is used to improve the power of parsing scripts compared to the standard tokenizer library. </p><p>The talk will very much focus on the technical aspects of the implementation of the new version, including the overall architecture and code extracts, and is hoped to give a demonstration of the application as it stands at the moment.</p>",
+                "twitter": "phpdorset",
+                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-december-nick-whitelegg-ephp-developing-a-php-learning-tool-tickets-39644539886"
+            }
+        },
         "november": {
             "1": {
                 "date": "2017-11-06",

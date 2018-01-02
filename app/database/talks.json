@@ -1,12 +1,24 @@
 {
+    "2018": {
+        "january": {
+            "1": {
+                "date": "2018-01-08",
+                "speaker": "Dave Liddament",
+                "title": "The Test Suite Holy Trinity",
+                "avatar": "/images/davel.jpg",
+                "abstract": "<p>What would the perfect test suite look like? Well it would definitely fully test every bit of functionality. It would run lightning fast. And the test suite would be quick to write. That sounds great right?</p><p>Unfortunately these 3 goals work against each other. Increasing test coverage will increase the time spent writing and executing tests. Reducing test execution time will result in lower coverage.</p><p>This talk look at the properties of unit, integration and system tests in terms of what they test, how fast they run and how quick they are to write. Will look at how to get the most out of testing at each of these levels, how best to architect code for testing and where best to make compromises.  Although by the end of the talk we won’t have quite achieved the Test Suite Holy Trinity, we’ll be a step closer. </p>",
+                "twitter": "DaveLiddament"
+            }
+        }
+    },
     "2017": {
         "december": {
             "1": {
                 "date": "2017-12-04",
-                "speaker": "Nick Whitelegg",
-                "title": "EPHP - Developing a PHP learning tool",
-                "avatar": "/images/nwl.jpeg",
-                "abstract": "<p><strong>EPHP - Developing a PHP learning tool  using xdebug, PHP-Parser, websockets and Ratchet</strong></p><p>Students frequently struggle to learn the basics of PHP and my theory is that the inability to visualise the components of a PHP web application and how they interact could be an important cause. \"EPHP\" an online learning tool I am developing to help introductory students learn PHP by visualising the client-server communication of a PHP-based application, the input to a PHP script, and the database results.</p><p>The tool has been used on a real group of students earlier this year; since then, I have been developing EPHP further into a new version, ephpii. Unlike the original, this version uses xdebug and DBGp to debug students' scripts, allowing much more flexibility than the original version. To allow instant client-side notification of the line-by-line stepthrough of the debugger, websockets and Ratchet are used together with ZeroMQ for communication between the debug client and websocket server. PHP-Parser is used to improve the power of parsing scripts compared to the standard tokenizer library. </p><p>The talk will very much focus on the technical aspects of the implementation of the new version, including the overall architecture and code extracts, and is hoped to give a demonstration of the application as it stands at the moment.</p>",
+                "speaker": "PHPDorset",
+                "title": "Lightning talks",
+                "avatar": "/images/lightning.png",
+                "abstract": "<p>Dave Hulbert talks what's new in Symfony 4, Chris Sherry shares how 3 Sided Cube do 24/7 support for the American Red Cross, and Alex describes the infrastructure behind Passenger.</p>",
                 "twitter": "phpdorset",
                 "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-december-nick-whitelegg-ephp-developing-a-php-learning-tool-tickets-39644539886"
             }

@@ -1,5 +1,16 @@
 {
     "2018": {
+        "february": {
+            "1": {
+              "date": "2018-02-05",
+              "speaker": "Dave Baker",
+              "title": "Exiting Vim",
+              "avatar": "/images/daveb.jpg",
+              "abstract": "<p>As of May 2017 the “How do I exit Vim” question was still receiving around 80 visits an hour, showing that many people end up in Vim, but don’t know much or anything about it. This talk aims to provide a set of tips and tricks to allow developers to utilise one of the most powerful text editors around to enhance their workflows.</p><p>It is a beginner to intermediate talk, aimed at getting new, curious or infrequent users comfortable with the editor from the perspective of a PHP developer. It does not compare Vim to other editors or IDE’s or cover more advanced topics. By the end of the talk, attendees should feel comfortable with the editor and confident on where to find more information should they wish to learn more.</p>",
+              "twitter": "fully_baked",
+              "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-february-dave-baker-how-to-exit-vim-tickets-41754300236?aff=email1&mc_eid=ebd48fd226&mc_cid=c4965e6c27"
+            }
+        },
         "january": {
             "1": {
                 "date": "2018-01-08",
@@ -7,7 +18,8 @@
                 "title": "The Test Suite Holy Trinity",
                 "avatar": "/images/davel.jpg",
                 "abstract": "<p>What would the perfect test suite look like? Well it would definitely fully test every bit of functionality. It would run lightning fast. And the test suite would be quick to write. That sounds great right?</p><p>Unfortunately these 3 goals work against each other. Increasing test coverage will increase the time spent writing and executing tests. Reducing test execution time will result in lower coverage.</p><p>This talk look at the properties of unit, integration and system tests in terms of what they test, how fast they run and how quick they are to write. Will look at how to get the most out of testing at each of these levels, how best to architect code for testing and where best to make compromises.  Although by the end of the talk we won’t have quite achieved the Test Suite Holy Trinity, we’ll be a step closer. </p>",
-                "twitter": "DaveLiddament"
+                "twitter": "DaveLiddament",
+                "slides": "2018_january.pdf"
             }
         }
     },

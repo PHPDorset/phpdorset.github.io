@@ -1,5 +1,15 @@
 {
     "2018": {
+        "march": {
+            "1": {
+                "date": "2018-03-05",
+                "speaker": "PHPDorset",
+                "title": "Video [TBD]",
+                "avatar": "/images/video.png",
+                "abstract": "<p>Unfortunately this month there is no speaker. However we will be watching a video together instead at the same time and place.</p><p>We'll be choosing a video from recent PHP conferences, If there is a topic you'd like to watch with us and discuss, please let us nown on twitter. We'll choose a video based on a vote at the start of the evening.</p>",
+                "twitter": "phpdorset"
+            }
+        },
         "february": {
             "1": {
               "date": "2018-02-05",

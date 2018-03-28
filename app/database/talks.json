@@ -1,12 +1,22 @@
 {
     "2018": {
+        "april": {
+            "1": {
+                "date": "2018-03-05",
+                "speaker": "Rob Waller",
+                "title": "5 Tips for an Aspiring Tech Manager",
+                "avatar": "/images/robdwaller.jpg",
+                "abstract": "<p>Management is a difficult area for many developers to move into as it is very different to programming. Based on my learnings as a tech lead, running a business and teachings from sport and history I wish to share my tips for those who want to become managers and succeed at running tech teams.</p>",
+                "twitter": "RobDWaller"
+            }
+        },
         "march": {
             "1": {
                 "date": "2018-03-05",
                 "speaker": "PHPDorset",
-                "title": "Video [TBD]",
+                "title": "Video: Christopher Pitt - Monads",
                 "avatar": "/images/video.png",
-                "abstract": "<p>Unfortunately this month there is no speaker. However we will be watching a video together instead at the same time and place.</p><p>We'll be choosing a video from recent PHP conferences, If there is a topic you'd like to watch with us and discuss, please let us nown on twitter. We'll choose a video based on a vote at the start of the evening.</p>",
+                "abstract": "<p>This week we watched the following video: Christopher Pitt - Monads in PHP - Laracon EU 2017. https://www.youtube.com/watch?v=2th3L1RWvJk</p>",
                 "twitter": "phpdorset"
             }
         },

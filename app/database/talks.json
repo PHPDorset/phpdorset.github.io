@@ -1,5 +1,15 @@
 {
     "2018": {
+        "may": {
+            "1": {
+                "date": "2018-05-14",
+                "speaker": "[VIDEO]",
+                "title": "TBC",
+                "avatar": "/images/video.png",
+                "abstract": "Video and Discussion evening. Video to be decided.",
+                "twitter": "phpdorset"
+            }
+        },
         "april": {
             "1": {
                 "date": "2018-04-09",

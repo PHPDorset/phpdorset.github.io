@@ -1,5 +1,23 @@
 {
     "2018": {
+        "june": {
+            "1": {
+                "date": "2018-06-11",
+                "speaker": "Dave Hulbert",
+                "title": "The Great PHP Dorset JeoPHPardy Quiz",
+                "avatar": "/images/dave.jpeg",
+                "abstract": "<p> This month we have something both educational and fun! Dave Hulbert will be running a Jeopardy-style PHP quiz. Come along and be a contestant or join the audience and learn some facts about PHP. Whether you're new to PHP or an expert, there's sure to be something new. We'll cover PHP functions, popular frameworks and other parts of the PHP ecosystem.</p>",
+                "twitter": "dave1010"
+            },
+            "2": {
+                "speaker": "PHPDorset",
+                "date": "2018-06-11",
+                "title": "Lean Coffee Session",
+                "avatar": "/images/logo-transparent.png",
+                "abstract": "<p>We'll also be hosting a <a href\"http://wall-skills.com/wp-content/uploads/2013/12/Lean-Coffee_Wall-Skills1.png\">\"Lean Coffee\"</a> format discussion.</p>",
+                "twitter": "phpdorset"
+            }
+        },
         "may": {
             "1": {
                 "date": "2018-05-14",

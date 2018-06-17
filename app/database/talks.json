@@ -1,5 +1,15 @@
 {
     "2018": {
+        "july": {
+            "1": {
+                "date": "2018-07-02",
+                "speaker": "Stuart Herbert",
+                "title": "Using JSON Schema to validate your API",
+                "avatar": "/images/stu.jpg",
+                "abstract": "When Stuart needed to build an API-first app for a client, he wanted to find a better way to do input validation. He'd just come off a quality audit role on a large-scale project where he'd seen first-hand how it just isn't feasible to expect anyone to achieve 100% input validation through entirely manual means. That experience, and that search, led him to JSON Schema. In this talk, Stuart will introduce you to JSON Schema. He'll show you the essential points of writing a schema, and how to use it both from PHP and from JavaScript. Finally, he'll discuss the current state of the JSON schema draft, and share the compatibility issues he's seen over the last couple of years.",
+                "twitter": "stuherbert"
+            }
+        },
         "june": {
             "1": {
                 "date": "2018-06-11",

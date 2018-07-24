@@ -1,5 +1,15 @@
 {
     "2018": {
+        "august": {
+            "1": {
+                "date": "2018-08-06",
+                "speaker": "Chris Sherry & Dave Hulbert",
+                "title": " Get out of jail \"free\" cards - tips and quick fixes to get you out of sticky situations with servers, websites and APIs",
+                "avatar": "/images/chrisdave.jpg",
+                "abstract": "<p>There are lots of popular talks about the best practice and right way to build your software and infrastructure to ensure the most reliable, fault tolerant systems and optimised codebases, without which we would not know how to improve and better our processes.</p><p>But in reality, projects exist in a multitude of states of imperfectness, sometimes due to commercial decisions or financial demands, scheduling pressures, or unfortunately some naivety or ignorance on our parts or those we inherited those projects from.</p><p>Together Chris and Dave have years of experience working with and maintaining legacy PHP codebases, MVP monoliths and prototypes that got shipped to production. They have joined forces to share with you some of their favourite tips on getting through times of late night bug fixing, weekend patches and badly timed traffic spikes. The talk will help you survive your initial dilemma to keep things running and give ideas for some better long term resolutions.</p>",
+                "twitter": "phpdorset"
+            }
+        },
         "july": {
             "1": {
                 "date": "2018-07-02",

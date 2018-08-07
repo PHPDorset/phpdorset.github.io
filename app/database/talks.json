@@ -1,5 +1,15 @@
 {
     "2018": {
+        "september": {
+            "1": {
+                "date": "2018-09-03",
+                "speaker": "Michael Cullumn",
+                "title": "TBC",
+                "avatar": "/images/michaelc.jpg",
+                "abstract": "<p>Michael will be talking about one of the following subjects - yet to be confirmed</p><ul><li>Introduction to GraphQL</li><li>Trend analysis and machine learning in PHP</li><li>Hadoop & PHP</li><li>Building first-class REST APIs with Symfony</li></ul><p>If you have a preference please let us know at phpdorset@gamil.com).",
+                "twitter": "michaelcullumuk"
+            }
+        },
         "august": {
             "1": {
                 "date": "2018-08-06",
@@ -7,7 +17,12 @@
                 "title": " Get out of jail \"free\" cards - tips and quick fixes to get you out of sticky situations with servers, websites and APIs",
                 "avatar": "/images/chrisdave.jpg",
                 "abstract": "<p>There are lots of popular talks about the best practice and right way to build your software and infrastructure to ensure the most reliable, fault tolerant systems and optimised codebases, without which we would not know how to improve and better our processes.</p><p>But in reality, projects exist in a multitude of states of imperfectness, sometimes due to commercial decisions or financial demands, scheduling pressures, or unfortunately some naivety or ignorance on our parts or those we inherited those projects from.</p><p>Together Chris and Dave have years of experience working with and maintaining legacy PHP codebases, MVP monoliths and prototypes that got shipped to production. They have joined forces to share with you some of their favourite tips on getting through times of late night bug fixing, weekend patches and badly timed traffic spikes. The talk will help you survive your initial dilemma to keep things running and give ideas for some better long term resolutions.</p>",
-                "twitter": "phpdorset"
+                "twitter": "phpdorset",
+                "slides": "2018_august.pdf",
+                "resources": {
+                    "Download the Slides": "http://phpdorset.co.uk/pdfs/2018_august.pdf",
+                    "Query Order & Cardinality Talk by Rich Baker": "https://www.phpdorset.co.uk/talks/2017/april"
+                }
             }
         },
         "july": {
@@ -70,13 +85,13 @@
         },
         "february": {
             "1": {
-              "date": "2018-02-05",
-              "speaker": "Dave Baker",
-              "title": "Exiting Vim",
-              "avatar": "/images/daveb.jpg",
-              "abstract": "<p>As of May 2017 the “How do I exit Vim” question was still receiving around 80 visits an hour, showing that many people end up in Vim, but don’t know much or anything about it. This talk aims to provide a set of tips and tricks to allow developers to utilise one of the most powerful text editors around to enhance their workflows.</p><p>It is a beginner to intermediate talk, aimed at getting new, curious or infrequent users comfortable with the editor from the perspective of a PHP developer. It does not compare Vim to other editors or IDE’s or cover more advanced topics. By the end of the talk, attendees should feel comfortable with the editor and confident on where to find more information should they wish to learn more.</p>",
-              "twitter": "fully_baked",
-              "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-february-dave-baker-how-to-exit-vim-tickets-41754300236?aff=email1&mc_eid=ebd48fd226&mc_cid=c4965e6c27"
+                "date": "2018-02-05",
+                "speaker": "Dave Baker",
+                "title": "Exiting Vim",
+                "avatar": "/images/daveb.jpg",
+                "abstract": "<p>As of May 2017 the “How do I exit Vim” question was still receiving around 80 visits an hour, showing that many people end up in Vim, but don’t know much or anything about it. This talk aims to provide a set of tips and tricks to allow developers to utilise one of the most powerful text editors around to enhance their workflows.</p><p>It is a beginner to intermediate talk, aimed at getting new, curious or infrequent users comfortable with the editor from the perspective of a PHP developer. It does not compare Vim to other editors or IDE’s or cover more advanced topics. By the end of the talk, attendees should feel comfortable with the editor and confident on where to find more information should they wish to learn more.</p>",
+                "twitter": "fully_baked",
+                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-february-dave-baker-how-to-exit-vim-tickets-41754300236?aff=email1&mc_eid=ebd48fd226&mc_cid=c4965e6c27"
             }
         },
         "january": {
@@ -341,48 +356,48 @@
                 "slides":""
             }
         },
-      "april": {
-        "1" : {
-          "date": "2016-04-04",
-          "speaker": "David McKay",
-          "title": "Kickass development environments with Docker",
-          "avatar": "/images/rawkode.jpeg",
-          "abstract": "Docker, the hottest technology around at the moment. It swept the Ops world by storm in 2014, became mainstream in 2015, and now it’s set to dominate the developer world, in 2016. Docker is a tool that allows you to package your application up into a single-runnable distributable binary - akin to the phar, but in Hulk mode. Docker allows you, a developer, to specify the exact environment your application needs to run, across development; test; staging; and production. In this talk I will cover the creation of this utopian distributable and show you how to can compose your entire production infrastructure locally with only a small YAML file and without installing a single thing. Lets say hello, to Docker. ",
-          "twitter": "rawkode",
-          "slides":"2016_april_davidmckay.pdf"
-        }
-      },
-      "march": {
-        "1" : {
-          "date": "2016-03-07",
-          "speaker": "Stanko Markovic",
-          "title": "How to do interviews properly - view from both sides",
-          "avatar": "/images/stanko.jpg",
-          "abstract": "As software developers, we are in great demand. There are lots of companies out there looking for good developers, but how do we know what companies are good to work for? We will look into how to set yourself up for the interview as a candidate, and what signs to look for. There is a clear list of indicators and questions we should ask, that will give us a clear understanding of the way a company is organised. But what happens if a developer has to be the one conducting the interview? Here we will switch things around, as we will go through the way the interviews should be conducted from the interviewer side. We will see what questions to ask, and how to gauge the answers from the candidate. We will look into how to structure the interview, and what techniques to use. Finally we will go over some of the interview basics and how to navigate the usual pitfalls of the job marketplace. Overall by following these steps, we should make the job hunt easier, and more pleasurable for all involved.",
-          "twitter": "greyshirt",
-          "slides":""
-        }
-      },
-      "february": {
-        "1" : {
-          "date": "2016-02-01",
-          "speaker": "Matt Cockayne",
-          "title": "Are you a good Code Scout?",
-          "avatar": "/images/mattcockayne.jpg",
-          "abstract": "Scouts are taught to be adventurous, considerate, thoughtful, effective, diligent, ingenious, thorough, earnest and effective! All of these qualities are ones that we should be striving for as a Developer. \n\nI will prove that being a Good Scout and being a Great developer are are the same thing. I’ll take you through the actions and attitudes taught to millions of kids aged 7-18 and how you can apply those practices to what you do in your code. ",
-          "twitter": "phpboyscout",
-          "slides":""
+        "april": {
+            "1" : {
+                "date": "2016-04-04",
+                "speaker": "David McKay",
+                "title": "Kickass development environments with Docker",
+                "avatar": "/images/rawkode.jpeg",
+                "abstract": "Docker, the hottest technology around at the moment. It swept the Ops world by storm in 2014, became mainstream in 2015, and now it’s set to dominate the developer world, in 2016. Docker is a tool that allows you to package your application up into a single-runnable distributable binary - akin to the phar, but in Hulk mode. Docker allows you, a developer, to specify the exact environment your application needs to run, across development; test; staging; and production. In this talk I will cover the creation of this utopian distributable and show you how to can compose your entire production infrastructure locally with only a small YAML file and without installing a single thing. Lets say hello, to Docker. ",
+                "twitter": "rawkode",
+                "slides":"2016_april_davidmckay.pdf"
+            }
         },
-        "2" : {
-          "date": "2016-02-01",
-          "speaker": "Toby Griffiths",
-          "title": "So you’re thinking about going self-employed?",
-          "avatar": "/images/tobygriffiths.jpg",
-          "abstract": "Having gone self-employed just over 6 years ago, I've had to learn a whole heap more than just how to code better. Over those years, I’ve learned much about the many aspects of the day-to-day running of a business, and (I like to think) how to stay sane through it all. Starting a business is not a smooth ride, but I'd like to share with you, not only the details of starting your own business, but also the highs and lows I've been through, and the wonderful snippets I’ve learned over those years, so that your journey to self-employment might go a little more smoothly.",
-          "twitter": "ToG",
-          "slides": "2016_february_toby.pdf"
+        "march": {
+            "1" : {
+                "date": "2016-03-07",
+                "speaker": "Stanko Markovic",
+                "title": "How to do interviews properly - view from both sides",
+                "avatar": "/images/stanko.jpg",
+                "abstract": "As software developers, we are in great demand. There are lots of companies out there looking for good developers, but how do we know what companies are good to work for? We will look into how to set yourself up for the interview as a candidate, and what signs to look for. There is a clear list of indicators and questions we should ask, that will give us a clear understanding of the way a company is organised. But what happens if a developer has to be the one conducting the interview? Here we will switch things around, as we will go through the way the interviews should be conducted from the interviewer side. We will see what questions to ask, and how to gauge the answers from the candidate. We will look into how to structure the interview, and what techniques to use. Finally we will go over some of the interview basics and how to navigate the usual pitfalls of the job marketplace. Overall by following these steps, we should make the job hunt easier, and more pleasurable for all involved.",
+                "twitter": "greyshirt",
+                "slides":""
+            }
+        },
+        "february": {
+            "1" : {
+                "date": "2016-02-01",
+                "speaker": "Matt Cockayne",
+                "title": "Are you a good Code Scout?",
+                "avatar": "/images/mattcockayne.jpg",
+                "abstract": "Scouts are taught to be adventurous, considerate, thoughtful, effective, diligent, ingenious, thorough, earnest and effective! All of these qualities are ones that we should be striving for as a Developer. \n\nI will prove that being a Good Scout and being a Great developer are are the same thing. I’ll take you through the actions and attitudes taught to millions of kids aged 7-18 and how you can apply those practices to what you do in your code. ",
+                "twitter": "phpboyscout",
+                "slides":""
+            },
+            "2" : {
+                "date": "2016-02-01",
+                "speaker": "Toby Griffiths",
+                "title": "So you’re thinking about going self-employed?",
+                "avatar": "/images/tobygriffiths.jpg",
+                "abstract": "Having gone self-employed just over 6 years ago, I've had to learn a whole heap more than just how to code better. Over those years, I’ve learned much about the many aspects of the day-to-day running of a business, and (I like to think) how to stay sane through it all. Starting a business is not a smooth ride, but I'd like to share with you, not only the details of starting your own business, but also the highs and lows I've been through, and the wonderful snippets I’ve learned over those years, so that your journey to self-employment might go a little more smoothly.",
+                "twitter": "ToG",
+                "slides": "2016_february_toby.pdf"
+            }
         }
-      }
     },
     "2015": {
         "december": {
@@ -445,14 +460,14 @@
             }
         },
         "october": {
-          "1" : {
-            "date": "2015-10-05",
-            "speaker": "Dave Hulbert",
-            "title": "Practical intro to using PhpSpec. AKA how to be lazy and write better code.",
-            "avatar": "/images/dave.jpeg",
-            "abstract": "PhpSpec is a tool for \"SpecBDD\". Basically test-driven development (TDD) but without the word \"test\" in it. This talk shows how to effectively use PhpSpec for fun and/or profit, and the advantages to using it along side other tools like PHPUnit and why it's \"literally\" made of awesomesauce. We'll start off with a breakneck primer on unit testing with PHPUnit and basic TDD concepts. Then we'll move on to getting set up with PhpSpec, followed by a guided tour of its main features. By the end of the talk you'll have techniques to take advantage of your natural inclination to laziness to actually help you write better code.",
-            "twitter": "dave1010"
-          }
+            "1" : {
+                "date": "2015-10-05",
+                "speaker": "Dave Hulbert",
+                "title": "Practical intro to using PhpSpec. AKA how to be lazy and write better code.",
+                "avatar": "/images/dave.jpeg",
+                "abstract": "PhpSpec is a tool for \"SpecBDD\". Basically test-driven development (TDD) but without the word \"test\" in it. This talk shows how to effectively use PhpSpec for fun and/or profit, and the advantages to using it along side other tools like PHPUnit and why it's \"literally\" made of awesomesauce. We'll start off with a breakneck primer on unit testing with PHPUnit and basic TDD concepts. Then we'll move on to getting set up with PhpSpec, followed by a guided tour of its main features. By the end of the talk you'll have techniques to take advantage of your natural inclination to laziness to actually help you write better code.",
+                "twitter": "dave1010"
+            }
         },
         "september": {
             "1" : {

@@ -4,9 +4,9 @@
             "1": {
                 "date": "2018-09-03",
                 "speaker": "Michael Cullumn",
-                "title": "TBC",
+                "title": "Trend analysis and machine learning in PHP",
                 "avatar": "/images/michaelc.jpg",
-                "abstract": "<p>Michael will be talking about one of the following subjects - yet to be confirmed</p><ul><li>Introduction to GraphQL</li><li>Trend analysis and machine learning in PHP</li><li>Hadoop & PHP</li><li>Building first-class REST APIs with Symfony</li></ul><p>If you have a preference please let us know at phpdorset@gamil.com).",
+                "abstract": "The world we live in is one where data is one of the most valuable assets. There are many different pieces of data we can analyse on all kind of data from analytics of user behaviour of your platform, user generated content, monitoring of exception rates, or when your core business model is to provide some kind of analytics platform. This talk will talk about how you can, in your Symfony applications, perform some simple trend analysis techniques to build models, analyse data to get useful information and spot anomalies.",
                 "twitter": "michaelcullumuk"
             }
         },

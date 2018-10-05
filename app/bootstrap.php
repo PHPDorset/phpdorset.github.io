@@ -3,12 +3,14 @@
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+define('CSP_NONCE', base64_encode(random_bytes(16)));
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
 $app->after(function (Request $request, Response $response) {
-    $response->headers->set('Content-Security-Policy', 'default-src \'self\'; font-src \'self\' http://netdna.bootstrapcdn.com; img-src \'self\'; frame-src https://www.google.com; script-src \'self\' https://ajax.googleapis.com http://netdna.bootstrapcdn.com; style-src \'self\' http://netdna.bootstrapcdn.com');
+    $response->headers->set('Content-Security-Policy', 'default-src \'self\'; font-src \'self\' https://netdna.bootstrapcdn.com; img-src \'self\'; frame-src https://www.google.com; script-src \'self\' \'nonce-' . CSP_NONCE . '\' https://www.google-analytics.com https://ajax.googleapis.com https://netdna.bootstrapcdn.com https://oss.maxcdn.com; style-src \'self\' https://netdna.bootstrapcdn.com');
 });
 
 $app['current_url'] = function ($app) {
@@ -21,6 +23,9 @@ $app->register(
         'twig.path' => __DIR__ . '/../views',
     )
 );
+
+$app["twig"]->addGlobal('CSP_NONCE', CSP_NONCE);
+
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider());
 

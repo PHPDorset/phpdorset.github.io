@@ -107,5 +107,8 @@ $app->get(
     }
 );
 
+$app->error(function (\Exception $e, Request $request, $code) use ($app) {
+    return new Response($app['twig']->resolveTemplate('errors/404.twig')->render([]), $code);
+});
 
 return $app;

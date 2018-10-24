@@ -10,7 +10,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $app = new Silex\Application();
 
 $app->after(function (Request $request, Response $response) {
-    $response->headers->set('Content-Security-Policy', 'default-src \'self\'; font-src \'self\' https://netdna.bootstrapcdn.com; img-src \'self\'; frame-src https://www.google.com; script-src \'self\' \'nonce-' . CSP_NONCE . '\' https://www.google-analytics.com https://ajax.googleapis.com https://netdna.bootstrapcdn.com https://oss.maxcdn.com; style-src \'self\' https://netdna.bootstrapcdn.com');
+    $response->headers->set('Content-Security-Policy', 'default-src \'self\'; font-src \'self\' https://netdna.bootstrapcdn.com; img-src \'self\' https://maps.googleapis.com; frame-src https://www.google.com; script-src \'self\' \'nonce-' . CSP_NONCE . '\' https://www.google-analytics.com https://ajax.googleapis.com https://netdna.bootstrapcdn.com https://oss.maxcdn.com; style-src \'self\' https://netdna.bootstrapcdn.com');
 });
 
 $app['current_url'] = function ($app) {

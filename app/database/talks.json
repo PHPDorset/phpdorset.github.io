@@ -1,5 +1,15 @@
 {
     "2018": {
+        "november": {
+            "1": {
+                "date": "2018-11-12",
+                "speaker": "TBC",
+                "title": "TBC",
+                "avatar": "/images/logo-transparent.png",
+                "abstract": "TBC",
+                "twitter": "phpdorset"
+            }
+        },
         "october": {
             "1": {
                 "date": "2018-10-01",
@@ -7,8 +17,12 @@
                 "title": "Lightweight GraphQL && Database Driven GraphQL Design",
                 "avatar": "/images/benjie.jpg",
                 "abstract": "<strong>Lightweight GraphQL</strong><p>Using only React, “window.fetch()” and string concatenation this talk covers GraphQL fundamentals such as schemas, queries and mutations. By focussing on the basics and sidestepping the distractions of tooling and clients, this presentation will help you understand the power of GraphQL and give you the foundations to consider it for your own projects</p><strong>Database Driven GraphQL Design</strong><p>Learn how a database-centric approach to GraphQL API development can give your engineers more time to focus on the important parts of your application. Topics covered include authentication, authorization, adhering to GraphQL best practices, and avoiding common pitfalls</p>",
-
-                "twitter": "Benjie"
+                "twitter": "Benjie",
+                "resources": {
+                    "[SLIDES] Lightweight GraphQL": "https://www.graphql-training.com/lightweight-graphql-react/#1",
+                    "[SLIDES] Database Driven GraphQL Design": "https://www.graphile.org/ddgd/#",
+                    "[VIDEO] GraohQL Finland Live Stream": "https://www.youtube.com/watch?v=aX-BxhkFd9g&feature=youtu.be&t=29233"
+                }
             }
         },
         "september": {

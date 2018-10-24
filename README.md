@@ -1,4 +1,4 @@
-# [PHP Dorset website](http://www.phpdorset.co.uk/)
+# [PHP Dorset website](https://www.phpdorset.co.uk/)
 
 [![Build Status](https://travis-ci.org/PHPDorset/phpdorset.github.io.svg)](https://travis-ci.org/PHPDorset/phpdorset.github.io)
 
@@ -12,7 +12,7 @@ PHP Dorset Site based on Silex + Twig
 
 ### Quick start, just using PHP
 
-You will need: [composer](https://getcomposer.org/download/), [git](http://git-scm.com/downloads) and [PHP](http://php.net/) (5.6+)
+You will need: [composer](https://getcomposer.org/download/), [git](https://git-scm.com/downloads) and [PHP](https://php.net/) (5.6+)
 
     git clone git@github.com:PHPDorset/phpdorset.github.io.git phpdorset
     cd phpdorset

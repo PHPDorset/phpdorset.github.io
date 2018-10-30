@@ -3,11 +3,11 @@
         "november": {
             "1": {
                 "date": "2018-11-12",
-                "speaker": "TBC",
-                "title": "TBC",
-                "avatar": "/images/logo-transparent.png",
-                "abstract": "TBC",
-                "twitter": "phpdorset"
+                "speaker": "Joe Lambert",
+                "title": "Supercharging WordPress",
+                "avatar": "/images/joelambert.jpg",
+                "abstract": "Often WordPress themes are not easy to change, maintain or fun to work on. This can rule WordPress out as a viable option for bespoke, non-trivial websites.<br/><br/>In this talk we’ll dive into how this happens & look at how we can benefit from software engineering techniques to help make your code easier to change. I’ll also show how using Lumberjack, a powerful MVC framework built on Timber, can be used to power-up your themes.",
+                "twitter": "joelambert"
             }
         },
         "october": {

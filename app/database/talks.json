@@ -1,5 +1,15 @@
 {
     "2018": {
+        "december": {
+            "1": {
+                "speaker": "PHPDorset",
+                "date": "2018-12-03",
+                "title": "Christmas Social",
+                "avatar": "/images/logo-transparent.png",
+                "abstract": "<p>For December's meet up tomorrow, we will be having a :christmas_tree: Xmas social, starting out at @eagle_labs_bmth as usual for a chat and some :pizza: #PHPizza (thanks to @Spectrum_IT). Then we'll be heading off to the Libertine for a drink and more socialising</p>",
+                "twitter": "phpdorset"
+            }
+        },
         "november": {
             "1": {
                 "date": "2018-11-12",

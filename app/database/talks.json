@@ -1,4 +1,26 @@
 {
+    "2019": {
+        "january": {
+            "1": {
+                "date": "2019-01-07",
+                "speaker": "Alex Ross",
+                "title": "Docker In Production (Lightning Talk)",
+                "avatar": "/images/rossey.jpg",
+                "abstract": "Join us for our first meeting of 2019. Alex will be giving us a short talk on how to run Docker in production environments.",
+                "twitter": "rossey",
+                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-december-7th-1830-tickets-41754559010"
+            },
+            "2": {
+                "date": "2019-01-07",
+                "speaker": "Chris Sherry",
+                "title": "Discussion (Lean Coffee) Session",
+                "avatar": "/images/chris.png",
+                "abstract": "Chris will be leading a chat session on topics that will be suggested by the members of the meet up an then voted on in a \"Lean Coffee\" style discussion",
+                "twitter": "tweetingsherry",
+                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-december-7th-1830-tickets-41754559010"
+            }
+        }
+    },
     "2018": {
         "december": {
             "1": {

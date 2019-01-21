@@ -1,5 +1,15 @@
 {
     "2019": {
+        "february": {
+            "1": {
+                "date": "2019-02-04",
+                "speaker": "Dan Richards",
+                "title": "Go for PHP Developers",
+                "avatar": "/images/danrichards.jpg",
+                "abstract": "Over the past 5 years the Go programming language has skyrocketed in popularity. The reasons for this are far reaching but at a high level center around speed, flexibility and developer productivity. But what does this mean to a PHP developer?\n\nThis talk aims to answer that question. It provides an introduction to the Go programming language, how it differs from PHP, why you should consider using it and (perhaps most importantly) when you should use it. The talk will also cover some tricky areas that can trip you up as a new Go developer.\n\nThis won't be a lecture on why you should always use Go because it's \"just better\". Go is a great language and can be complimentary to nearly any developers skill set.",
+                "twitter": "DanielMRichards"
+            }
+        },
         "january": {
             "1": {
                 "date": "2019-01-07",

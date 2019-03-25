@@ -1,5 +1,25 @@
 {
     "2019": {
+        "april": {
+            "1": {
+                "date": "2019-04-01",
+                "speaker": "Joel Jenvey",
+                "title": "Internationalisation: local content, global dreams",
+                "avatar": "/images/jdjenvey.jpg",
+                "abstract": "In computing, internationalisation and localisation are means of adapting computer software to different languages, regional differences and technical requirements of a target locale. In this talk we discuss some of the intricacies of providing content for a global audience.",
+                "twitter": "jdjenvey"
+            }
+        },
+        "march": {
+            "1": {
+                "date": "2019-03-04",
+                "speaker": "Dave Hulbert",
+                "title": "Discussion (Lean Coffee) Session",
+                "avatar": "/images/dave.jpg",
+                "abstract": "Dave will be leading a chat session on topics that will be suggested by the members of the meet up an then voted on in a \"Lean Coffee\" style discussion",
+                "twitter": "dave1010"
+            }
+        },        
         "february": {
             "1": {
                 "date": "2019-02-04",

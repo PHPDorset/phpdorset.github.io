@@ -1,5 +1,15 @@
 {
     "2019": {
+        "may": {
+            "1": {
+                "date": "2019-05-13",
+                "speaker": "Rob Waller",
+                "title": "Test to Break Principles",
+                "avatar": "/images/robdwaller.jpg",
+                "abstract": "There are two types of tests developers can write, ‘test to work’ and ‘test to break’ and both are essential to produce good software. This talk delves into the importance of test to break principles, which are used widely in other industries, to show how they improve code and product quality. The talk highlights the importance of tests, why developers should spend more time on tests, and how test to break principles generate more robust applications. The talk also: - Explains the difference between tests which help applications to function and tests which aim to break and stress business logic so applications do not fail. - Includes code demos that show how test to break principles work in practice. - Draws comparisons to other industries, such as the car industry, who have used test to break methodologies to drive product improvement and safety for decades. - Shows how test to break principles deal with the 'working software myth' and help developers overcome the 'ignorance / complexity' problem. - Highlights how test to break principles force developers to introduce logic to handle unexpected behaviour and write code that can only be used in one way.",
+                "twitter": "RobDWaller"
+            }
+        },
         "april": {
             "1": {
                 "date": "2019-04-01",
@@ -19,7 +29,7 @@
                 "abstract": "Dave will be leading a chat session on topics that will be suggested by the members of the meet up an then voted on in a \"Lean Coffee\" style discussion",
                 "twitter": "dave1010"
             }
-        },        
+        },
         "february": {
             "1": {
                 "date": "2019-02-04",

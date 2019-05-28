@@ -1,5 +1,16 @@
 {
     "2019": {
+        "june": {
+            "1": {
+                "date": "2019-06-03",
+                "speaker": "Jack Pritchard",
+                "title": "WordPress To Gatsby",
+                "avatar": "/images/jackp.png",
+                "abstract": "WordPress To Gatsby is a walkthrough tutorial session inspired presentation showing the basics of how you can get a truly bespoke developer experience that gives your clients creative control whilst making use of the latest and greatest frameworks and tools available to us developers.\n\nI'll be showing how I've hacked together some of the bleeding-edge WordPress plugins with React frameworks to serve static HTML files to your end user.\n\nIn this information-packed presentation, we are going to cover -\nWordPress\nHeadless WordPress\nGutenberg\nAdvanced Custom Fields\nReact\nStyled Components\nGatsby\nNetlify\nThis is not going to be one to miss if you are looking to include React in your developer workflow or to maximise your experience in developing everyday WordPress sites.",
+                "twitter": "whatjackhasmade",
+                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-june-3rd-2019-jack-pritchard-wordpress-to-gatsby-tickets-62516252795"
+            }
+        },
         "may": {
             "1": {
                 "date": "2019-05-13",

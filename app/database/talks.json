@@ -8,7 +8,7 @@
                 "avatar": "/images/dave.jpeg",
                 "abstract": "We program algorithms with shortcuts known as heuristics. These allow us to get a good enough answer to a problem with less CPU and memory usage. Brains attempt to take shortcuts too, using intuition and biases to figure things out with less thinking or knowledge. Heuristics are valuable but they're not perfect. We can evaluate best and worst cases for code but how do we do the same with our own decision making process?\n\nIn this talk, we'll go through the ups and downs of heuristics and biases that exist in a developer's world. We'll look at ways to reduce any resulting fallacies, whilst still taking advantage of the performance improvement.",
                 "twitter": "dave1010",
-                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-july-1st-2019-dave-hulbert-debugging-our-biases-and-intuition-in-software-development-tickets-64293151547"
+                "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-july-1st-2019-dave-hulbert-debugging-our-biases-and-intuition-in-software-development-tickets-64293151547",
             }
         },
         "june": {
@@ -19,6 +19,7 @@
                 "avatar": "/images/jackp.png",
                 "abstract": "WordPress To Gatsby is a walkthrough tutorial session inspired presentation showing the basics of how you can get a truly bespoke developer experience that gives your clients creative control whilst making use of the latest and greatest frameworks and tools available to us developers.\n\nI'll be showing how I've hacked together some of the bleeding-edge WordPress plugins with React frameworks to serve static HTML files to your end user.\n\nIn this information-packed presentation, we are going to cover -\nWordPress\nHeadless WordPress\nGutenberg\nAdvanced Custom Fields\nReact\nStyled Components\nGatsby\nNetlify\nThis is not going to be one to miss if you are looking to include React in your developer workflow or to maximise your experience in developing everyday WordPress sites.",
                 "twitter": "whatjackhasmade",
+                "slides": "2019_june.pdf",
                 "ticketLink": "https://www.eventbrite.co.uk/e/phpdorset-june-3rd-2019-jack-pritchard-wordpress-to-gatsby-tickets-62516252795"
             }
         },

@@ -450,7 +450,7 @@ height: 0;
     top:10px;
     right:10px;
     z-index:9999;
-    background:#3d7b94;
+    background: #377a84;
     padding:10px;
     border-radius:2px;
     text-align:left;
@@ -469,7 +469,20 @@ height: 0;
     }
 
     .map-overlay{
-        width:200px;
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .google-maps {
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    .google-maps iframe {
+        position: relative;
     }
 
 }

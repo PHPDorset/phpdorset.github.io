@@ -1,5 +1,16 @@
 {
     "2019": {
+        "december": {
+            "1": {
+                "date": "2019-12-09",
+                "speaker": "Matt Alner",
+                "title": "Discussion (Lean Cofee) Session",
+                "avatar": "/images/matta.jpeg",
+                "abstract": "Matt will be leading a chat session on topics that will be suggested by the members of the meet up an then voted on in a \"Lean Coffee\" style discussion",
+                "twitter": "matthewalner",
+                "ticketLink": "https://www.eventbrite.co.uk/e/php-dorset-monthly-meetup-aka-tech-dorset-tickets-85102813807"
+            }
+        },
         "november": {
             "1": {
                 "date": "2019-11-11",

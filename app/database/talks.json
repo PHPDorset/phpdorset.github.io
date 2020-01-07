@@ -1,4 +1,17 @@
 {
+    "2020": {
+        "january": {
+            "1": {
+                "date": "2019-12-09",
+                "speaker": "Matt Alner",
+                "title": "Web Bluetooth API & Smart Mugs",
+                "avatar": "/images/matta.jpeg",
+                "abstract": "Matt will be giving a talk on the Web Bluetooth API and reverse engineering his smart mug followed by a lean coffee style open discussion",
+                "twitter": "matthewalner",
+                "ticketLink": "https://www.eventbrite.co.uk/e/tech-dorset-pizza-and-chat-about-whats-new-in-dev-tech-and-tech-news-registration-49689447475?mc_cid=54b9a2226c&mc_eid=[UNIQID]"
+            }
+        }
+    },
     "2019": {
         "december": {
             "1": {

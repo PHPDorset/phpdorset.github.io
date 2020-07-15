@@ -425,17 +425,6 @@
         }
     },
     "2016": {
-        "december": {
-            "1": {
-                "date": "2016-12-05",
-                "speaker": "Jamie Cruwys",
-                "title": "The Investigatory Powers Act (Snoopers Charter)",
-                "avatar": "/images/jamie.png",
-                "twitter": "jamiecruwys",
-                "abstract": "The Investigatory Powers Act, also known as the Snoopers Charter is becoming law. In this talk we will discuss the impact of the act, ways in which you can further protect your online privacy and how what actionable items you can implement to improve your online privacy.",
-                "slides" : "2016_december.pdf"
-            }
-        },
         "november": {
             "1": {
                 "date": "2016-11-07",
